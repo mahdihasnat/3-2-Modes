@@ -1,0 +1,1000 @@
+  958  make
+  959  make clean
+  960  make
+  961  make clean
+  962  make
+  963  make clean
+  964  make
+  965  make clean
+  966  make
+  967  make clean
+  968  make
+  969  make clean
+  970  make
+  971  make clean
+  972  make
+  973  make clean
+  974  make
+  975  make clean
+  976  make
+  977  make clean
+  978  make
+  979  make clean
+  980  make
+  981  make clean
+  982  make
+  983  make clean
+  984  make
+  985  make clean
+  986  make
+  987  gcc temp.c
+  988  gcc -Wall -Wextra temp.c
+  989  make
+  990  gcc -Wall -Wextra temp.c
+  991  make
+  992  gcc -Wall -Wextra temp.c
+  993  make
+  994  make clean
+  995  make
+  996  gcc -Wall -Wextra temp.c
+  997  make
+  998  gcc -Wall -Wextra temp.c
+  999  make
+ 1000  gcc -Wall -Wextra temp.c
+ 1001  make
+ 1002  make clean
+ 1003  make
+ 1004  make clean
+ 1005  make
+ 1006  make clean
+ 1007  make
+ 1008  make clean
+ 1009  make
+ 1010  make clean
+ 1011  make
+ 1012  make clean
+ 1013  make 
+ 1014  cat cat sampleIO_V2/input.txt > input.txt
+ 1015  cat sampleIO_V2/input.txt > input.txt
+ 1016  cat sampleIO_V2//input1.txt > input.txt
+ 1017  make
+ 1018  cat sampleIO_V2//input2.txt > input.txt
+ 1019  make
+ 1020  make clean
+ 1021  make 
+ 1022  make clean
+ 1023  make 
+ 1024  cat sampleIO_V2//input3.txt > input.txt
+ 1025  make 
+ 1026  make clean
+ 1027  make 
+ 1028  cat sampleIO_V2//input4.txt > input.txt
+ 1029  make
+ 1030  cat sampleIO_V2//input5.txt > input.txt
+ 1031  make
+ 1032  make clean
+ 1033  make
+ 1034  make clean
+ 1035  ls
+ 1036  clear
+ 1037  make clean
+ 1038  make 
+ 1039  make clean
+ 1040  make 
+ 1041  g++ temp.c
+ 1042  make 
+ 1043  make clean
+ 1044  make
+ 1045  make 
+ 1046  make
+ 1047  make clean
+ 1048  make
+ 1049  make clean
+ 1050  make 
+ 1051  make clean
+ 1052  make 
+ 1053  make clean
+ 1054  make 
+ 1055  make
+ 1056  make clean
+ 1057  make
+ 1058  make clean
+ 1059  make 
+ 1060  make clean
+ 1061  make 
+ 1062  make
+ 1063  make clean
+ 1064  make
+ 1065  make clean
+ 1066  make
+ 1067  make clean
+ 1068  make
+ 1069  make clean
+ 1070  make
+ 1071  make clean
+ 1072  make
+ 1073  make clean
+ 1074  make
+ 1075  make clean
+ 1076  cd 1705003/
+ 1077  ls
+ 1078  make 
+ 1079  make clean
+ 1080  make 
+ 1081  make clear
+ 1082  make clean
+ 1083  make
+ 1084  make clean
+ 1085  make
+ 1086  make clean
+ 1087  make
+ 1088  g++ lightoj.cpp
+ 1089  ./a.out
+ 1090  g++ lightoj.cpp
+ 1091  ./a.out
+ 1092  g++ lightoj.cpp
+ 1093  ./a.out
+ 1094  #pragma GCC target ("avx2")
+ 1095  #pragma GCC optimization ("O3")
+ 1096  #pragma GCC optimization ("unroll-loops")
+ 1097  #include <bits/stdc++.h>
+ 1098  using namespace std;
+ 1099  typedef long long ll;
+ 1100  typedef pair <int, int> pii;
+ 1101  #define ALL(a) a.begin(), a.end()
+ 1102  #define FastIO ios::sync_with_stdio(false); cin.tie(0);cout.tie(0)
+ 1103  #define IN freopen("input.txt","r+",stdin)
+ 1104  #define OUT freopen("output.txt","w+",stdout)
+ 1105  #define DBG(a) cerr<< "line "<<__LINE__ <<" : "<< #a <<" --> "<<(a)<<endl
+ 1106  #define NL cout<<endl
+ 1107  template < class T1,class T2>
+ 1108  ostream &operator <<(ostream &os,const pair < T1,T2 > &p)
+ 1109  {
+ 1110      os<<"{"<<p.first<<","<<p.second<<"}";
+ 1111      return os;
+ 1112  }
+ 1113  const int N=500+5;
+ 1114  const ll oo=1e9+7;
+ 1115  long long bigmod ( long long a, long long p, long long m )
+ 1116  {
+ 1117      long long res = 1;
+ 1118      long long x = a;
+ 1119      while ( p )
+ 1120      {
+ 1121          if ( p & 1 ) //p is odd
+ 1122          {
+ 1123              res = ( res * x ) % m;
+ 1124          }
+ 1125          x = ( x * x ) % m;
+ 1126          p = p >> 1;
+ 1127      }
+ 1128      return res;
+ 1129  }
+ 1130  int lp[N+1];
+ 1131  vector<int> pr;
+ 1132  void sieve()
+ 1133  {
+ 1134      for (int i=2; i<=N; ++i)
+ 1135      {
+ 1136          if (lp[i] == 0)
+ 1137          {
+ 1138              lp[i] = i;
+ 1139              pr.push_back (i);
+ 1140          }
+ 1141          for (int j=0; j<(int)pr.size() && pr[j]<=lp[i] && i*pr[j]<=N; ++j)
+ 1142              lp[i * pr[j]] = pr[j];
+ 1143      }
+ 1144  }
+ 1145  ll ncrsafe(ll n,int r)
+ 1146  {
+ 1147  g++ lightoj.cpp
+ 1148  ./a.out
+ 1149  g++ lightoj.cpp
+ 1150  ./a.out
+ 1151  g++ lightoj.cpp
+ 1152  ./a.out
+ 1153  g++ lightoj.cpp
+ 1154  ./a.out
+ 1155  g++ lightoj.cpp
+ 1156  ./a.out
+ 1157  g++ atcoder.cpp
+ 1158  ./a.out
+ 1159  #pragma GCC target ("avx2")
+ 1160  #pragma GCC optimization ("O3")
+ 1161  #pragma GCC optimization ("unroll-loops")
+ 1162  #include <bits/stdc++.h>
+ 1163  using namespace std;
+ 1164  typedef long long ll;
+ 1165  typedef pair <int, int> pii;
+ 1166  #define ALL(a) a.begin(), a.end()
+ 1167  #define FastIO ios::sync_with_stdio(false); cin.tie(0);cout.tie(0)
+ 1168  #define IN freopen("input.txt","r+",stdin)
+ 1169  #define OUT freopen("output.txt","w+",stdout)
+ 1170  #define DBG(a) cerr<< "line "<<__LINE__ <<" : "<< #a <<" --> "<<(a)<<endl
+ 1171  #define NL cout<<endl
+ 1172  template < class T1,class T2>
+ 1173  ostream &operator <<(ostream &os,const pair < T1,T2 > &p)
+ 1174  {
+ 1175      os<<"{"<<p.first<<","<<p.second<<"}";
+ 1176      return os;
+ 1177  }
+ 1178  const int N=500+5;
+ 1179  const ll oo=1e9+7;
+ 1180  long long bigmod ( long long a, long long p, long long m )
+ 1181  {
+ 1182      long long res = 1;
+ 1183      long long x = a;
+ 1184      while ( p )
+ 1185      {
+ 1186          if ( p & 1 ) //p is odd
+ 1187          {
+ 1188              res = ( res * x ) % m;
+ 1189          }
+ 1190          x = ( x * x ) % m;
+ 1191          p = p >> 1;
+ 1192      }
+ 1193      return res;
+ 1194  }
+ 1195  int lp[N+1];
+ 1196  vector<int> pr;
+ 1197  void sieve()
+ 1198  {
+ 1199      for (int i=2; i<=N; ++i)
+ 1200      {
+ 1201          if (lp[i] == 0)
+ 1202          {
+ 1203              lp[i] = i;
+ 1204              pr.push_back (i);
+ 1205          }
+ 1206          for (int j=0; j<(int)pr.size() && pr[j]<=lp[i] && i*pr[j]<=N; ++j)
+ 1207              lp[i * pr[j]] = pr[j];
+ 1208      }
+ 1209  }
+ 1210  ll ncrsafe(ll n,int r)
+ 1211  {
+ 1212  lear
+ 1213  clear
+ 1214  g++ atcoder.cpp
+ 1215  ./a.out
+ 1216  g++ lightoj.cpp
+ 1217  ./a.out
+ 1218  g++ lightoj.cpp
+ 1219  ./a.out
+ 1220  g++ lightoj.cpp
+ 1221  ./a.out
+ 1222  g++ lightoj.cpp
+ 1223  ./a.out
+ 1224  make
+ 1225  make clean
+ 1226  make 
+ 1227  make clean
+ 1228  make
+ 1229  make clean
+ 1230  git history
+ 1231  git --help
+ 1232  git log
+ 1233  git show 5ee90
+ 1234  ls
+ 1235  make 
+ 1236  make clear
+ 1237  make clean
+ 1238  git log
+ 1239  git show 067
+ 1240  git show 067479a
+ 1241  git push
+ 1242  g++ --version
+ 1243  bison --version
+ 1244  exit
+ 1245  ls
+ 1246  cat README
+ 1247  exit
+ 1248  bison --version
+ 1249  exit
+ 1250  ls
+ 1251  make
+ 1252  make clean
+ 1253  make
+ 1254  make clean
+ 1255  make 
+ 1256  make
+ 1257  make clean
+ 1258  make 
+ 1259  make clean
+ 1260  make
+ 1261  make clean
+ 1262  make
+ 1263  make clean
+ 1264  make
+ 1265  exit
+ 1266  flex --version
+ 1267  exit
+ 1268  ls
+ 1269  make clean
+ 1270  make 
+ 1271  make
+ 1272  make clean
+ 1273  exit
+ 1274  ls
+ 1275  ./autogen.sh 
+ 1276  flex --version
+ 1277  make clean
+ 1278  exit
+ 1279  wsl
+ 1280  las
+ 1281  exit
+ 1282  ls
+ 1283  make clean
+ 1284  make
+ 1285  make clean
+ 1286  make
+ 1287  make clean
+ 1288  exit
+ 1289  pip install gunicorn
+ 1290  pip
+ 1291  sudo apt install pip
+ 1292  pip
+ 1293  python
+ 1294  sudo apt install python
+ 1295  pip install gunicorn
+ 1296  python
+ 1297  pip2 install gunicorn
+ 1298  pip3 install gunicorn
+ 1299  postgres
+ 1300  sudo apt-get install postgresql
+ 1301  sudo snap install heroku --classic
+ 1302  sudo apt install heroku
+ 1303  sudo apt install heroku --classic
+ 1304  exit
+ 1305  pip install importlib
+ 1306  heroku local
+ 1307  exit
+ 1308  sudo apt-get install postgresql
+ 1309  python3 --version
+ 1310  python --version
+ 1311  python3 --version
+ 1312  sudo apt-get install software-properties-commo
+ 1313  sudo apt-get install software-properties-common
+ 1314  sudo add-apt-repository ppa:deadsnakes/ppa
+ 1315  sudo apt-get update
+ 1316  sudo apt-get install python3.9
+ 1317  heroku --help
+ 1318  heroku
+ 1319  sudo apt install heroku
+ 1320  python3 -m venv getting-started
+ 1321  sudo apt-get install python3-venv
+ 1322  python3 -m venv getting-started
+ 1323  pip install -r requirements.txt
+ 1324  pip3 install -r requirements.txt
+ 1325  pip3 install django
+ 1326  pip3 install gunicorn
+ 1327  pip3 install django-heroku
+ 1328  exit
+ 1329  echo "93bdab204067321ff131f560879db46bee3b994bf24836bb78538640f689e58f *ubuntu-20.04.2.0-desktop-amd64.iso" | shasum -a 256 --check
+ 1330  echo "93bdab204067321ff131f560879db46bee3b994bf24836bb78538640f689e58f *ubuntu-20.04-desktop-amd64.iso" | shasum -a 256 --check
+ 1331  make
+ 1332  bison --help
+ 1333  make clean
+ 1334  make
+ 1335  make clean
+ 1336  make 
+ 1337  make clean
+ 1338  make 
+ 1339  make
+ 1340  make clean
+ 1341  make
+ 1342  make clean
+ 1343  ./script.sh 
+ 1344  make
+ 1345  make clean
+ 1346  make 
+ 1347  make clean
+ 1348  git log
+ 1349  git checkout 75a97e851500
+ 1350  git log
+ 1351  git status
+ 1352  exit
+ 1353  make
+ 1354  mmakke
+ 1355  make
+ 1356  make clean
+ 1357  make
+ 1358  make clean
+ 1359  make
+ 1360  make clean
+ 1361  make
+ 1362  make clean
+ 1363  make
+ 1364  make clean
+ 1365  make y.o
+ 1366  make clean
+ 1367  make y.o
+ 1368  make clean
+ 1369  make
+ 1370  make clean
+ 1371  make run
+ 1372  make clean
+ 1373  make y.o
+ 1374  make clean
+ 1375  make
+ 1376  make clean
+ 1377  make
+ 1378  make > a.txt
+ 1379  make clean
+ 1380  make
+ 1381  maake cleen
+ 1382  make clean
+ 1383  make
+ 1384  make clean
+ 1385  make > a.txt
+ 1386  make 
+ 1387  make
+ 1388  make clean
+ 1389  make
+ 1390  make clean
+ 1391  make
+ 1392  make 
+ 1393  make clean
+ 1394  make
+ 1395  make clean
+ 1396  make
+ 1397  make clean
+ 1398  make
+ 1399  cp '/sampleIO_V2/input1.txt' 'input.txt'
+ 1400  cp 'sampleIO_V2/input1.txt' 'input.txt'
+ 1401  make
+ 1402  cp 'sampleIO_V2/input2.txt' 'input.txt'
+ 1403  make
+ 1404  make clean
+ 1405  cp 'sampleIO_V2/input3.txt' 'input.txt'
+ 1406  make
+ 1407  cp 'sampleIO_V2/input4.txt' 'input.txt'
+ 1408  make
+ 1409  cp 'sampleIO_V2/input5.txt' 'input.txt'
+ 1410  make
+ 1411  cp 'sampleIO_V2/input4.txt' 'input.txt'
+ 1412  make
+ 1413  make clean
+ 1414  make
+ 1415  cp 'sampleIO_V2/input5.txt' 'input.txt'
+ 1416  cp 'sampleIO_V2/input1.txt' 'input.txt'
+ 1417  make
+ 1418  cp 'sampleIO_V2/input2.txt' 'input.txt'
+ 1419  make
+ 1420  cp 'sampleIO_V2/input3.txt' 'input.txt'
+ 1421  make
+ 1422  cp 'sampleIO_V2/input4.txt' 'input.txt'
+ 1423  make
+ 1424  cp 'sampleIO_V2/input5.txt' 'input.txt'
+ 1425  make
+ 1426  cd 1705003
+ 1427  script.sh
+ 1428  ./script.sh
+ 1429  ls
+ 1430  ./script.sh 
+ 1431  yacc -d -y -v 1705003.y
+ 1432  ./script.sh 
+ 1433  ./script.sh
+ 1434  yacc -d -y -v 1705003.y
+ 1435  ./script.sh 
+ 1436  cd ..
+ 1437  make clean
+ 1438  ls
+ 1439  make 
+ 1440  cat log.txt
+ 1441  make clean
+ 1442  exit
+ 1443  make
+ 1444  make clean
+ 1445  make
+ 1446  g++ temp.c
+ 1447  ./a.out
+ 1448  g++ temp.c
+ 1449  ./a.out
+ 1450  g++ temp.c
+ 1451  ./a.out
+ 1452  g++ temp.c
+ 1453  ./a.out
+ 1454  g++ temp.c
+ 1455  ./a.out
+ 1456  g++ temp.c
+ 1457  ./a.out
+ 1458  g++ temp.c
+ 1459  ./a.out
+ 1460  g++ temp.c
+ 1461  ./a.out
+ 1462  g++ temp.c
+ 1463  ./a.out
+ 1464  g++ temp.c
+ 1465  ./a.out
+ 1466  g++ temp.c
+ 1467  ./a.out
+ 1468  g++ temp.c
+ 1469  ./a.out
+ 1470  make clean
+ 1471  make
+ 1472  ls
+ 1473  ./script.sh
+ 1474  cat sampleIO_V2/input1.txt > input.txt
+ 1475  make
+ 1476  cat sampleIO_V2/input2.txt > input.txt
+ 1477  make
+ 1478  cat sampleIO_V2/input3.txt > input.txt
+ 1479  make
+ 1480  cat sampleIO_V2/input4.txt > input.txt
+ 1481  make
+ 1482  cat sampleIO_V2/input5.txt > input.txt
+ 1483  make
+ 1484  make clean
+ 1485  make 
+ 1486  make clean
+ 1487  cd 1705003/
+ 1488  script.sh
+ 1489  ./script.sh
+ 1490  g++ -w --help
+ 1491  make
+ 1492  make clean
+ 1493  make
+ 1494  make clean
+ 1495  make
+ 1496  make clean
+ 1497  g++ temp.c
+ 1498  exit
+ 1499  make
+ 1500  make clean
+ 1501  make
+ 1502  make clean
+ 1503  make
+ 1504  make clean
+ 1505  make
+ 1506  make clean
+ 1507  make
+ 1508  make clean
+ 1509  make
+ 1510  make clean
+ 1511  make
+ 1512  make clean
+ 1513  make
+ 1514  make clean
+ 1515  make
+ 1516  g++ temp.cpp
+ 1517  ./a.out
+ 1518  make
+ 1519  make clean
+ 1520  make
+ 1521  make clean
+ 1522  make
+ 1523  make clean
+ 1524  make
+ 1525  make clean
+ 1526  make
+ 1527  make clean
+ 1528  make
+ 1529  make clean
+ 1530  make
+ 1531  make clean
+ 1532  make
+ 1533  make clean
+ 1534  make
+ 1535  make clean
+ 1536  make
+ 1537  make 
+ 1538  make clean
+ 1539  make
+ 1540  make clean
+ 1541  make 
+ 1542  make
+ 1543  make clean
+ 1544  make
+ 1545  make clean
+ 1546  make
+ 1547  make clean
+ 1548  make
+ 1549  make clean
+ 1550  make
+ 1551  make clean
+ 1552  make
+ 1553  make clean
+ 1554  make
+ 1555  make cleean
+ 1556  make clean
+ 1557  make
+ 1558  make clean
+ 1559  make
+ 1560  make clean
+ 1561  make
+ 1562  make input.c
+ 1563  make clean
+ 1564  make
+ 1565  make clean
+ 1566  make
+ 1567  make clean
+ 1568  make
+ 1569  make clean
+ 1570  make
+ 1571  make clean
+ 1572  make
+ 1573  make clean
+ 1574  exit
+ 1575  make
+ 1576  make clean
+ 1577  make
+ 1578  make 
+ 1579  make clean
+ 1580  make
+ 1581  make clean
+ 1582  make
+ 1583  make run
+ 1584  make
+ 1585  make clen
+ 1586  make clean
+ 1587  make
+ 1588  make clean
+ 1589  make
+ 1590  make clean
+ 1591  make
+ 1592  make clean
+ 1593  make
+ 1594  make clean
+ 1595  make
+ 1596  make clean
+ 1597  make
+ 1598  make clean
+ 1599  make
+ 1600  make clean
+ 1601  make
+ 1602  make clean
+ 1603  make
+ 1604  make clean
+ 1605  make
+ 1606  make clean
+ 1607  make
+ 1608  make clean
+ 1609  make
+ 1610  make clean
+ 1611  make
+ 1612  make clean
+ 1613  make
+ 1614  exit
+ 1615  sudo apt update
+ 1616  'apt list --upgradable
+ 1617  sudo apt upgrade
+ 1618  make clean
+ 1619  make
+ 1620  make clean
+ 1621  make
+ 1622  make clean
+ 1623  make
+ 1624  make clean
+ 1625  make
+ 1626  make clean
+ 1627  ./test.sh
+ 1628  make
+ 1629  make 
+ 1630  make
+ 1631  ./test.sh
+ 1632  make clean
+ 1633  make
+ 1634  make clean
+ 1635  make 
+ 1636  make clean
+ 1637  make
+ 1638  make clean
+ 1639  make
+ 1640  make clean
+ 1641  make
+ 1642  make clean
+ 1643  make
+ 1644  make clean
+ 1645  make
+ 1646  make clean
+ 1647  make
+ 1648  make clean
+ 1649  make
+ 1650  make clean
+ 1651  make
+ 1652  make clean
+ 1653  make
+ 1654  make clean
+ 1655  make
+ 1656  make clean
+ 1657  make
+ 1658  make clean
+ 1659  make
+ 1660  make clean
+ 1661  make
+ 1662  make clea
+ 1663  make clean
+ 1664  make
+ 1665  make clean
+ 1666  make
+ 1667  make clean
+ 1668  make
+ 1669  make clean
+ 1670  make
+ 1671  make clean
+ 1672  make
+ 1673  make clean
+ 1674  make
+ 1675  make clean
+ 1676  make
+ 1677  make clean
+ 1678  make
+ 1679  make clean
+ 1680  make
+ 1681  make clean
+ 1682  make
+ 1683  make clean
+ 1684  make
+ 1685  make clean
+ 1686  make
+ 1687  make clean
+ 1688  ./script.sh
+ 1689  ./script.sh Code.cpp
+ 1690  ./script.sh inp.txt
+ 1691  make
+ 1692  make clean
+ 1693  make
+ 1694  make clean
+ 1695  make
+ 1696  make clean
+ 1697  make
+ 1698  make clean
+ 1699  make
+ 1700  make clean
+ 1701  make
+ 1702  make clean
+ 1703  make
+ 1704  make clean
+ 1705  make
+ 1706  make clean
+ 1707  make
+ 1708  amke clean
+ 1709  make clean
+ 1710  make
+ 1711  make clean
+ 1712  make
+ 1713  make clean
+ 1714  make
+ 1715  make clean
+ 1716  make
+ 1717  make clean
+ 1718  make
+ 1719  make clean
+ 1720  make
+ 1721  make clean
+ 1722  make
+ 1723  make clean
+ 1724  make
+ 1725  make clean
+ 1726  make
+ 1727  make clean
+ 1728  make
+ 1729  ./test.sh
+ 1730  make clean
+ 1731  ./test.sh
+ 1732  make
+ 1733  make clean
+ 1734  cd 1705003/
+ 1735  ./script.sh
+ 1736  ./script.sh input.c
+ 1737  ./script.sh
+ 1738  ./script.sh input.c
+ 1739  make
+ 1740  make clean
+ 1741  make
+ 1742  make clean
+ 1743  make
+ 1744  make clean
+ 1745  ./script.sh
+ 1746  ./script.sh input.c
+ 1747  make clean
+ 1748  make
+ 1749  make clean
+ 1750  ./temp.sh
+ 1751  flex --version
+ 1752  make
+ 1753  ./compile.sh
+ 1754  ./temp.sh
+ 1755  bison temp.y
+ 1756  bison -y -d temp.y
+ 1757  make
+ 1758  make clean
+ 1759  make
+ 1760  sudo apt update
+ 1761  sudo apt-get install texlive-full
+ 1762  sudo apt-get install texlive
+ 1763  ./Pdf Making/texcodegen.py
+ 1764  ./Pdf\ Making/texcodegen.py
+ 1765  python Pdf\ Making/texcodegen.py
+ 1766  python Pdf\ Making/texcodegen.py > Pdf\ Making/list.tex
+ 1767  cd Pdf\ Making/
+ 1768  texlive note.tex
+ 1769  tex note.tex
+ 1770  pdftex note.tex
+ 1771  pdflatex note.tex
+ 1772  sudo apt-get install texlive-latex-extra 
+ 1773  pdflatex note.tex
+ 1774  pdflatex -shell-escape note.tex
+ 1775  sudo apt-get install python-pygments
+ 1776  pdflatex -shell-escape note.tex
+ 1777  sudo easy_install Pygments
+ 1778  sudo apt-get install python3-pygments
+ 1779  pdflatex -shell-escape note.tex
+ 1780  cd Pdf\ Making/
+ 1781  pdflatex -shell-escape note.tex
+ 1782  python Pdf\ Making/texcodegen.py > Pdf\ Making/list.tex
+ 1783  cd ..
+ 1784  python texcodegen.py > list.tex
+ 1785  cd Pdf\ Making/
+ 1786  python texcodegen.py > list.tex
+ 1787  pdflatex -shell-escape note.tex
+ 1788  python3 tmp.py
+ 1789  cd "c:\Users\mahdi\Desktop\ICS-PROBLEM1\" && g++ -std=gnu++11 a.cpp -o a && "c:\Users\mahdi\Desktop\ICS-PROBLEM1\"a
+ 1790  exit
+ 1791  chmod +x ENTROPY 
+ 1792  ./ENTROPY 
+ 1793  ./ENTROPY "01234567" ""
+ 1794  ./ENTROPY "0123456" ""
+ 1795  ./ENTROPY "012345678" ""
+ 1796  ./ENTROPY "0123456" ""
+ 1797  ./ENTROPY "012345" ""
+ 1798  ./ENTROPY "01234" ""
+ 1799  ./ENTROPY "0123" ""
+ 1800  ./TERMINATOR "0123" ""
+ 1801  ./TERMINATOR 
+ 1802  ./TERMINATOR "01234567" ""
+ 1803  ./TERMINATOR "012345678" ""
+ 1804  ./TERMINATOR "0123" ""
+ 1805  chmod +x tmp.sh
+ 1806  ./tmp.sh
+ 1807  ./TERMINATOR "" ""
+ 1808  ./TERMINATOR "" "" ""
+ 1809  python
+ 1810  ./tmp.sh
+ 1811  python
+ 1812  ./tmp.sh
+ 1813  strings TERMINATOR 
+ 1814  C:/Anaconda3/envs/miazi_env/python.exe c:/Users/mahdi/Desktop/ICS-PROBLEM1/tmp.py
+ 1815  exit
+ 1816  ./tmp.sh
+ 1817  strings Controller.lsc 
+ 1818  strings Controller.lsc > tmp.txt
+ 1819  ldd ENTROPY 
+ 1820  ltrace ENTROPY
+ 1821  readelf
+ 1822  readelf -a ENTROPY 
+ 1823  readelf -a ENTROPY > tmp.txt
+ 1824  ./TERMINATOR "a"
+ 1825  ./TERMINATOR """a
+ 1826  """
+ 1827  ./TERMINATOR ""
+ 1828  traceroute 8.8.8.8
+ 1829  exit
+ 1830  ls
+ 1831  cd ..
+ 1832  cd .
+ 1833  echo .
+ 1834  cd ..
+ 1835  ls
+ 1836  cd Operating\ System/
+ 1837  ..
+ 1838  cd ..
+ 1839  cd Operating\ System/
+ 1840  cd Shell\ Class\ 1/
+ 1841  cd
+ 1842  ls
+ 1843  ls -a
+ 1844  ls
+ 1845  ls -a
+ 1846  ls -l
+ 1847  ls -a -l
+ 1848  ls -lh
+ 1849  ls -a -lh
+ 1850  pwd
+ 1851  ls
+ 1852  cd /mnt
+ 1853  ls
+ 1854  cd f
+ 1855  ls
+ 1856  cd ..
+ 1857  cd c
+ 1858  ls
+ 1859  cd Users
+ 1860  ls
+ 1861  cd mahdi
+ 1862  ls
+ 1863  cd Desktop/
+ 1864  ls
+ 1865  cd New\ folder
+ 1866  ls
+ 1867  cd 3-2-Modes/
+ 1868  ls
+ 1869  cd Operating\ System/
+ 1870  man ls
+ 1871  mkdir playground
+ 1872  ls
+ 1873  cd Shell\ Class\ 1/
+ 1874  ls
+ 1875  mkdir playground
+ 1876  ls
+ 1877  cd
+ 1878  cd ..
+ 1879  cd ~
+ 1880  cd mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Operating\ System/Shell\ Class\ 1
+ 1881  ls
+ 1882  ls -a
+ 1883  cd ~
+ 1884  cd ..
+ 1885  ls
+ 1886  cd ..
+ 1887  ls
+ 1888  cd mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Operating\ System/Shell\ Class\ 1
+ 1889  ls
+ 1890  cp playground/ x
+ 1891  cp -r playground/ x
+ 1892  cp -r playground/ playground-copy
+ 1893  cp -r playground/ playground-copy/
+ 1894  man cp
+ 1895  pushd
+ 1896  pushd .
+ 1897  cd ..
+ 1898  pushd .
+ 1899  cd Shell\ Class\ 1/
+ 1900  popd
+ 1901  ls
+ 1902  cd playground
+ 1903  ls
+ 1904  ls -l
+ 1905  chmod a-rwx
+ 1906  chmod a-rwx x.txt 
+ 1907  ls -l
+ 1908  chmod g-x x.txt 
+ 1909  ls -l
+ 1910  chmod 777 x.txt
+ 1911  ls -l x.txt 
+ 1912  chmod 000 x.txt
+ 1913  ls -l x.txt 
+ 1914  ls
+ 1915  more x.txt
+ 1916  head x.txt 
+ 1917  wc x.txt
+ 1918  clear
+ 1919  cd ..
+ 1920  grep face ..
+ 1921  grep face .
+ 1922  cd playground
+ 1923  grep face x.txt
+ 1924  grep f* x.txt
+ 1925  ls /bin/user/bin
+ 1926  ls ~/bin/user/bin
+ 1927  ls /bin /user/bin
+ 1928  ls /bin /user/bin | sort
+ 1929  ls /bin /user/bin | sort | uniq
+ 1930  ls /bin /user/bin | sort | uniq | less
+ 1931  history | grep grep
+ 1932  ls -r *
+ 1933  mkdir a/xyz{1..20}
+ 1934  mkdir -r a/xyz{1..20}
+ 1935  man mkdir
+ 1936  mkdir -p a/xyz{1..20}
+ 1937  rm -r a
+ 1938  ls
+ 1939  ls -r a
+ 1940  mkdir {1.10}
+ 1941  mkdir /{1.10}
+ 1942  mkdir {1..10}
+ 1943  echo {1..10}
+ 1944  > /{1..10}/{1..10}.txt
+ 1945  ls /{1..10}/{1..10}.txt
+ 1946  ls {1..10}/{1..10}.txt
+ 1947  > /{1..10}/{1..10}.txt
+ 1948  echo /{1..10}/{1..10}.txt
+ 1949  > ./{1..10}/{1..10}.txt
+ 1950  > a.txt
+ 1951* 
+ 1952  touch ./{1..10}/{1..10}.txt
+ 1953  echo {1..10} >> ./{1..10}/{1..10}.txt
+ 1954  ./{1..10}/{1..10}.txt < hi
+ 1955  histoy
+ 1956  history
+ 1957  history > history.txt
