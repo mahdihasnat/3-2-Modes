@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"*.asm": "muchassemblyrequired",
+		"*.txt": "plaintext",
+		"iostream": "cpp"
+	}
+}
