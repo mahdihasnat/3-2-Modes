@@ -18,6 +18,10 @@ public class FileRequestHandler {
         fileRequestConcurrentMap.put(fileRequest.getRequestId() , fileRequest);
         return fileRequest;
     }
+    public FileRequest getFileRequest(int requestId)
+    {
+        return fileRequestConcurrentMap.get(requestId);
+    }
 
 
 

@@ -9,6 +9,8 @@ public class Server {
     
 	public static void main(String [] args) {
 		Settings settings = Settings.getInstance();
+		Thread bufferManagerThread = new BufferManagerThread();
+		bufferManagerThread.start();
 
 		try 
 		{

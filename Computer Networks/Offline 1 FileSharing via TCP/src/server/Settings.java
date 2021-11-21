@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Settings {
 	// sizes are in byte
-	private int MAX_BUFFER_SIZE;
+	private long MAX_BUFFER_SIZE;
 	private int MIN_CHUNK_SIZE;
 	private int MAX_CHUNK_SIZE;
 	private int PORT ;
@@ -27,7 +27,7 @@ public class Settings {
 		return new Random().nextInt(MAX_CHUNK_SIZE - MIN_CHUNK_SIZE) +MIN_CHUNK_SIZE;
 	}
 
-	public int getMAX_BUFFER_SIZE() {
+	public long getMAX_BUFFER_SIZE() {
 		return MAX_BUFFER_SIZE;
 	}
 
@@ -44,6 +44,5 @@ public class Settings {
 		}
 		return instance;
 	}
-
 
 }

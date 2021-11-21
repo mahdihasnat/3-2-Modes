@@ -1,6 +1,6 @@
 package client;
 
-import client.file.UploadRequests;
+import client.file.PendingUploads;
 import client.message.MessageQueue;
 
 import java.io.DataInputStream;
@@ -12,14 +12,16 @@ import java.util.Scanner;
 
 public class Client {
 
+    public static String ipAddress = "localhost";
+    public static int port = 60666;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter IP address: ");
         //String ipAddress = scanner.next();
-        String ipAddress = "localhost";
+
         System.out.println("Enter Port no: ");
         //int port = scanner.nextInt();
-        int port = 60666;
 
 
         Socket socket = null;
@@ -35,9 +37,12 @@ public class Client {
             String sid = scanner.next();
 
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-            out.writeUTF(sid);
-
             DataInputStream in = new DataInputStream(socket.getInputStream());
+            synchronized (out) {
+                out.writeUTF("login");
+                out.writeUTF(sid);
+                out.flush();
+            }
 
             String connectionStatus = in.readUTF();
 
@@ -63,15 +68,17 @@ public class Client {
                         "upload requestId filepath\n";
 
                 MessageQueue messageQueue = MessageQueue.getInstance();
-                UploadRequests uploadRequests = UploadRequests.getInstance();
+                PendingUploads pendingUploads = PendingUploads.getInstance();
 
                 while (true) {
-                    System.out.println(msg);
+
                     String operation = scanner.next();
                     String operand1 = null;
 
                     if (operation.equals("showmessages")) {
                         System.out.println(messageQueue.readMessages());
+                    } else if(operation.equals("h")){
+                        System.out.println(msg);
                     } else {
                         if (operation.equals("showfiles") || operation.equals("upload")
                         ) {
@@ -82,14 +89,11 @@ public class Client {
 
                             String filePath = scanner.nextLine().trim();
                             File file = new File(filePath);
-                            if (!file.exists())
-                            {
-                                System.out.println("Upload failed! File not found "+filePath + " : "+file.getAbsolutePath());
-                            }
-                            else
-                            {
+                            if (!file.exists()) {
+                                System.out.println("Upload failed! File not found " + filePath + " : " + file.getAbsolutePath());
+                            } else {
                                 long fileLength = file.length();
-                                uploadRequests.add(file);
+                                pendingUploads.add(file);
 
                                 synchronized (out) {
                                     out.writeUTF(operation);

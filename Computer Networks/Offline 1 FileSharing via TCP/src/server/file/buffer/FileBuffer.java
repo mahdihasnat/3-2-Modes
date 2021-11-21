@@ -15,14 +15,14 @@ public abstract class FileBuffer {
     String owner;
     private long fileLength;
 
-    public FileBuffer(String owner, String visibility, String fileName,long fileLength) {
-        this.file = new File(Settings.getInstance().getPath() + owner +"\\" + visibility, fileName);
+    public FileBuffer(String owner, String visibility, String fileName, long fileLength) {
+        this.file = new File(Settings.getInstance().getPath() + owner + "\\" + visibility, fileName);
         this.datas = new LinkedList<byte[]>();
         this.owner = owner;
-        this.fileLength=fileLength;
+        this.fileLength = fileLength;
     }
 
-    final void addData(byte[] data) {
+    final public void addData(byte[] data) {
         datas.add(data);
     }
 
@@ -30,9 +30,15 @@ public abstract class FileBuffer {
         return owner;
     }
 
+    final public long getFileLength() {
+        return fileLength;
+    }
 
+    /// call this only one time
+    // true if data is written and removed from heap
+    // false otherwise
+    public boolean writeFile() {
 
-    boolean writeFile() {
         //System.out.println(file.getAbsolutePath());
         if (file.exists())
             file.delete();
@@ -49,6 +55,7 @@ public abstract class FileBuffer {
                 fileOutputStream.write(data);
             }
             fileOutputStream.close();
+            datas.clear(); //data removed
             return true;
         } catch (FileNotFoundException e) {
             System.out.println("File not found! write error " + file.getName());
@@ -61,12 +68,20 @@ public abstract class FileBuffer {
         }
     }
 
+    final public boolean checkIntegrity()
+    {
+        long totalLength = 0;
+        for(byte[] d: datas)
+            totalLength+=d.length;
+        return totalLength == fileLength;
+    }
+
     public static void main(String[] args) {
-        FileBuffer fileBuffer = new UserFileBuffer("1", "public", "a.txt",7);
+        FileBuffer fileBuffer = new UserFileBuffer("1", "public", "a.txt", 7);
         byte[] b = {'a', 'b'};
         fileBuffer.addData(b);
         fileBuffer.addData(b);
-        byte[] c = {'x','y','z'};
+        byte[] c = {'x', 'y', 'z'};
         fileBuffer.addData(c);
         System.out.println(fileBuffer.writeFile());
     }

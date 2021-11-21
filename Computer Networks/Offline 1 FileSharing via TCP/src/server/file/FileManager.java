@@ -53,6 +53,12 @@ public class FileManager {
 
         return false;
     }
+    public void refreshFiles(String sid )
+    {
+        File userDir = new File(root , sid);
+        privateFiles.put(sid,new Files(new File(userDir , "private"), sid ,"private" ));
+        publicFiles.put(sid,new Files(new File(userDir , "public"), sid ,"public" ));
+    }
 
     public String getStudentFiles(String sid)
     {

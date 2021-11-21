@@ -1,30 +1,40 @@
 package server.file.buffer;
 
 import server.StudentDirectory;
+import server.filerequest.FileRequest;
 
 import java.io.File;
 
 public class RequestFileBuffer extends FileBuffer{
 
-    String requester;
     String fileName;
-    String requestId;
+    FileRequest fileRequest;
 
-    public RequestFileBuffer(String owner, String requestId, String fileName,long fileLength, String requester) {
+    public RequestFileBuffer(String owner, String fileName,long fileLength,FileRequest fileRequest) {
         super(owner, "public", fileName,fileLength);
         this.fileName=fileName;
-        this.requester = requester;
-        this.requestId = requestId;
+        this.fileRequest = fileRequest;
     }
 
     @Override
-    boolean writeFile() {
+    public boolean writeFile() {
         boolean ret = super.writeFile();
         if(ret)
         {
             StudentDirectory studentDirectory = StudentDirectory.getInstance();
-            studentDirectory.sendMessage(requester , getOwner() + " uploaded file "+fileName + " upon your request #"+requestId );
+            studentDirectory.sendMessage(fileRequest.getSid() , getOwner() + " uploaded file "+fileName + " upon your request #"+ fileRequest.getRequestId());
         }
         return ret;
+    }
+
+    @Override
+    public String toString() {
+        return "RequestFileBuffer{" +
+                "datas=" + datas +
+                ", file=" + file +
+                ", owner='" + owner + '\'' +
+                ", fileName='" + fileName + '\'' +
+                ", fileRequest=" + fileRequest +
+                '}';
     }
 }

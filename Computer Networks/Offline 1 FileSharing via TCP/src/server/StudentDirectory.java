@@ -3,6 +3,7 @@ package server;
 import server.file.FileManager;
 
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -82,7 +83,51 @@ public class StudentDirectory {
             }
         }
     }
+    public boolean sendMessages(String sid, String[] messages)
+    {
+        if(currentlyOnlineStudents.containsKey(sid))
+        {
+            DataOutputStream out = currentlyOnlineStudents.get(sid).getOut();
+            synchronized (out)
+            {
+                try
+                {
+                    for(String message: messages)
+                        out.writeUTF(message);
+                    out.flush();
+                } catch (IOException e) {
+                    //e.printStackTrace();
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
 
+    public boolean sendBeginUpload(String sid, int fileId)
+    {
+        if(currentlyOnlineStudents.containsKey(sid))
+        {
+            DataOutputStream out = currentlyOnlineStudents.get(sid).getOut();
+            int chunkSize = Settings.getInstance().getRandomChunkSize();
+            synchronized (out)
+            {
+                try
+                {
+                    out.writeUTF("beginupload");
+                    out.writeInt(fileId);
+                    out.writeInt(chunkSize);
+                    out.flush();
+                } catch (IOException e) {
+                    //e.printStackTrace();
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
 
 
     private static StudentDirectory instance;
