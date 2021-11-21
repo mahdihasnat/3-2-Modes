@@ -1,15 +1,16 @@
 package client;
 
+import client.file.UploadRequests;
 import client.message.MessageQueue;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -18,7 +19,7 @@ public class Client {
         String ipAddress = "localhost";
         System.out.println("Enter Port no: ");
         //int port = scanner.nextInt();
-        int port = 6666;
+        int port = 60666;
 
 
         Socket socket = null;
@@ -26,6 +27,7 @@ public class Client {
             socket = new Socket(ipAddress, port);
 
             System.out.println("Connection established");
+            System.out.println("Remote address: " + socket.getInetAddress());
             System.out.println("Remote port: " + socket.getPort());
             System.out.println("Local port: " + socket.getLocalPort());
 
@@ -55,11 +57,13 @@ public class Client {
                         "showallfiles - to show all public files\n" +
                         "showfiles SID - to show all public files of specific students\n" +
                         "requestfile message - request files from user with message\n" +
-                        "showmessages - show all unread messages\n";
+                        "showmessages - show all unread messages\n" +
+                        "upload private filepath\n" +
+                        "upload public filepath\n" +
+                        "upload requestId filepath\n";
 
                 MessageQueue messageQueue = MessageQueue.getInstance();
-
-
+                UploadRequests uploadRequests = UploadRequests.getInstance();
 
                 while (true) {
                     System.out.println(msg);
@@ -68,15 +72,45 @@ public class Client {
 
                     if (operation.equals("showmessages")) {
                         System.out.println(messageQueue.readMessages());
-
                     } else {
-                        if (operation.equals("showfiles")) {
+                        if (operation.equals("showfiles") || operation.equals("upload")
+                        ) {
                             operand1 = scanner.next();
                         }
-                        out.writeUTF(operation);
-                        if (operand1 != null)
-                            out.writeUTF(operand1);
-                        out.flush();
+
+                        if (operation.equals("upload")) {
+
+                            String filePath = scanner.nextLine().trim();
+                            File file = new File(filePath);
+                            if (!file.exists())
+                            {
+                                System.out.println("Upload failed! File not found "+filePath + " : "+file.getAbsolutePath());
+                            }
+                            else
+                            {
+                                long fileLength = file.length();
+                                uploadRequests.add(file);
+
+                                synchronized (out) {
+                                    out.writeUTF(operation);
+                                    out.writeUTF(operand1);
+                                    out.writeUTF(file.getName());
+                                    out.writeLong(fileLength);
+                                    out.flush();
+                                }
+                            }
+
+                        } else {
+
+                            synchronized (out) {
+                                out.writeUTF(operation);
+                                if (operand1 != null)
+                                    out.writeUTF(operand1);
+                                out.flush();
+                            }
+                        }
+
+
                     }
                 }
             }

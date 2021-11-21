@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentMap;
 
 public class StudentDirectory {
     ConcurrentMap<String, ClientHandler> currentlyOnlineStudents;
-    List<String> registeredStudents;
+    private List<String> registeredStudents;
 
 
     private StudentDirectory() {
@@ -65,7 +65,22 @@ public class StudentDirectory {
                 }
             }
         }
-            
+    }
+    public void sendMessage(String sid , String message)
+    {
+        if(currentlyOnlineStudents.containsKey(sid)) {
+
+            DataOutputStream out = currentlyOnlineStudents.get(sid).getOut();
+            synchronized (out) {
+                try {
+                    out.writeUTF("message");
+                    out.writeUTF(message);
+                    out.flush();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 

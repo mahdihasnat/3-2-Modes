@@ -1,6 +1,10 @@
 package server;
 
 import server.file.FileManager;
+import server.file.UploadBuffer;
+import server.file.buffer.FileBuffer;
+import server.file.buffer.UserFileBuffer;
+import server.filerequest.FileRequest;
 import server.filerequest.FileRequestHandler;
 
 import java.io.DataInputStream;
@@ -27,6 +31,7 @@ public class ClientHandler extends Thread {
         StudentDirectory studentDirectory = StudentDirectory.getInstance();
         FileManager fileManager = FileManager.getInstance();
         FileRequestHandler fileRequestHandler = FileRequestHandler.getInstance();
+        UploadBuffer uploadBuffer = UploadBuffer.getInstance();
 
         try {
 
@@ -59,8 +64,28 @@ public class ClientHandler extends Thread {
                             out.writeUTF(fileManager.getPublicFiles(sid_other));
                         } else if (operation.equals("requestfile")) {
                             String msg = in.readUTF();
-                            Thread broadcast = new BroadcastThread( sid + " requested file with note: " + msg);
+                            FileRequest  fileRequest =  fileRequestHandler.addNewRequest(sid , msg);
+                            Thread broadcast = new BroadcastThread(fileRequest.toString());
                             broadcast.start();
+                        } else if(operation.equals("upload")) {
+                            /// upload visi filename filesize
+                            String visibility = in.readUTF();
+                            String fileName = in.readUTF();
+                            long fileSize = in.readLong();
+                            FileBuffer fileBuffer  = null;
+                            if(visibility.equals("private") || visibility.equals("public"))
+                            {
+                                fileBuffer = new UserFileBuffer(sid , visibility , fileName , fileSize);
+                            }
+                            else
+                            {
+                                // TODO
+                            }
+                            int fileId = uploadBuffer.addOperation(fileBuffer);
+                            out.writeUTF("fileid");
+                            out.writeUTF(fileName);
+                            out.writeInt(fileId);
+
                         } else {
                             out.writeUTF("Incorrect operation :" + operation);
                             System.out.println("opeation: " + operation + " not defined for " + sid);

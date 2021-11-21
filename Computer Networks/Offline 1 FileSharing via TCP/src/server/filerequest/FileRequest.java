@@ -23,5 +23,12 @@ public class FileRequest {
         return requestId;
     }
 
-
+    @Override
+    public String toString() {
+        return "FileRequest{" +
+                "requester='" + sid + '\'' +
+                ", message='" + message + '\'' +
+                ", requestId=" + requestId +
+                '}';
+    }
 }

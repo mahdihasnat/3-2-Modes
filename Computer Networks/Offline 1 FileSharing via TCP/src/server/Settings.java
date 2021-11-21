@@ -1,5 +1,7 @@
 package server;
 
+import java.util.Random;
+
 public class Settings {
 	// sizes are in byte
 	private int MAX_BUFFER_SIZE;
@@ -13,12 +15,16 @@ public class Settings {
 		MAX_BUFFER_SIZE = 1024*1024*1024;
 		MIN_CHUNK_SIZE = 1;
 		MAX_CHUNK_SIZE = 1024;
-		PORT = 6666;
+		PORT = 60666;
 		path = "data\\";
 	}
 
 	public String getPath() {
 		return path;
+	}
+	public int getRandomChunkSize()
+	{
+		return new Random().nextInt(MAX_CHUNK_SIZE - MIN_CHUNK_SIZE) +MIN_CHUNK_SIZE;
 	}
 
 	public int getMAX_BUFFER_SIZE() {
@@ -38,4 +44,6 @@ public class Settings {
 		}
 		return instance;
 	}
+
+
 }
