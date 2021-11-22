@@ -52,7 +52,7 @@ public class Client {
                 System.out.println("Student id is already in use");
             } else {
 
-                Thread serverHandler = new ServerHandler(in);
+                Thread serverHandler = new ServerThread(in);
                 serverHandler.start();
 
                 System.out.println("Welcome " + sid + " !!");
@@ -65,7 +65,9 @@ public class Client {
                         "showmessages - show all unread messages\n" +
                         "upload private filepath\n" +
                         "upload public filepath\n" +
-                        "upload requestId filepath\n";
+                        "upload requestId filepath\n" +
+                        "download sid public filename\n" +
+                        "download sid private filename\n";
 
                 MessageQueue messageQueue = MessageQueue.getInstance();
                 PendingUploads pendingUploads = PendingUploads.getInstance();
@@ -77,16 +79,16 @@ public class Client {
 
                     if (operation.equals("showmessages")) {
                         System.out.println(messageQueue.readMessages());
-                    } else if(operation.equals("h")){
+                    } else if (operation.equals("h")) {
                         System.out.println(msg);
                     } else {
-                        if (operation.equals("showfiles") || operation.equals("upload")
+                        if (operation.equals("showfiles") || operation.equals("upload") || operation.equals("download")
                         ) {
                             operand1 = scanner.next();
                         }
 
-                        if (operation.equals("upload")) {
 
+                        if (operation.equals("upload")) {
                             String filePath = scanner.nextLine().trim();
                             File file = new File(filePath);
                             if (!file.exists()) {
@@ -102,6 +104,20 @@ public class Client {
                                     out.writeLong(fileLength);
                                     out.flush();
                                 }
+                            }
+                        } else if (operation.equals("download")) {
+                            String visibility = scanner.next();
+                            String fileName = scanner.nextLine().trim();
+
+                            if (visibility.equals("public") || visibility.equals("private")) {
+                                synchronized (out) {
+                                    out.writeUTF("download");
+                                    out.writeUTF(sid);
+                                    out.writeUTF(visibility);
+                                    out.writeUTF(fileName);
+                                }
+                            } else {
+                                System.out.println("select public or private\n");
                             }
 
                         } else {

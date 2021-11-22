@@ -5,7 +5,7 @@ public class FileRequest {
     String message;
     int requestId;
 
-    public FileRequest(String sid, String message,int requestId) {
+    public FileRequest(String sid, String message, int requestId) {
         this.sid = sid;
         this.message = message;
         this.requestId = requestId;

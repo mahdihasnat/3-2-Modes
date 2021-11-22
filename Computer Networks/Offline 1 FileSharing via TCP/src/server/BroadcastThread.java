@@ -1,8 +1,6 @@
 package server;
 
-import java.io.DataOutputStream;
-
-public class BroadcastThread extends Thread{
+public class BroadcastThread extends Thread {
     String message;
 
     public BroadcastThread(String message) {

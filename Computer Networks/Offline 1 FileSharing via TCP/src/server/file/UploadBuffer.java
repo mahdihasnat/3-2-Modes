@@ -11,7 +11,7 @@ public class UploadBuffer {
     private ConcurrentMap<Integer, FileBuffer> queueOperation;
     private ConcurrentMap<Integer, FileBuffer> runningOperation;
     private int nextFileId;
-    private Long currentBufferSize ;
+    private Long currentBufferSize;
 
 
     private UploadBuffer() {
@@ -21,42 +21,35 @@ public class UploadBuffer {
         currentBufferSize = new Long(0);
     }
 
-    public long getCurrentBufferSize() {
-        return currentBufferSize;
+    public int getNewFileId() {
+        return nextFileId++;
     }
 
-    public boolean isBufferAvailable(long newFileSize)
-    {
-        synchronized (currentBufferSize)
-        {
-            if(currentBufferSize+newFileSize <= Settings.getInstance().getMAX_BUFFER_SIZE())
-            {
-                currentBufferSize+=newFileSize;
+    public boolean isBufferAvailable(long newFileSize) {
+        synchronized (currentBufferSize) {
+            if (currentBufferSize + newFileSize <= Settings.getInstance().getMAX_BUFFER_SIZE()) {
+                currentBufferSize += newFileSize;
                 return true;
-            }
-            else return false;
-        }
-    }
-    public void releaseBuffer(long bufferSize)
-    {
-        synchronized (currentBufferSize)
-        {
-            assert (bufferSize <= currentBufferSize);
-            currentBufferSize-=bufferSize;
+            } else return false;
         }
     }
 
-    public FileBuffer getRunningFileBuffer(int fileId)
-    {
+    public void releaseBuffer(long bufferSize) {
+        synchronized (currentBufferSize) {
+            assert (bufferSize <= currentBufferSize);
+            currentBufferSize -= bufferSize;
+        }
+    }
+
+    public FileBuffer getRunningFileBuffer(int fileId) {
         return runningOperation.get(fileId);
     }
 
-    public void abortCurrentOperation(int fileId)
-    {
+    public void abortCurrentOperation(int fileId) {
         runningOperation.remove(fileId);
     }
-    public void discardQueueOperation(int fileId)
-    {
+
+    public void discardQueueOperation(int fileId) {
         queueOperation.remove(fileId);
     }
 
@@ -75,7 +68,6 @@ public class UploadBuffer {
         System.out.println("One Upload Request added to Queue :" + fileBuffer);
         return fileId;
     }
-
 
 
     private static UploadBuffer instance;

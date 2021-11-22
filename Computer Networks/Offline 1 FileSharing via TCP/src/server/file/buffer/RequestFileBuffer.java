@@ -3,26 +3,23 @@ package server.file.buffer;
 import server.StudentDirectory;
 import server.filerequest.FileRequest;
 
-import java.io.File;
-
-public class RequestFileBuffer extends FileBuffer{
+public class RequestFileBuffer extends FileBuffer {
 
     String fileName;
     FileRequest fileRequest;
 
-    public RequestFileBuffer(String owner, String fileName,long fileLength,FileRequest fileRequest) {
-        super(owner, "public", fileName,fileLength);
-        this.fileName=fileName;
+    public RequestFileBuffer(String owner, String fileName, long fileLength, FileRequest fileRequest) {
+        super(owner, "public", fileName, fileLength);
+        this.fileName = fileName;
         this.fileRequest = fileRequest;
     }
 
     @Override
     public boolean writeFile() {
         boolean ret = super.writeFile();
-        if(ret)
-        {
+        if (ret) {
             StudentDirectory studentDirectory = StudentDirectory.getInstance();
-            studentDirectory.sendMessage(fileRequest.getSid() , getOwner() + " uploaded file "+fileName + " upon your request #"+ fileRequest.getRequestId());
+            studentDirectory.sendMessage(fileRequest.getSid(), getOwner() + " uploaded file " + fileName + " upon your request #" + fileRequest.getRequestId());
         }
         return ret;
     }

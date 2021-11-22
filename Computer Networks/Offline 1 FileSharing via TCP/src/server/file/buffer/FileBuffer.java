@@ -1,6 +1,7 @@
 package server.file.buffer;
 
 import server.Settings;
+import util.DuplicateFileSave;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -34,14 +35,15 @@ public abstract class FileBuffer {
         return fileLength;
     }
 
+
     /// call this only one time
     // true if data is written and removed from heap
     // false otherwise
     public boolean writeFile() {
 
         //System.out.println(file.getAbsolutePath());
-        if (file.exists())
-            file.delete();
+        file = DuplicateFileSave.getUniqueFile(file);
+
         try {
             file.createNewFile();
         } catch (IOException e) {
@@ -68,16 +70,15 @@ public abstract class FileBuffer {
         }
     }
 
-    final public boolean checkIntegrity()
-    {
+    final public boolean checkIntegrity() {
         long totalLength = 0;
-        for(byte[] d: datas)
-            totalLength+=d.length;
+        for (byte[] d : datas)
+            totalLength += d.length;
         return totalLength == fileLength;
     }
 
     public static void main(String[] args) {
-        FileBuffer fileBuffer = new UserFileBuffer("1", "public", "a.txt", 7);
+        FileBuffer fileBuffer = new UserFileBuffer("1", "public", "", 7);
         byte[] b = {'a', 'b'};
         fileBuffer.addData(b);
         fileBuffer.addData(b);

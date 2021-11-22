@@ -10,16 +10,17 @@ import server.filerequest.FileRequestHandler;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 
-public class ClientHandler extends Thread {
+public class ClientThread extends Thread {
     private Socket socket;
     private DataOutputStream out;
     private DataInputStream in;
 
 
-    ClientHandler(Socket socket) {
+    ClientThread(Socket socket) {
         this.socket = socket;
     }
 
@@ -35,7 +36,7 @@ public class ClientHandler extends Thread {
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
-        if(fileId == -1) return;
+        if (fileId == -1) return;
         FileBuffer fileBuffer = UploadBuffer.getInstance().getRunningFileBuffer(fileId);
         try {
 
@@ -46,9 +47,14 @@ public class ClientHandler extends Thread {
                     if (fileBuffer.checkIntegrity()) {
                         out.writeUTF("ack");
                         out.flush();
-                        fileBuffer.writeFile();
-                        UploadBuffer.getInstance().abortCurrentOperation(fileId);
-                        FileManager.getInstance().refreshFiles(fileBuffer.getOwner());
+                        if (fileBuffer.writeFile()) {
+                            UploadBuffer.getInstance().abortCurrentOperation(fileId);
+                            FileManager.getInstance().refreshFiles(fileBuffer.getOwner());
+                        } else {
+                            out.writeUTF("print");
+                            out.writeUTF("Uploaded file was unable to saved| #" + fileId);
+                            out.flush();
+                        }
                     } else {
                         out.writeUTF("nack");
                         out.flush();
@@ -60,8 +66,11 @@ public class ClientHandler extends Thread {
                     byte[] datas = new byte[length];
                     in.read(datas);
                     fileBuffer.addData(datas);
+                    //Thread.sleep(10000);
                     out.writeUTF("ack");
                     out.flush();
+                } else if (operation.equals("abort")) {
+                    break;
                 } else {
                     System.out.println("FileUploadOperation not defined " + operation);
                 }
@@ -81,7 +90,6 @@ public class ClientHandler extends Thread {
         try {
 
             sid = in.readUTF();
-
 
             if (studentDirectory.addNewStudent(sid, this)) {
                 out.writeUTF("success");
@@ -149,8 +157,39 @@ public class ClientHandler extends Thread {
                                 out.writeInt(fileId);
                             }
 
+                        } else if (operation.equals("download")) {
+                            String fileOwner = in.readUTF();
+                            String visibility = in.readUTF();
+                            String fileName = in.readUTF();
+                            if (visibility.equals("private") && !fileOwner.equals(sid)) {
+
+                                out.writeUTF("print");
+                                out.writeUTF("Invalid access to others private files");
+
+                            } else {
+                                int totalMatch = fileManager.totalMatchFile(fileOwner, visibility, fileName);
+                                if (totalMatch <= 0) {
+                                    out.writeUTF("print");
+                                    out.writeUTF("No file found!");
+                                } else if (totalMatch > 1) {
+                                    out.writeUTF("print");
+                                    out.writeUTF("Multiple Files found with prefix");
+                                } else {
+                                    File file = fileManager.getFile(fileOwner, visibility, fileName);
+                                    int fileId = uploadBuffer.getNewFileId();
+                                    int chunkSize = Settings.getInstance().getMAX_CHUNK_SIZE();
+                                    Thread fileDownloaderThread = new FileDownloaderThread(file, chunkSize, fileId, out);
+                                    fileDownloaderThread.start();
+                                    out.writeUTF("print");
+                                    out.writeUTF("Download will start shortly");
+                                }
+                            }
+
+
                         } else {
+                            out.writeUTF("print");
                             out.writeUTF("Incorrect operation :" + operation);
+
                             System.out.println("opeation: " + operation + " not defined for " + sid);
                         }
                         out.flush();
@@ -190,5 +229,11 @@ public class ClientHandler extends Thread {
             fileUploadOperation();
         else
             loginOperation();
+
+        try {
+            socket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

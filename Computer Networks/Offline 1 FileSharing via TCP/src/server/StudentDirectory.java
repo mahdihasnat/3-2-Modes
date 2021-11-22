@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 public class StudentDirectory {
-    ConcurrentMap<String, ClientHandler> currentlyOnlineStudents;
+    ConcurrentMap<String, ClientThread> currentlyOnlineStudents;
     private List<String> registeredStudents;
 
 
@@ -18,7 +18,7 @@ public class StudentDirectory {
         registeredStudents = FileManager.getInstance().getRegisteredStudents();
     }
 
-    boolean addNewStudent(String sid, ClientHandler clientHandler) {
+    boolean addNewStudent(String sid, ClientThread clientThread) {
         if (currentlyOnlineStudents.containsKey(sid))
             return false;
         else {
@@ -27,7 +27,7 @@ public class StudentDirectory {
                     registeredStudents.add(sid);
                     FileManager.getInstance().addNewStudent(sid);
                 }
-                currentlyOnlineStudents.put(sid, clientHandler);
+                currentlyOnlineStudents.put(sid, clientThread);
 
                 System.out.println("Student with id: " + sid + " logged in");
 
@@ -51,11 +51,9 @@ public class StudentDirectory {
         return ret;
     }
 
-    public void broadCast(String message)
-    {
-        for(ClientHandler clientHandler : currentlyOnlineStudents.values())
-        {
-            DataOutputStream out = clientHandler.getOut();
+    public void broadCast(String message) {
+        for (ClientThread clientThread : currentlyOnlineStudents.values()) {
+            DataOutputStream out = clientThread.getOut();
             synchronized (out) {
                 try {
                     out.writeUTF("message");
@@ -67,9 +65,9 @@ public class StudentDirectory {
             }
         }
     }
-    public void sendMessage(String sid , String message)
-    {
-        if(currentlyOnlineStudents.containsKey(sid)) {
+
+    public void sendMessage(String sid, String message) {
+        if (currentlyOnlineStudents.containsKey(sid)) {
 
             DataOutputStream out = currentlyOnlineStudents.get(sid).getOut();
             synchronized (out) {
@@ -83,16 +81,13 @@ public class StudentDirectory {
             }
         }
     }
-    public boolean sendMessages(String sid, String[] messages)
-    {
-        if(currentlyOnlineStudents.containsKey(sid))
-        {
+
+    public boolean sendMessages(String sid, String[] messages) {
+        if (currentlyOnlineStudents.containsKey(sid)) {
             DataOutputStream out = currentlyOnlineStudents.get(sid).getOut();
-            synchronized (out)
-            {
-                try
-                {
-                    for(String message: messages)
+            synchronized (out) {
+                try {
+                    for (String message : messages)
                         out.writeUTF(message);
                     out.flush();
                 } catch (IOException e) {
@@ -105,16 +100,12 @@ public class StudentDirectory {
         return false;
     }
 
-    public boolean sendBeginUpload(String sid, int fileId)
-    {
-        if(currentlyOnlineStudents.containsKey(sid))
-        {
+    public boolean sendBeginUpload(String sid, int fileId) {
+        if (currentlyOnlineStudents.containsKey(sid)) {
             DataOutputStream out = currentlyOnlineStudents.get(sid).getOut();
             int chunkSize = Settings.getInstance().getRandomChunkSize();
-            synchronized (out)
-            {
-                try
-                {
+            synchronized (out) {
+                try {
                     out.writeUTF("beginupload");
                     out.writeInt(fileId);
                     out.writeInt(chunkSize);
