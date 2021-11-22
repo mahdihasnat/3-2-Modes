@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Client {
 
-    public static String ipAddress = "localhost";
+    public static String ipAddress = "10.18.122.211";
     public static int port = 60666;
 
     public static void main(String[] args) {
@@ -96,7 +96,7 @@ public class Client {
                             } else {
                                 long fileLength = file.length();
                                 pendingUploads.add(file);
-
+                                System.out.println("prndingUploads:" + pendingUploads);
                                 synchronized (out) {
                                     out.writeUTF(operation);
                                     out.writeUTF(operand1);

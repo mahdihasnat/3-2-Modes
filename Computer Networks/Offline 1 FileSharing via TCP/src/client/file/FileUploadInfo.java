@@ -6,11 +6,6 @@ public class FileUploadInfo {
     File file;
     int fileId;
 
-    public FileUploadInfo(File file, int fileId) {
-        this.file = file;
-        this.fileId = fileId;
-    }
-
     public FileUploadInfo(File file) {
         this.file = file;
         this.fileId = -1;
@@ -30,5 +25,13 @@ public class FileUploadInfo {
 
     public void setFileId(int fileId) {
         this.fileId = fileId;
+    }
+
+    @Override
+    public String toString() {
+        return "FileUploadInfo{" +
+                "file=" + file +
+                ", fileId=" + fileId +
+                '}';
     }
 }

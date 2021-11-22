@@ -44,12 +44,21 @@ public class PendingUploads {
         }
     }
 
+    @Override
+    public String toString() {
+        return "PendingUploads{" +
+                "concurrentLinkedQueue=" + concurrentLinkedQueue +
+                '}';
+    }
 
     private static PendingUploads instance;
 
     public static PendingUploads getInstance() {
         if (instance == null) {
-            instance = new PendingUploads();
+            synchronized (PendingUploads.class) {
+                if (instance == null)
+                    instance = new PendingUploads();
+            }
         }
         return instance;
     }
