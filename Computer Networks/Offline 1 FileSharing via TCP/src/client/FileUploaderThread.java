@@ -26,7 +26,7 @@ public class FileUploaderThread extends Thread {
 
         ClientLogger.getLogger().logMessage(LogLevel.DEBUG, this.toString() + " .run");
 
-
+        int lastPercentage = 0;
         long totalSent = 0;
         long totalLength = file.length();
         synchronized (netWorkOut) {
@@ -113,7 +113,10 @@ public class FileUploaderThread extends Thread {
                         continuousChunkReader.close();
                         return;
                     }
-                    ClientLogger.getLogger().logMessage(LogLevel.DEBUG, String.format("File Uploading %4.2f%% #%d\n", 1.0 * totalSent * 100 / totalLength, fileId));
+                    if (lastPercentage != 100.0 * totalSent / totalLength) {
+                        lastPercentage = (int) ((100.0 * totalSent) / totalLength);
+                        ClientLogger.getLogger().logMessage(LogLevel.DEBUG, String.format("File Uploading %4.2f%% #%d\n", 1.0 * totalSent * 100 / totalLength, fileId));
+                    }
                 }
                 /// check for ack within 30 sec
 
