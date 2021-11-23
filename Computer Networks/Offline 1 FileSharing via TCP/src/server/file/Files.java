@@ -29,11 +29,23 @@ public class Files {
         return null;
     }
 
+    private static String fileSizeReadable(long length)
+    {
+        if(length < 1024)
+            return length+" b";
+        else if (length < 1024*1024)
+            return String.format("%6.2f kb",length/1024.0);
+        else if(length < 1024 * 1024 *1024)
+            return String.format("%6.2f mb",length/1024.0/1024.0);
+        else
+            return String.format("%6.2f gb",length/1024.0/1024.0/1024.0);
+    }
+
     @Override
     public String toString() {
         String result = "";
         for (File f : files)
-            result += owner + " " + security + " " + f.getName() + " " + f.length() / 1024 / 1024 + " mb\n";
+            result += owner + " " + security + " " + f.getName() + " " + fileSizeReadable(f.length()) + "\n";
         return result;
     }
 

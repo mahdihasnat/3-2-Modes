@@ -58,13 +58,12 @@ public class FileManager {
             files = publicFiles.get(owner);
         } else if (visibility.equals("private")) {
             files = privateFiles.get(owner);
-        }
-        else files = null;
+        } else files = null;
 
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.owner:"+owner);
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.visibility:"+visibility);
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.fileName:"+fileName);
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.files:"+files);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "totalMatchFile.owner:" + owner);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "totalMatchFile.visibility:" + visibility);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "totalMatchFile.fileName:" + fileName);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "totalMatchFile.files:" + files);
         if (files == null)
             return 0;
         else {
@@ -79,12 +78,11 @@ public class FileManager {
             files = publicFiles.get(owner);
         } else if (visibility.equals("private")) {
             files = privateFiles.get(owner);
-        }
-        else files = null;
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"owner:"+owner);
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"visibility:"+visibility);
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"fileName:"+fileName);
-        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"files:"+files);
+        } else files = null;
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "owner:" + owner);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "visibility:" + visibility);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "fileName:" + fileName);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "files:" + files);
         if (files == null)
             return null;
         else {
@@ -99,29 +97,39 @@ public class FileManager {
     }
 
     public String getStudentFiles(String sid) {
-        return privateFiles.get(sid).toString() + publicFiles.get(sid).toString();
+
+        return "owner visibility filename size\n" +
+                "-------------------\n"+
+                privateFiles.get(sid).toString() +
+                publicFiles.get(sid).toString() +
+                "-------------------\n";
     }
 
     public String getPublicFiles(String sid) {
         if (publicFiles.containsKey(sid))
-            return publicFiles.get(sid).toString();
+            return "owner visibility filename size\n" +
+                    "-------------------\n"+
+                    publicFiles.get(sid).toString()+
+                    "-------------------\n";
         else
             return "Student with SID: " + sid + " not registered";
     }
 
     public String getAllPublicFiles() {
-        String result = "owner visibility filenaame size\n";
+        StringBuilder result = new StringBuilder("owner visibility filename size\n" +
+                "-------------------\n");
         for (Files files : publicFiles.values()) {
-            result += files.toString();
+            result.append(files.toString());
         }
-        return result;
+        result.append("-------------------\n");
+        return result.toString();
     }
 
 
     private static volatile FileManager instance;
 
     public static FileManager getInstance() {
-        if (instance == null){
+        if (instance == null) {
             synchronized (FileManager.class) {
                 if (instance == null) {
                     instance = new FileManager(new File(Settings.getInstance().getPath()));

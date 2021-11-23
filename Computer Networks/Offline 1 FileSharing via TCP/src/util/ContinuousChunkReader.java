@@ -2,7 +2,6 @@ package util;
 
 import client.ClientLogger;
 import util.log.LogLevel;
-import util.log.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,20 +16,16 @@ public class ContinuousChunkReader {
     }
 
     public int readNextChunk(byte[] data) throws IOException {
-        int read = fis.read(data);
-        // 0 - if data.length == 0
-        // -1- if no more data
-        // or length of data read
-        return read;
+        return fis.read(data);
     }
 
     public void close() {
         try {
             fis.close();
         } catch (IOException e) {
-            ClientLogger.getLogger().logMessage(LogLevel.ERROR , e.toString());
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR, e.toString());
             //e.printStackTrace();
-            System.out.println("cannot close fileinputstream");
+            System.out.println("cannot close fileInputStream");
         }
     }
 
@@ -43,8 +38,6 @@ public class ContinuousChunkReader {
                 byte[] x = new byte[5];
                 System.out.println(continuousChunkReader.readNextChunk(x));
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -4,6 +4,7 @@ import client.file.PendingUploads;
 import client.message.MessageQueue;
 import util.log.LogLevel;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -25,7 +26,7 @@ public class Client {
         //int port = scanner.nextInt();
 
 
-        Socket socket = null;
+        Socket socket;
         try {
             socket = new Socket(ipAddress, port);
 
@@ -65,16 +66,22 @@ public class Client {
                         "showfiles SID - to show all public files of specific students\n" +
                         "requestfile message - request files from user with message\n" +
                         "showmessages - show all unread messages\n" +
-                        "upload private filepath\n" +
-                        "upload public filepath\n" +
-                        "upload requestId filepath\n" +
-                        "download sid public filename\n" +
-                        "download sid private filename\n";
+                        "upload private filepath - upload file to private repo\n" +
+                        "upload public filepath - upload file to public repo\n" +
+                        "upload requestId filepath - upload requested file to public repo\n" +
+                        "download sid public filename - download public file \n" +
+                        "download sid private filename - download private file\n"+
+                        "exit - logout from server\n"+
+                        "h - for help\n";
 
                 MessageQueue messageQueue = MessageQueue.getInstance();
                 PendingUploads pendingUploads = PendingUploads.getInstance();
 
+                System.out.println(msg);
+
                 while (true) {
+
+                    System.out.print(">");
 
                     String operation = scanner.next();
                     String operand1 = null;
@@ -121,6 +128,8 @@ public class Client {
                                 System.out.println("select public or private\n");
                             }
 
+                        } else if(operation.equals("exit")){
+                            break;
                         } else {
 
                             synchronized (out) {
@@ -134,13 +143,15 @@ public class Client {
 
                     }
                 }
-            }
 
+            }
+            socket.close();
         } catch (IOException e) {
             ClientLogger.getLogger().logMessage(LogLevel.INFO,e.toString());
             ClientLogger.getLogger().logMessage(LogLevel.ERROR , e.toString());
             ClientLogger.getLogger().logMessage(LogLevel.DEBUG , e.getStackTrace().toString());
         }
+
 
 
     }

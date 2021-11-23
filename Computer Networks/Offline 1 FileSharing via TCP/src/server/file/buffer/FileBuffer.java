@@ -18,6 +18,7 @@ public abstract class FileBuffer {
 
     public FileBuffer(String owner, String visibility, String fileName, long fileLength) {
         this.file = new File(Settings.getInstance().getPath() + owner + "\\" + visibility, fileName);
+        this.file.getAbsoluteFile().getParentFile().mkdirs();
         this.datas = new LinkedList<byte[]>();
         this.owner = owner;
         this.fileLength = fileLength;
@@ -78,7 +79,7 @@ public abstract class FileBuffer {
     }
 
     public static void main(String[] args) {
-        FileBuffer fileBuffer = new UserFileBuffer("1", "public", "", 7);
+        FileBuffer fileBuffer = new UserFileBuffer("1", "public", "a", 7);
         byte[] b = {'a', 'b'};
         fileBuffer.addData(b);
         fileBuffer.addData(b);

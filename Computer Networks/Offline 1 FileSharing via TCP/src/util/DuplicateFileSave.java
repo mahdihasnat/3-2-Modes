@@ -15,13 +15,12 @@ public class DuplicateFileSave {
                 file = new File(parentPath, onlyName + "(" + 1 + ")" + (dot == -1 ? "" : "." + extension));
             } else {
                 int lastEndParenthesis = onlyName.lastIndexOf(')');
-                if (lastEndParenthesis == -1 || lastEndParenthesis < lastBeginParenthesis || lastEndParenthesis!= dot-1) {
+                if (lastEndParenthesis == -1 || lastEndParenthesis < lastBeginParenthesis || ( dot != -1 && lastEndParenthesis != dot - 1)) {
                     file = new File(parentPath, onlyName + "(" + 1 + ")" + (dot == -1 ? "" : "." + extension));
                 } else {
                     String number = onlyName.substring(lastBeginParenthesis + 1, lastEndParenthesis);
-                    int newNumber = -1;
                     try {
-                        newNumber = Integer.parseInt(number) + 1;
+                        int newNumber = Integer.parseInt(number) + 1;
                         file = new File(parentPath, onlyName.substring(0, lastBeginParenthesis) + "(" + newNumber + ")" + (dot == -1 ? "" : "." + extension));
                     } catch (NumberFormatException e) {
                         file = new File(parentPath, onlyName + "(" + 1 + ")" + (dot == -1 ? "" : "." + extension));

@@ -4,6 +4,7 @@ import client.file.PendingDownloads;
 import client.file.PendingUploads;
 import client.message.Message;
 import client.message.MessageQueue;
+import util.log.LogLevel;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -30,7 +31,6 @@ public class ServerThread extends Thread {
             while (true) {
 
                 String reqCode = dataInputStream.readUTF();
-
 
                 //System.out.println("received req code :"+reqCode);
 
@@ -100,7 +100,7 @@ public class ServerThread extends Thread {
 
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR,e.toString());
         }
 
 
