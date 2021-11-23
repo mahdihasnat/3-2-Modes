@@ -113,7 +113,7 @@ public class FileUploaderThread extends Thread {
                         continuousChunkReader.close();
                         return;
                     }
-                    if (lastPercentage != 100.0 * totalSent / totalLength) {
+                    if (lastPercentage != (int) (100.0 * totalSent / totalLength)) {
                         lastPercentage = (int) ((100.0 * totalSent) / totalLength);
                         ClientLogger.getLogger().logMessage(LogLevel.DEBUG, String.format("File Uploading %4.2f%% #%d\n", 1.0 * totalSent * 100 / totalLength, fileId));
                     }

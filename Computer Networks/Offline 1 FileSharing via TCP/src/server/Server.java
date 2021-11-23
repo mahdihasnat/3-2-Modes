@@ -2,6 +2,7 @@ package server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 
 public class Server {
@@ -10,6 +11,12 @@ public class Server {
         Settings settings = Settings.getInstance();
         Thread bufferManagerThread = new BufferManagerThread();
         bufferManagerThread.start();
+
+        System.out.println("Enter port no:");
+        Scanner scanner = new Scanner(System.in);
+        int port = scanner.nextInt();
+        settings.setPORT(port);
+
 
         try {
             ServerSocket serverSocket = new ServerSocket(settings.getPORT());

@@ -13,7 +13,7 @@ public class Settings {
     private Settings() {
         MAX_BUFFER_SIZE = 1024 * 1024 * 1024;
         MIN_CHUNK_SIZE = 1;
-        MAX_CHUNK_SIZE = 1024 ;
+        MAX_CHUNK_SIZE = 1024;
         PORT = 60666;
         path = "data\\";
     }
@@ -38,6 +38,9 @@ public class Settings {
         return PORT;
     }
 
+    public void setPORT(int PORT) {
+        this.PORT = PORT;
+    }
 
     private static Settings instance;
 

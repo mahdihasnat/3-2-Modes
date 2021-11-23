@@ -4,7 +4,6 @@ import client.file.PendingUploads;
 import client.message.MessageQueue;
 import util.log.LogLevel;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -20,10 +19,10 @@ public class Client {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter IP address: ");
-        //String ipAddress = scanner.next();
+        ipAddress = scanner.next();
 
         System.out.println("Enter Port no: ");
-        //int port = scanner.nextInt();
+        port = scanner.nextInt();
 
 
         Socket socket;
@@ -55,7 +54,7 @@ public class Client {
                 System.out.println("Student id is already in use");
             } else {
 
-                Thread serverHandler = new ServerThread(in,out);
+                Thread serverHandler = new ServerThread(in, out);
                 serverHandler.start();
 
                 System.out.println("Welcome " + sid + " !!");
@@ -70,8 +69,8 @@ public class Client {
                         "upload public filepath - upload file to public repo\n" +
                         "upload requestId filepath - upload requested file to public repo\n" +
                         "download sid public filename - download public file \n" +
-                        "download sid private filename - download private file\n"+
-                        "exit - logout from server\n"+
+                        "download sid private filename - download private file\n" +
+                        "exit - logout from server\n" +
                         "h - for help\n";
 
                 MessageQueue messageQueue = MessageQueue.getInstance();
@@ -128,7 +127,7 @@ public class Client {
                                 System.out.println("select public or private\n");
                             }
 
-                        } else if(operation.equals("exit")){
+                        } else if (operation.equals("exit")) {
                             break;
                         } else {
 
@@ -147,11 +146,10 @@ public class Client {
             }
             socket.close();
         } catch (IOException e) {
-            ClientLogger.getLogger().logMessage(LogLevel.INFO,e.toString());
-            ClientLogger.getLogger().logMessage(LogLevel.ERROR , e.toString());
-            ClientLogger.getLogger().logMessage(LogLevel.DEBUG , e.getStackTrace().toString());
+            ClientLogger.getLogger().logMessage(LogLevel.INFO, e.toString());
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR, e.toString());
+            ClientLogger.getLogger().logMessage(LogLevel.DEBUG, e.getStackTrace().toString());
         }
-
 
 
     }
