@@ -2,6 +2,7 @@ package client;
 
 import client.file.PendingUploads;
 import client.message.MessageQueue;
+import util.log.LogLevel;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -38,6 +39,7 @@ public class Client {
 
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             DataInputStream in = new DataInputStream(socket.getInputStream());
+
             synchronized (out) {
                 out.writeUTF("login");
                 out.writeUTF(sid);
@@ -52,7 +54,7 @@ public class Client {
                 System.out.println("Student id is already in use");
             } else {
 
-                Thread serverHandler = new ServerThread(in);
+                Thread serverHandler = new ServerThread(in,out);
                 serverHandler.start();
 
                 System.out.println("Welcome " + sid + " !!");
@@ -87,7 +89,6 @@ public class Client {
                             operand1 = scanner.next();
                         }
 
-
                         if (operation.equals("upload")) {
                             String filePath = scanner.nextLine().trim();
                             File file = new File(filePath);
@@ -112,7 +113,7 @@ public class Client {
                             if (visibility.equals("public") || visibility.equals("private")) {
                                 synchronized (out) {
                                     out.writeUTF("download");
-                                    out.writeUTF(sid);
+                                    out.writeUTF(operand1);
                                     out.writeUTF(visibility);
                                     out.writeUTF(fileName);
                                 }
@@ -136,7 +137,9 @@ public class Client {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            ClientLogger.getLogger().logMessage(LogLevel.INFO,e.toString());
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR , e.toString());
+            ClientLogger.getLogger().logMessage(LogLevel.DEBUG , e.getStackTrace().toString());
         }
 
 

@@ -1,5 +1,9 @@
 package util;
 
+import client.ClientLogger;
+import util.log.LogLevel;
+import util.log.Logger;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,6 +28,7 @@ public class ContinuousChunkReader {
         try {
             fis.close();
         } catch (IOException e) {
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR , e.toString());
             //e.printStackTrace();
             System.out.println("cannot close fileinputstream");
         }

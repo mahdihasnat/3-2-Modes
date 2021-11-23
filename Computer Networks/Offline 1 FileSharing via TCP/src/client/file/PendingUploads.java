@@ -17,7 +17,7 @@ public class PendingUploads {
 
     public boolean assignFIllId(String fileName, int fileId) {
         for (FileUploadInfo fileUploadInfo : concurrentLinkedQueue) {
-            if (fileUploadInfo.getFile().getName().equals(fileName)) {
+            if (fileUploadInfo.getFile().getName().equals(fileName) && fileUploadInfo.getFileId() == -1) {
                 fileUploadInfo.setFileId(fileId);
                 return true;
             }

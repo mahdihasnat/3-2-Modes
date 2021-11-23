@@ -13,9 +13,11 @@ import java.net.Socket;
 
 public class ServerThread extends Thread {
     DataInputStream dataInputStream;
+    DataOutputStream dataOutputStream;
 
-    public ServerThread(DataInputStream dataInputStream) {
+    public ServerThread(DataInputStream dataInputStream, DataOutputStream dataOutputStream) {
         this.dataInputStream = dataInputStream;
+        this.dataOutputStream = dataOutputStream;
     }
 
     @Override
@@ -58,6 +60,14 @@ public class ServerThread extends Thread {
                     File file = PendingUploads.getInstance().getFile(fileId);
                     if (file == null) {
                         System.out.println("File not found in pending uploads! #" + fileId);
+                        synchronized (dataOutputStream)
+                        {
+                            dataOutputStream.writeUTF("uploadabort");
+                            dataOutputStream.writeInt(fileId);
+                            dataOutputStream.flush();
+                        }
+
+
                     } else {
                         Socket socket = new Socket(Client.ipAddress, Client.port);
                         Thread fileUploader = new FileUploaderThread(

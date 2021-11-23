@@ -15,7 +15,7 @@ public class DuplicateFileSave {
                 file = new File(parentPath, onlyName + "(" + 1 + ")" + (dot == -1 ? "" : "." + extension));
             } else {
                 int lastEndParenthesis = onlyName.lastIndexOf(')');
-                if (lastEndParenthesis == -1 || lastEndParenthesis < lastBeginParenthesis) {
+                if (lastEndParenthesis == -1 || lastEndParenthesis < lastBeginParenthesis || lastEndParenthesis!= dot-1) {
                     file = new File(parentPath, onlyName + "(" + 1 + ")" + (dot == -1 ? "" : "." + extension));
                 } else {
                     String number = onlyName.substring(lastBeginParenthesis + 1, lastEndParenthesis);

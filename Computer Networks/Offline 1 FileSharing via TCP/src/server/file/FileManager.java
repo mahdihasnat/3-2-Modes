@@ -1,6 +1,8 @@
 package server.file;
 
+import server.ServerLogger;
 import server.Settings;
+import util.log.LogLevel;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -57,6 +59,12 @@ public class FileManager {
         } else if (visibility.equals("private")) {
             files = privateFiles.get(owner);
         }
+        else files = null;
+
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.owner:"+owner);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.visibility:"+visibility);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.fileName:"+fileName);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"totalMatchFile.files:"+files);
         if (files == null)
             return 0;
         else {
@@ -65,12 +73,18 @@ public class FileManager {
     }
 
     public File getFile(String owner, String visibility, String fileName) {
+
         Files files = null;
         if (visibility.equals("public")) {
             files = publicFiles.get(owner);
         } else if (visibility.equals("private")) {
             files = privateFiles.get(owner);
         }
+        else files = null;
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"owner:"+owner);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"visibility:"+visibility);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"fileName:"+fileName);
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"files:"+files);
         if (files == null)
             return null;
         else {
@@ -104,11 +118,16 @@ public class FileManager {
     }
 
 
-    private static FileManager instance;
+    private static volatile FileManager instance;
 
     public static FileManager getInstance() {
-        if (instance == null)
-            instance = new FileManager(new File(Settings.getInstance().getPath()));
+        if (instance == null){
+            synchronized (FileManager.class) {
+                if (instance == null) {
+                    instance = new FileManager(new File(Settings.getInstance().getPath()));
+                }
+            }
+        }
         return instance;
     }
 
