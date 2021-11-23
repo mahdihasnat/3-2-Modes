@@ -146,7 +146,7 @@ public class FileUploaderThread extends Thread {
                         continuousChunkReader.close();
                         return;
                     }
-
+                    ClientLogger.getLogger().logMessage(LogLevel.DEBUG , String.format("uploaded file %5.2f" , totalSent*100.0/totalLength));
                     System.out.println("File upload failed! poor network connection. #" + fileId);
                     break;
                 }

@@ -60,14 +60,11 @@ public class ServerThread extends Thread {
                     File file = PendingUploads.getInstance().getFile(fileId);
                     if (file == null) {
                         System.out.println("File not found in pending uploads! #" + fileId);
-                        synchronized (dataOutputStream)
-                        {
+                        synchronized (dataOutputStream) {
                             dataOutputStream.writeUTF("uploadabort");
                             dataOutputStream.writeInt(fileId);
                             dataOutputStream.flush();
                         }
-
-
                     } else {
                         Socket socket = new Socket(Client.ipAddress, Client.port);
                         Thread fileUploader = new FileUploaderThread(
@@ -100,7 +97,7 @@ public class ServerThread extends Thread {
 
             }
         } catch (IOException e) {
-            ClientLogger.getLogger().logMessage(LogLevel.ERROR,e.toString());
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR, e.toString());
         }
 
 

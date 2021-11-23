@@ -163,14 +163,14 @@ public class ClientThread extends Thread {
                             FileBuffer fileBuffer = uploadBuffer.getRunningFileBuffer(fileId);
                             uploadBuffer.releaseBuffer(fileBuffer.getFileLength());
                             uploadBuffer.abortCurrentOperation(fileId);
-                            ServerLogger.getLogger().logMessage(LogLevel.INFO, "Upload Canceled #"+fileId);
+                            ServerLogger.getLogger().logMessage(LogLevel.INFO, "Upload Canceled #" + fileId);
                         } else if (operation.equals("download")) {
                             String fileOwner = in.readUTF();
                             String visibility = in.readUTF();
                             String fileName = in.readUTF();
-                            ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"download.fileOwner"+fileOwner);
-                            ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"download.visibility"+visibility);
-                            ServerLogger.getLogger().logMessage(LogLevel.DEBUG,"download.fileName"+fileName);
+                            ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "download.fileOwner" + fileOwner);
+                            ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "download.visibility" + visibility);
+                            ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "download.fileName" + fileName);
 
                             if (visibility.equals("private") && !fileOwner.equals(sid)) {
 

@@ -29,16 +29,15 @@ public class Files {
         return null;
     }
 
-    private static String fileSizeReadable(long length)
-    {
-        if(length < 1024)
-            return length+" b";
-        else if (length < 1024*1024)
-            return String.format("%6.2f kb",length/1024.0);
-        else if(length < 1024 * 1024 *1024)
-            return String.format("%6.2f mb",length/1024.0/1024.0);
+    private static String fileSizeReadable(long length) {
+        if (length < 1024)
+            return length + " b";
+        else if (length < 1024 * 1024)
+            return String.format("%6.2f kb", length / 1024.0);
+        else if (length < 1024 * 1024 * 1024)
+            return String.format("%6.2f mb", length / 1024.0 / 1024.0);
         else
-            return String.format("%6.2f gb",length/1024.0/1024.0/1024.0);
+            return String.format("%6.2f gb", length / 1024.0 / 1024.0 / 1024.0);
     }
 
     @Override

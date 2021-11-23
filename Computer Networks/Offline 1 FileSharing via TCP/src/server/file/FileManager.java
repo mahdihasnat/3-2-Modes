@@ -99,7 +99,7 @@ public class FileManager {
     public String getStudentFiles(String sid) {
 
         return "owner visibility filename size\n" +
-                "-------------------\n"+
+                "-------------------\n" +
                 privateFiles.get(sid).toString() +
                 publicFiles.get(sid).toString() +
                 "-------------------\n";
@@ -108,8 +108,8 @@ public class FileManager {
     public String getPublicFiles(String sid) {
         if (publicFiles.containsKey(sid))
             return "owner visibility filename size\n" +
-                    "-------------------\n"+
-                    publicFiles.get(sid).toString()+
+                    "-------------------\n" +
+                    publicFiles.get(sid).toString() +
                     "-------------------\n";
         else
             return "Student with SID: " + sid + " not registered";
