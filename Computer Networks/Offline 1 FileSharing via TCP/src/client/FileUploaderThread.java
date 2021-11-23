@@ -33,6 +33,7 @@ public class FileUploaderThread extends Thread {
             try {
                 netWorkOut.writeUTF("fileupload");
                 netWorkOut.writeInt(fileId);
+                netWorkOut.flush();
             } catch (IOException e) {
                 ClientLogger.getLogger().logMessage(LogLevel.ERROR, e.toString());
                 ClientLogger.getLogger().logMessage(LogLevel.DEBUG, this.toString());
@@ -112,7 +113,7 @@ public class FileUploaderThread extends Thread {
                         continuousChunkReader.close();
                         return;
                     }
-                    //System.out.printf("File Uploading %4.2f%% #%d\n",1.0*totalSent*100/totalLength , fileId);
+                    ClientLogger.getLogger().logMessage(LogLevel.DEBUG, String.format("File Uploading %4.2f%% #%d\n", 1.0 * totalSent * 100 / totalLength, fileId));
                 }
                 /// check for ack within 30 sec
 
@@ -146,14 +147,18 @@ public class FileUploaderThread extends Thread {
                         continuousChunkReader.close();
                         return;
                     }
-                    ClientLogger.getLogger().logMessage(LogLevel.DEBUG , String.format("uploaded file %5.2f" , totalSent*100.0/totalLength));
+                    ClientLogger.getLogger().logMessage(LogLevel.DEBUG, String.format("uploaded file %5.2f", totalSent * 100.0 / totalLength));
                     System.out.println("File upload failed! poor network connection. #" + fileId);
                     break;
                 }
             }
         }
         continuousChunkReader.close();
-
+        try {
+            netWorkOut.close();
+        } catch (IOException e) {
+            ClientLogger.getLogger().logMessage(LogLevel.ERROR, e.toString());
+        }
     }
 
     @Override

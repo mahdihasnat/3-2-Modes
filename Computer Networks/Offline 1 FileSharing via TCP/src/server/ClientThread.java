@@ -9,10 +9,7 @@ import server.filerequest.FileRequest;
 import server.filerequest.FileRequestHandler;
 import util.log.LogLevel;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 public class ClientThread extends Thread {
@@ -33,18 +30,18 @@ public class ClientThread extends Thread {
         int fileId = -1;
         try {
             fileId = in.readInt();
-
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
+        ServerLogger.getLogger().logMessage(LogLevel.DEBUG, "Upload Handshake Started #" + fileId);
         if (fileId == -1) return;
         FileBuffer fileBuffer = UploadBuffer.getInstance().getRunningFileBuffer(fileId);
         try {
-
             while (true) {
                 String operation = in.readUTF();
                 //System.out.println("operation:"+operation);
                 if (operation.equals("completeupload")) {
+                    ServerLogger.getLogger().logMessage(LogLevel.INFO, "completeupload: all data received #" + fileId);
                     if (fileBuffer.checkIntegrity()) {
                         out.writeUTF("ack");
                         out.flush();
@@ -77,9 +74,16 @@ public class ClientThread extends Thread {
                 }
             }
         } catch (Exception e) {
-            //e.printStackTrace();
+            ServerLogger.getLogger().logMessage(LogLevel.ERROR, "FileModeClient: " + e.toString());
+
+            StringWriter stringWriter = new StringWriter();
+            e.printStackTrace(new PrintWriter(stringWriter));
+            ServerLogger.getLogger().logMessage(LogLevel.DEBUG, stringWriter.toString());
+
+        } finally {
+            UploadBuffer.getInstance().releaseBuffer(fileBuffer.getFileLength());
         }
-        UploadBuffer.getInstance().releaseBuffer(fileBuffer.getFileLength());
+
     }
 
     private void loginOperation() {

@@ -12,7 +12,7 @@ public class Settings {
 
     private Settings() {
         MAX_BUFFER_SIZE = 1024 * 1024 * 1024;
-        MIN_CHUNK_SIZE = 1;
+        MIN_CHUNK_SIZE = 1024 * 2;
         MAX_CHUNK_SIZE = 1024 * 4;
         PORT = 60666;
         path = "data\\";
