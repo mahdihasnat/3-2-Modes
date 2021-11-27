@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Offline_1_A_star_Search" targetName="Offline_1_A_star_Search" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Offline 1 A star Search.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board/Board.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board/Board.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board/Board3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board/Board3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/astar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/server/Server.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="21LdMZzCcAVvn34BZ86WdZS8rJU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src" />
+      <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\board" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Offline_1_A_star_Search" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offline_1_A_star_Search" TARGET_NAME="Offline_1_A_star_Search" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Offline_1_A_star_Search" RUN_TARGET_NAME="Offline_1_A_star_Search">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="" />
+      <created>1637724254832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637724254832</updated>
+      <workItem from="1637724256236" duration="310000" />
+      <workItem from="1637724591707" duration="3944000" />
+      <workItem from="1637928858679" duration="615000" />
+      <workItem from="1637952462520" duration="2326000" />
+      <workItem from="1637974840109" duration="6144000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

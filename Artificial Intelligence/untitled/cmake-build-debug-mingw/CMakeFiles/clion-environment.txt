@@ -1,0 +1,4 @@
+ToolSet: w64 7.0 (local)@C:\mingw64
+Options: 
+
+Options:-DCMAKE_MAKE_PROGRAM=C:/Program Files/CMake/bin/cmake.exe

@@ -1,0 +1,49 @@
+//
+// Created by mahdi on 11/27/2021.
+//
+
+#ifndef OFFLINE_1_A_STAR_SEARCH_BOARD3_H
+#define OFFLINE_1_A_STAR_SEARCH_BOARD3_H
+
+
+#include <cassert>
+#include "Board.h"
+
+class Board3 : public Board{
+private:
+    int num;
+public:
+    Board3(const Board2D &board2D)
+    {
+        assert(board2D.getK() == 3);
+        num= 0;
+        for(int i=0;i<3;i++)
+        {
+            for(int j=0;j<3;j++)
+            {
+                num*=9;
+                num+=board2D.getVal(i,j);
+            }
+        }
+    }
+
+    Board2D getBoard2D() override
+    {
+        Board2D board2D(3);
+        int x=num;
+        for(int i=8;i>=0;i--)
+        {
+            board2D.setVal(i/3,i%3,num%9);
+            num/=9;
+        }
+        return board2D;
+    }
+
+    Board *nextMove(int direction) override;
+
+    __int128_t getNum() const override;
+
+};
+
+
+#endif //OFFLINE_1_A_STAR_SEARCH_BOARD3_H
