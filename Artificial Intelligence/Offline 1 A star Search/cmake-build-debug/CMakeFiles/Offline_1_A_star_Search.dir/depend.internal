@@ -21,12 +21,21 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.cpp
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.obj
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.cpp
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/RowLinearConflict.cpp
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/RowLinearConflict.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.h
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
+ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/main.cpp
  C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.obj

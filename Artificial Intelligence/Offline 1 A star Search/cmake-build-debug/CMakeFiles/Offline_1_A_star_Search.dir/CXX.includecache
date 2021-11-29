@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.cpp
-Board.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
-
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
 Board2D.h
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
@@ -24,10 +20,6 @@ iostream
 iomanip
 -
 
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.cpp
-Board3.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
-
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
 cassert
 -
@@ -39,6 +31,10 @@ C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A 
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
 
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
+../board/Board2D.h
+C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
+
+C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
 ../board/Board2D.h
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
 
@@ -55,16 +51,8 @@ heuristics/Hamming.h
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
 heuristics/Dummy.h
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.cpp
-queue
--
-ostream
--
-astar.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
-map
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/map
+heuristics/Manhattan.h
+C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
 
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
 ../board/Board.h

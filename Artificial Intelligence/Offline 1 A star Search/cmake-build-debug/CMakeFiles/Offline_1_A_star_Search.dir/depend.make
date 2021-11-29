@@ -21,12 +21,21 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj: \
  ../src/board/Board2D.h \
  ../src/heuristics/Hamming.cpp \
  ../src/heuristics/Hamming.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.obj: \
+ ../src/board/Board2D.h \
+ ../src/heuristics/Manhattan.cpp \
+ ../src/heuristics/Manhattan.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj: \
+ ../src/board/Board2D.h \
+ ../src/heuristics/RowLinearConflict.cpp \
+ ../src/heuristics/RowLinearConflict.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj: \
  ../src/board/Board.h \
  ../src/board/Board2D.h \
  ../src/board/Board3.h \
  ../src/heuristics/Dummy.h \
  ../src/heuristics/Hamming.h \
+ ../src/heuristics/Manhattan.h \
  ../src/main.cpp \
  ../src/search/astar.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.obj: \

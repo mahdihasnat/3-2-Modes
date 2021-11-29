@@ -200,6 +200,30 @@ src/board/Board3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.s
 .PHONY : src/board/Board3.cpp.s
 
+src/board/Board4.obj: src/board/Board4.cpp.obj
+.PHONY : src/board/Board4.obj
+
+# target to build an object file
+src/board/Board4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.obj
+.PHONY : src/board/Board4.cpp.obj
+
+src/board/Board4.i: src/board/Board4.cpp.i
+.PHONY : src/board/Board4.i
+
+# target to preprocess a source file
+src/board/Board4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.i
+.PHONY : src/board/Board4.cpp.i
+
+src/board/Board4.s: src/board/Board4.cpp.s
+.PHONY : src/board/Board4.s
+
+# target to generate assembly for a file
+src/board/Board4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.s
+.PHONY : src/board/Board4.cpp.s
+
 src/heuristics/Dummy.obj: src/heuristics/Dummy.cpp.obj
 .PHONY : src/heuristics/Dummy.obj
 
@@ -247,6 +271,54 @@ src/heuristics/Hamming.s: src/heuristics/Hamming.cpp.s
 src/heuristics/Hamming.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.s
 .PHONY : src/heuristics/Hamming.cpp.s
+
+src/heuristics/Manhattan.obj: src/heuristics/Manhattan.cpp.obj
+.PHONY : src/heuristics/Manhattan.obj
+
+# target to build an object file
+src/heuristics/Manhattan.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.obj
+.PHONY : src/heuristics/Manhattan.cpp.obj
+
+src/heuristics/Manhattan.i: src/heuristics/Manhattan.cpp.i
+.PHONY : src/heuristics/Manhattan.i
+
+# target to preprocess a source file
+src/heuristics/Manhattan.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.i
+.PHONY : src/heuristics/Manhattan.cpp.i
+
+src/heuristics/Manhattan.s: src/heuristics/Manhattan.cpp.s
+.PHONY : src/heuristics/Manhattan.s
+
+# target to generate assembly for a file
+src/heuristics/Manhattan.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.s
+.PHONY : src/heuristics/Manhattan.cpp.s
+
+src/heuristics/RowLinearConflict.obj: src/heuristics/RowLinearConflict.cpp.obj
+.PHONY : src/heuristics/RowLinearConflict.obj
+
+# target to build an object file
+src/heuristics/RowLinearConflict.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj
+.PHONY : src/heuristics/RowLinearConflict.cpp.obj
+
+src/heuristics/RowLinearConflict.i: src/heuristics/RowLinearConflict.cpp.i
+.PHONY : src/heuristics/RowLinearConflict.i
+
+# target to preprocess a source file
+src/heuristics/RowLinearConflict.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.i
+.PHONY : src/heuristics/RowLinearConflict.cpp.i
+
+src/heuristics/RowLinearConflict.s: src/heuristics/RowLinearConflict.cpp.s
+.PHONY : src/heuristics/RowLinearConflict.s
+
+# target to generate assembly for a file
+src/heuristics/RowLinearConflict.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.s
+.PHONY : src/heuristics/RowLinearConflict.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -314,12 +386,21 @@ help:
 	@echo ... src/board/Board3.obj
 	@echo ... src/board/Board3.i
 	@echo ... src/board/Board3.s
+	@echo ... src/board/Board4.obj
+	@echo ... src/board/Board4.i
+	@echo ... src/board/Board4.s
 	@echo ... src/heuristics/Dummy.obj
 	@echo ... src/heuristics/Dummy.i
 	@echo ... src/heuristics/Dummy.s
 	@echo ... src/heuristics/Hamming.obj
 	@echo ... src/heuristics/Hamming.i
 	@echo ... src/heuristics/Hamming.s
+	@echo ... src/heuristics/Manhattan.obj
+	@echo ... src/heuristics/Manhattan.i
+	@echo ... src/heuristics/Manhattan.s
+	@echo ... src/heuristics/RowLinearConflict.obj
+	@echo ... src/heuristics/RowLinearConflict.i
+	@echo ... src/heuristics/RowLinearConflict.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

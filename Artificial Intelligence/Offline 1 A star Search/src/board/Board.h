@@ -23,7 +23,7 @@ public:
     virtual __int128 getNum() const = 0;
     virtual Board * clone() = 0;
 
-    virtual bool operator <(const Board & board) const
+    bool operator <(const Board & board) const
     {
         return getNum()<board.getNum();
     };

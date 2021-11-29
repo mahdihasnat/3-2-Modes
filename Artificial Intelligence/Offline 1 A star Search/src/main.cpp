@@ -7,6 +7,7 @@
 #include "board/Board3.h"
 #include "heuristics/Hamming.h"
 #include "heuristics/Dummy.h"
+#include "heuristics/Manhattan.h"
 
 using namespace std;
 
@@ -25,7 +26,7 @@ int main() {
         DBG("input is not valid\n");
         return -1;
     }
-    astar(&b3,&Dummy);
+    astar(&b3,&Hamming);
 
     return 0;
 }
