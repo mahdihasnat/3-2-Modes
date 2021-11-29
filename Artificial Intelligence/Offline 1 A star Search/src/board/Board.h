@@ -10,24 +10,28 @@
 class Board
 {
 private:
-    Board(const Board & b)
-    {
 
-    }
 public:
+    Board(const Board & b);
     Board();
 
     virtual ~Board() = default;
 
     virtual Board * nextMove(int direction) = 0;
     Board * prevMove(int direction);
-    virtual Board2D getBoard2D() = 0;
+    virtual Board2D getBoard2D() const = 0;
     virtual __int128 getNum() const = 0;
+    virtual Board * clone() = 0;
 
-    virtual bool operator <(const Board & board)
+    virtual bool operator <(const Board & board) const
     {
         return getNum()<board.getNum();
     };
+
+    friend ostream &operator <<(ostream & os , const Board & b)
+    {
+        return os<<(b.getBoard2D());
+    }
 };
 
 

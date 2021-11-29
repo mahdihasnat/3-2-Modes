@@ -100,6 +100,18 @@
 		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
+		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.cpp">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
+		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.h">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
+		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.cpp">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
+		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
 		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/main.cpp">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>

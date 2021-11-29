@@ -4,14 +4,14 @@
 
 #include "Board2D.h"
 
-int dx[4] = {1, 0, -1, 0};
-int dy[4] = {0, 1, 0, -1};
+const int dx[4] = {1, 0, -1, 0};
+const int dy[4] = {0, 1, 0, -1};
 
-char moves[4] = {'R', 'U', 'L', 'D'};
+
 
 Board2D Board2D::nextMove(int direction) const {
     Board2D ret = *this;
-    int k = ret.board.size();
+    const int k = ret.board.size();
     int x = -1;
     int y = -1;
     for (int i = 0; i < k; i++) {
@@ -25,26 +25,37 @@ Board2D Board2D::nextMove(int direction) const {
     int xx = x + dx[direction];
     int yy = y + dy[direction];
 
+    xx=max(xx,0);
+    xx=min(xx,k-1);
+
+    yy=max(yy,0);
+    yy=min(yy,k-1);
+
+
     swap(ret.board[x][y], ret.board[xx][yy]);
     return ret;
 }
 
 bool Board2D::isValid() const {
-    int k = board.size();
-    vector<bool> found(k * k, 0);
+    int k = (int)board.size();
+    vector<bool> found(k * k, false);
 
     for (vector<signed char> row: board) {
         if (board.size() != k)
             return false;
         for (const signed char &elem: row) {
-            if (elem < 0 or elem >= k * k)
+            if (elem < 0 || elem >= k * k)
                 return false;
             if (found[elem])
                 return false;
-            found[elem] = 1;
+            found[elem] = true;
         }
     }
     return true;
 }
 
 Board2D::Board2D(const vector<std::vector<int8_t>> &board) : board(board) {}
+
+const vector<std::vector<int8_t>> &Board2D::getBoard() const {
+    return board;
+}

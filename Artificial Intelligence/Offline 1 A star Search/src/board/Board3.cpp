@@ -12,3 +12,7 @@ __int128_t Board3::getNum() const {
     return num;
 }
 
+Board *Board3::clone() {
+    return new Board3(*this);
+}
+

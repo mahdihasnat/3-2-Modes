@@ -20,6 +20,8 @@ public:
     explicit Board2D(const int &k) : board(k, vector<int8_t>(k, 0)) {
     }
 
+    const vector<std::vector<int8_t>> &getBoard() const;
+
     Board2D(const vector<std::vector<int8_t>> &board);
 
     Board2D nextMove(int direction) const;
@@ -41,7 +43,7 @@ public:
         return board[i][j];
     }
 
-    bool isFInal() {
+    bool isFInal() const {
         int k = board.size();
         for (int i = 0; i < k; i++) {
             for (int j = 1; j < k; j++)
@@ -58,20 +60,37 @@ public:
         int k = d.board.size();
         for (int i = 0; i < k; i++)
             for (int j = 0; j < k; j++) {
-                int x;
-                is >> x;
+                string s;
+                is >> s;
+                int x = -1;
+                if(s=="*")
+                {
+                    x=k*k-1;
+                }
+                else
+                {
+                    stringstream ss(s);
+                    ss>>x;
+                    x--;
+                }
                 d.board[i][j] = x;
             }
         return is;
     }
 
+
     friend ostream &operator<<(ostream &os, const Board2D &d) {
         const int k = d.board.size();
+        const int n= k*k-1;
 #define rowPrint(os, k, c) {int x=k;while(x--) (os)<<c;os<<"\n";}
         rowPrint(os, k * 3 + 1, '-')
         for (const vector<int8_t> &row: d.board) {
-            for (const int8_t &element: row)
-                os << "|" << setw(2) << (int) element;
+            for (const int8_t &element: row) {
+                    if(element == n)
+                        os<<"|**";
+                    else
+                        os << "|" << setw(2) << (int) (element + 1);
+            }
             os << "|\n";
             rowPrint(os, k * 3 + 1, '-')
         }

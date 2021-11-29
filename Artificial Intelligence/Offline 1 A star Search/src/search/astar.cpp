@@ -3,37 +3,144 @@
 //
 
 #include <queue>
+#include <ostream>
 #include "astar.h"
 #include "map"
 
-class MapCmp
+#define DBG(a) cerr << "line " << __LINE__ << " : " << #a << " --> " << (a) << endl
+#define NL cout << endl
+
+std::ostream&
+operator<<( std::ostream& dest, __int128_t value )
 {
+    std::ostream::sentry s( dest );
+    if ( s ) {
+        __uint128_t tmp = value < 0 ? -value : value;
+        char buffer[ 128 ];
+        char* d = std::end( buffer );
+        do
+        {
+            -- d;
+            *d = "0123456789"[ tmp % 10 ];
+            tmp /= 10;
+        } while ( tmp != 0 );
+        if ( value < 0 ) {
+            -- d;
+            *d = '-';
+        }
+        int len = std::end( buffer ) - d;
+        if ( dest.rdbuf()->sputn( d, len ) != len ) {
+            dest.setstate( std::ios_base::badbit );
+        }
+    }
+    return dest;
+}
+
+
+char moves[4] = {'R', 'U', 'L', 'D'};
+
+class MapCmp {
 public:
     template<typename T>
-    bool operator ()(const unique_ptr<T> & lhs , const unique_ptr<T> & rhs) const
-    {
-        return *(lhs) < *(rhs);
+    bool operator()(const Board * &l,const Board * & r) {
+        return (*l) < (*r);
     }
 };
 
-class PriorityField
-{
+class PriorityField {
 public:
-    int x;
-    Board * board;
 
-    PriorityField(int x, Board *board) : x(x), board(board) {}
+    int f; // g(board) + h(board)
+    Board *board;
+
+    PriorityField(int f, Board *board) : f(f), board(board) {}
+
+    bool operator<(const PriorityField &priorityField) const {
+        return this->f < priorityField.f;
+    }
+
+    friend ostream &operator<<(ostream &os, const PriorityField &field) {
+        os << "f: " << field.f << " board: " << field.board;
+        return os;
+    }
 
 };
 
-void astar(Board * startState)
-{
+void astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
 
-    map<unique_ptr<Board > , int , MapCmp> dist;
-    priority_queue<PriorityField> priorityQueue;
-    unique_ptr<Board> source(startState);
-    dist[move(source)] = 0;
+    priority_queue<PriorityField> pq;
+    map<Board *, int,MapCmp> dist;
+    map<Board *, int,MapCmp> prevMove;
 
-    
+    Board *startBoard1 = startBoard->clone();
+    dist[startBoard1] = 0;
+
+    Board *startBoard2 = startBoard->clone();
+    pq.push({0 + heuristic(startBoard2->getBoard2D()), startBoard2});
+
+    int totalExplored = 0;
+    int totalExpanded = 0;
+
+    while (!pq.empty()) {
+
+        PriorityField priorityField = pq.top();
+        pq.pop();
+
+        totalExplored++;
+        //DBG(priorityField);
+
+
+        int f = priorityField.f;
+        Board *board = priorityField.board;
+        int g = f - heuristic(board->getBoard2D());
+
+        DBG(priorityField);
+        DBG(g);
+        DBG(dist[board]);
+        DBG(board->getBoard2D());
+
+        if (board->getBoard2D().isFInal()) {
+            cout << "Final Found" << "\n";
+            DBG(totalExplored);
+            DBG(g);
+            return;
+        }
+
+
+        if (dist[board] != g)
+            continue;
+
+
+        for (int direction = 0; direction < 4; direction++) {
+            //DBG(__LINE__);
+            Board *nextBoard = board->nextMove(direction);
+
+            //DBG(nextBoard->getBoard2D());
+
+            if (dist.find(nextBoard) == dist.end()) {
+
+                dist[nextBoard] = g + 1;
+
+                DBG(nextBoard);
+                DBG(dist[nextBoard]);
+                DBG(nextBoard->getNum());
+
+                Board *nextBoard1 = nextBoard->clone();
+                pq.push({g + 1 + heuristic(nextBoard1 -> getBoard2D()), nextBoard1});
+                DBG(dist[nextBoard1]);
+                DBG(nextBoard1->getNum());
+
+            } else if (dist[nextBoard] > g + 1) {
+                dist[nextBoard] = g + 1;
+
+                pq.push({g + 1+ heuristic(nextBoard->getBoard2D()), nextBoard});
+            } else {
+                delete nextBoard;
+            }
+        }
+    }
+    cout << "No final state";
+    DBG(totalExplored);
+    DBG(totalExpanded);
 
 }

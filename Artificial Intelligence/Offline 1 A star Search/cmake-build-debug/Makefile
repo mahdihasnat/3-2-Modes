@@ -200,6 +200,54 @@ src/board/Board3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.s
 .PHONY : src/board/Board3.cpp.s
 
+src/heuristics/Dummy.obj: src/heuristics/Dummy.cpp.obj
+.PHONY : src/heuristics/Dummy.obj
+
+# target to build an object file
+src/heuristics/Dummy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj
+.PHONY : src/heuristics/Dummy.cpp.obj
+
+src/heuristics/Dummy.i: src/heuristics/Dummy.cpp.i
+.PHONY : src/heuristics/Dummy.i
+
+# target to preprocess a source file
+src/heuristics/Dummy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.i
+.PHONY : src/heuristics/Dummy.cpp.i
+
+src/heuristics/Dummy.s: src/heuristics/Dummy.cpp.s
+.PHONY : src/heuristics/Dummy.s
+
+# target to generate assembly for a file
+src/heuristics/Dummy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.s
+.PHONY : src/heuristics/Dummy.cpp.s
+
+src/heuristics/Hamming.obj: src/heuristics/Hamming.cpp.obj
+.PHONY : src/heuristics/Hamming.obj
+
+# target to build an object file
+src/heuristics/Hamming.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj
+.PHONY : src/heuristics/Hamming.cpp.obj
+
+src/heuristics/Hamming.i: src/heuristics/Hamming.cpp.i
+.PHONY : src/heuristics/Hamming.i
+
+# target to preprocess a source file
+src/heuristics/Hamming.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.i
+.PHONY : src/heuristics/Hamming.cpp.i
+
+src/heuristics/Hamming.s: src/heuristics/Hamming.cpp.s
+.PHONY : src/heuristics/Hamming.s
+
+# target to generate assembly for a file
+src/heuristics/Hamming.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.s
+.PHONY : src/heuristics/Hamming.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -266,6 +314,12 @@ help:
 	@echo ... src/board/Board3.obj
 	@echo ... src/board/Board3.i
 	@echo ... src/board/Board3.s
+	@echo ... src/heuristics/Dummy.obj
+	@echo ... src/heuristics/Dummy.i
+	@echo ... src/heuristics/Dummy.s
+	@echo ... src/heuristics/Hamming.obj
+	@echo ... src/heuristics/Hamming.i
+	@echo ... src/heuristics/Hamming.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

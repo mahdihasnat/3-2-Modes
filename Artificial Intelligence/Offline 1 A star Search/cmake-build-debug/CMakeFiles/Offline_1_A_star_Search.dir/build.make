@@ -130,13 +130,41 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\search\astar.cpp" -o CMakeFiles\Offline_1_A_star_Search.dir\src\search\astar.cpp.s
 
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj: CMakeFiles/Offline_1_A_star_Search.dir/flags.make
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj: ../src/heuristics/Hamming.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Offline_1_A_star_Search.dir\src\heuristics\Hamming.cpp.obj -c "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\heuristics\Hamming.cpp"
+
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\heuristics\Hamming.cpp" > CMakeFiles\Offline_1_A_star_Search.dir\src\heuristics\Hamming.cpp.i
+
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\heuristics\Hamming.cpp" -o CMakeFiles\Offline_1_A_star_Search.dir\src\heuristics\Hamming.cpp.s
+
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj: CMakeFiles/Offline_1_A_star_Search.dir/flags.make
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj: ../src/heuristics/Dummy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Offline_1_A_star_Search.dir\src\heuristics\Dummy.cpp.obj -c "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\heuristics\Dummy.cpp"
+
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\heuristics\Dummy.cpp" > CMakeFiles\Offline_1_A_star_Search.dir\src\heuristics\Dummy.cpp.i
+
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src\heuristics\Dummy.cpp" -o CMakeFiles\Offline_1_A_star_Search.dir\src\heuristics\Dummy.cpp.s
+
 # Object files for target Offline_1_A_star_Search
 Offline_1_A_star_Search_OBJECTS = \
 "CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj" \
 "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board.cpp.obj" \
 "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board2D.cpp.obj" \
 "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.obj" \
-"CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.obj"
+"CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.obj" \
+"CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj" \
+"CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj"
 
 # External object files for target Offline_1_A_star_Search
 Offline_1_A_star_Search_EXTERNAL_OBJECTS =
@@ -146,11 +174,13 @@ Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/src/board/Bo
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board2D.cpp.obj
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.obj
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.obj
+Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj
+Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/build.make
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/linklibs.rsp
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/objects1.rsp
 Offline_1_A_star_Search.exe: CMakeFiles/Offline_1_A_star_Search.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Offline_1_A_star_Search.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Offline_1_A_star_Search.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Offline_1_A_star_Search.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board2D.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.obj"
+  "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj"
+  "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/search/astar.cpp.obj"
   "Offline_1_A_star_Search.exe"

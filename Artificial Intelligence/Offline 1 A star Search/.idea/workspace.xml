@@ -12,22 +12,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Offline 1 A star Search.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board3.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board3.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/astar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Computer Networks/Offline 1 FileSharing via TCP/src/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSE 318 A-star.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/heuristics/Dummy.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/heuristics/Dummy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/heuristics/Hamming.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/heuristics/Hamming.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Offline_1_A_star_Search.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Offline_1_A_star_Search.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board3.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board3.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/astar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/astar.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +63,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
@@ -61,17 +75,19 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug" />
+      <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\" />
       <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src" />
       <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\board" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Offline_1_A_star_Search" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offline_1_A_star_Search" TARGET_NAME="Offline_1_A_star_Search" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Offline_1_A_star_Search" RUN_TARGET_NAME="Offline_1_A_star_Search">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Offline_1_A_star_Search" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offline_1_A_star_Search" TARGET_NAME="Offline_1_A_star_Search" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Offline_1_A_star_Search" RUN_TARGET_NAME="Offline_1_A_star_Search">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -95,6 +111,10 @@
       <workItem from="1637928858679" duration="615000" />
       <workItem from="1637952462520" duration="2326000" />
       <workItem from="1637974840109" duration="6144000" />
+      <workItem from="1638085760651" duration="4561000" />
+      <workItem from="1638101568945" duration="2194000" />
+      <workItem from="1638110386399" duration="13845000" />
+      <workItem from="1638151557866" duration="1775000" />
     </task>
     <servers />
   </component>
@@ -112,5 +132,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
