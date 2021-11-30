@@ -41,11 +41,18 @@ public:
         return board2D;
     }
 
-    Board *clone() override;
+    Board *clone() override{
+        return new Board3(*this);
+    }
 
-    Board *nextMove(int direction) override;
+    Board *nextMove(int direction) override{
+        return  new Board3(getBoard2D().nextMove(direction));
+    }
 
-    __int128_t getNum() const override;
+
+    __int128_t getNum() const override {
+        return num;
+    }
 
 };
 

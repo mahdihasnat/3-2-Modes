@@ -13,6 +13,11 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.obj: \
  ../src/board/Board2D.h \
  ../src/board/Board3.cpp \
  ../src/board/Board3.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.obj: \
+ ../src/board/Board.h \
+ ../src/board/Board2D.h \
+ ../src/board/Board4.cpp \
+ ../src/board/Board4.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj: \
  ../src/board/Board2D.h \
  ../src/heuristics/Dummy.cpp \
@@ -21,20 +26,28 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj: \
  ../src/board/Board2D.h \
  ../src/heuristics/Hamming.cpp \
  ../src/heuristics/Hamming.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/LinearConflict.cpp.obj: \
+ ../src/board/Board2D.h \
+ ../src/heuristics/LinearConflict.cpp \
+ ../src/heuristics/LinearConflict.h \
+ ../src/heuristics/Manhattan.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.obj: \
  ../src/board/Board2D.h \
  ../src/heuristics/Manhattan.cpp \
  ../src/heuristics/Manhattan.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj: \
  ../src/board/Board2D.h \
+ ../src/heuristics/Manhattan.h \
  ../src/heuristics/RowLinearConflict.cpp \
  ../src/heuristics/RowLinearConflict.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj: \
  ../src/board/Board.h \
  ../src/board/Board2D.h \
  ../src/board/Board3.h \
+ ../src/board/Board4.h \
  ../src/heuristics/Dummy.h \
  ../src/heuristics/Hamming.h \
+ ../src/heuristics/LinearConflict.h \
  ../src/heuristics/Manhattan.h \
  ../src/main.cpp \
  ../src/search/astar.h

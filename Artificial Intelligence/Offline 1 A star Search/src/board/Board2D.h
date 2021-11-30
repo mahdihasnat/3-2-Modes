@@ -56,6 +56,10 @@ public:
         return true;
     }
 
+    int totalInversion() const;
+
+    bool isSolvable()const;
+
     friend istream &operator>>(istream &is, Board2D &d) {
         int k = d.board.size();
         for (int i = 0; i < k; i++)
@@ -98,6 +102,7 @@ public:
     }
 
 
+    Board2D(vector<vector<int>> board);
 };
 
 

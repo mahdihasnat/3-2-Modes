@@ -8,6 +8,6 @@
 
 #include "../board/Board.h"
 
-void astar(Board * startBoard, int (*heuristic)(const Board2D &board2D));
+int astar(Board * startBoard, int (*heuristic)(const Board2D &board2D));
 
 #endif //OFFLINE_1_A_STAR_SEARCH_ASTAR_H

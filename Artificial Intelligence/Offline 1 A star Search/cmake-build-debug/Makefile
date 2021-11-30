@@ -272,6 +272,30 @@ src/heuristics/Hamming.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.s
 .PHONY : src/heuristics/Hamming.cpp.s
 
+src/heuristics/LinearConflict.obj: src/heuristics/LinearConflict.cpp.obj
+.PHONY : src/heuristics/LinearConflict.obj
+
+# target to build an object file
+src/heuristics/LinearConflict.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/LinearConflict.cpp.obj
+.PHONY : src/heuristics/LinearConflict.cpp.obj
+
+src/heuristics/LinearConflict.i: src/heuristics/LinearConflict.cpp.i
+.PHONY : src/heuristics/LinearConflict.i
+
+# target to preprocess a source file
+src/heuristics/LinearConflict.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/LinearConflict.cpp.i
+.PHONY : src/heuristics/LinearConflict.cpp.i
+
+src/heuristics/LinearConflict.s: src/heuristics/LinearConflict.cpp.s
+.PHONY : src/heuristics/LinearConflict.s
+
+# target to generate assembly for a file
+src/heuristics/LinearConflict.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/LinearConflict.cpp.s
+.PHONY : src/heuristics/LinearConflict.cpp.s
+
 src/heuristics/Manhattan.obj: src/heuristics/Manhattan.cpp.obj
 .PHONY : src/heuristics/Manhattan.obj
 
@@ -395,6 +419,9 @@ help:
 	@echo ... src/heuristics/Hamming.obj
 	@echo ... src/heuristics/Hamming.i
 	@echo ... src/heuristics/Hamming.s
+	@echo ... src/heuristics/LinearConflict.obj
+	@echo ... src/heuristics/LinearConflict.i
+	@echo ... src/heuristics/LinearConflict.s
 	@echo ... src/heuristics/Manhattan.obj
 	@echo ... src/heuristics/Manhattan.i
 	@echo ... src/heuristics/Manhattan.s

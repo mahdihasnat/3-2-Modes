@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.obj"
+  "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/LinearConflict.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj"

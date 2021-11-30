@@ -118,6 +118,12 @@
 		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
+		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.cpp">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
+		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
 		<Unit filename="C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.cpp">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>

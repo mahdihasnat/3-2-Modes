@@ -12,13 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board4.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board4.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/heuristics/Manhattan.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/heuristics/Manhattan.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/heuristics/LinearConflict.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/heuristics/LinearConflict.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
@@ -30,19 +25,21 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/objects1.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Offline_1_A_star_Search.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Offline_1_A_star_Search.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/in.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board3.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board3.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board4.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board4.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/search/astar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/astar.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,7 @@
       <workItem from="1638085760651" duration="4561000" />
       <workItem from="1638101568945" duration="2194000" />
       <workItem from="1638110386399" duration="13845000" />
-      <workItem from="1638151557866" duration="7538000" />
+      <workItem from="1638151557866" duration="17726000" />
     </task>
     <servers />
   </component>

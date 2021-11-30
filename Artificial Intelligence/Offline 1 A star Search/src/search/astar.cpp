@@ -64,7 +64,7 @@ public:
 
 };
 
-void astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
+int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
 
     priority_queue<PriorityField> pq;
     map<Board *, int, MapCmp> dist;
@@ -85,25 +85,27 @@ void astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
         pq.pop();
 
         totalExpanded++;
-        //DBG(priorityField);
 
 
         int f = priorityField.f;
         Board *board = priorityField.board;
         int g = f - heuristic(board->getBoard2D());
+
         /*
         DBG(priorityField);
         DBG(board->getBoard2D());
         DBG(f);
         DBG(g);
-         */
+*/
 
         if (board->getBoard2D().isFInal()) {
+            /*
             cout << "Final Found" << "\n";
             DBG(totalExplored);
             DBG(totalExpanded);
             DBG(g);
-            return;
+             */
+            return g;
         }
 
 
@@ -135,8 +137,10 @@ void astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
             }
         }
     }
+    /*
     cout << "No final state";
     DBG(totalExplored);
     DBG(totalExpanded);
-
+*/
+    return -1;
 }
