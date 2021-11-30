@@ -72,6 +72,7 @@ int Assignment()
         cout<<"Board not implemented\n";
         return -1;
     }
+    /*
     {
         cout<<("Starting Astar with Hamming:")<<endl;
         astar(board , &Hamming);
@@ -82,6 +83,7 @@ int Assignment()
         astar(board , &Manhattan);
         cout<<("Completed Astar with Manhattan:")<<endl;
     }
+     */
     {
         cout<<("Starting Astar with LinearConflict:")<<endl;
         astar(board , &LinearConflict);
@@ -91,10 +93,17 @@ int Assignment()
 
 }
 
+
+#include <chrono>
+using namespace std::chrono;
+
 int main() {
-
-
+    auto start = high_resolution_clock::now();
     //Lightoj1139();
     Assignment();
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(stop - start);
+    cout << "Elapsed Time:"<<duration.count()/1000.0 << endl;
+
     return 0;
 }

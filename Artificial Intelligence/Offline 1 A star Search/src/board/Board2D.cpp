@@ -66,7 +66,7 @@ bool Board2D::isSolvable() const {
         return totalInversion() % 2 == 0;
     else {
         int blankRow = -1;
-        for (int i = 0; i < k and blankRow != -1; i++) {
+        for (int i = 0; i < k and blankRow == -1; i++) {
             for (int j = 0; j < k; j++) {
                 if (board[i][j] == k * k - 1) {
                     blankRow = i;
@@ -74,7 +74,8 @@ bool Board2D::isSolvable() const {
                 }
             }
         }
-        return (blankRow % 2) xor (totalInversion() % 2);
+        //cout<<"inv:"<<(totalInversion())<<endl;
+        return  ((blankRow % 2) xor (totalInversion() % 2));
     }
 }
 

@@ -13,14 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/in.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/inass.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/Offline_1_A_star_Search" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/Offline_1_A_star_Search" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/inass.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/inass.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/astar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <workItem from="1638101568945" duration="2194000" />
       <workItem from="1638110386399" duration="13845000" />
       <workItem from="1638151557866" duration="20919000" />
-      <workItem from="1638282613318" duration="6957000" />
+      <workItem from="1638282613318" duration="9332000" />
     </task>
     <servers />
   </component>
