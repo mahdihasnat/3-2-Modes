@@ -320,30 +320,6 @@ src/heuristics/Manhattan.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.s
 .PHONY : src/heuristics/Manhattan.cpp.s
 
-src/heuristics/RowLinearConflict.obj: src/heuristics/RowLinearConflict.cpp.obj
-.PHONY : src/heuristics/RowLinearConflict.obj
-
-# target to build an object file
-src/heuristics/RowLinearConflict.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj
-.PHONY : src/heuristics/RowLinearConflict.cpp.obj
-
-src/heuristics/RowLinearConflict.i: src/heuristics/RowLinearConflict.cpp.i
-.PHONY : src/heuristics/RowLinearConflict.i
-
-# target to preprocess a source file
-src/heuristics/RowLinearConflict.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.i
-.PHONY : src/heuristics/RowLinearConflict.cpp.i
-
-src/heuristics/RowLinearConflict.s: src/heuristics/RowLinearConflict.cpp.s
-.PHONY : src/heuristics/RowLinearConflict.s
-
-# target to generate assembly for a file
-src/heuristics/RowLinearConflict.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Offline_1_A_star_Search.dir\build.make CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.s
-.PHONY : src/heuristics/RowLinearConflict.cpp.s
-
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -425,9 +401,6 @@ help:
 	@echo ... src/heuristics/Manhattan.obj
 	@echo ... src/heuristics/Manhattan.i
 	@echo ... src/heuristics/Manhattan.s
-	@echo ... src/heuristics/RowLinearConflict.obj
-	@echo ... src/heuristics/RowLinearConflict.i
-	@echo ... src/heuristics/RowLinearConflict.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

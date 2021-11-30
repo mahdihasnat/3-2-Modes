@@ -35,11 +35,6 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.obj: \
  ../src/board/Board2D.h \
  ../src/heuristics/Manhattan.cpp \
  ../src/heuristics/Manhattan.h
-CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/RowLinearConflict.cpp.obj: \
- ../src/board/Board2D.h \
- ../src/heuristics/Manhattan.h \
- ../src/heuristics/RowLinearConflict.cpp \
- ../src/heuristics/RowLinearConflict.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.obj: \
  ../src/board/Board.h \
  ../src/board/Board2D.h \

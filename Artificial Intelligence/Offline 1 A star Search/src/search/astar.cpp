@@ -36,7 +36,7 @@ operator<<(std::ostream &dest, __int128_t value) {
 }
 
 
-char moves[4] = {'R', 'U', 'L', 'D'};
+const char moves[4] = {'R', 'U', 'L', 'D'};
 
 class MapCmp {
 public:

@@ -12,12 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/heuristics/LinearConflict.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/heuristics/LinearConflict.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/cmake_clean.cmake" afterDir="false" />
@@ -29,17 +26,12 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Offline_1_A_star_Search.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Offline_1_A_star_Search.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/in.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Board2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/board/Board2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Board3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Board3.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board3.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Board4.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board4.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/heuristics/LinearConflict.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/heuristics/LinearConflict.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/heuristics/RowLinearConflict.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/search/astar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/astar.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +78,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,7 +100,8 @@
       <workItem from="1638085760651" duration="4561000" />
       <workItem from="1638101568945" duration="2194000" />
       <workItem from="1638110386399" duration="13845000" />
-      <workItem from="1638151557866" duration="17726000" />
+      <workItem from="1638151557866" duration="20919000" />
+      <workItem from="1638282613318" duration="1846000" />
     </task>
     <servers />
   </component>

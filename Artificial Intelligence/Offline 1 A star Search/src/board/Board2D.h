@@ -76,6 +76,8 @@ public:
                     stringstream ss(s);
                     ss>>x;
                     x--;
+                    if(x == -1)
+                        x=k*k-1;
                 }
                 d.board[i][j] = x;
             }

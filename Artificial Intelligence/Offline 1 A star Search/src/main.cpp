@@ -36,31 +36,61 @@ void Lightoj1139()
         if(board2D.isSolvable())
         {
             Board3 board4(board2D);
-            cout<<"Case "<<++cs<<": "<<astar(&board4,&Manhattan)<<"\n";
+            cout<<"Case "<<++cs<<": "<<astar(&board4,&LinearConflict)<<"\n";
         }
         else cout<<"Case "<<++cs<<": impossible\n";
     }
 }
 
-int main() {
-    DBG(freopen("in.txt","r+",stdin));
-    Lightoj1139();
-    /*
-    Board2D b(3);
+int Assignment()
+{
+    int k;
+    cin>>k;
+    Board2D board2D(k);
+    cin>>board2D;
 
-    cin>>b;
-
-    Board3 b3(b);
-
-    cout<<b3;
-
-    if(!b.isValid())
+    if(!board2D.isValid())
     {
-        DBG("input is not valid\n");
+        cout<<"Input Board is not valid"<<endl;
+        cout<<board2D;
         return -1;
     }
-    astar(&b3,&Hamming);
-     */
+    if(!board2D.isSolvable())
+    {
+        cout<<"Input Board is not solvable"<<endl;
+        cout<<board2D;
+        return -1;
+    }
 
+    Board * board;
+    if(k==3)    board = new Board3(board2D);
+    else if(k==4)    board = new Board4(board2D);
+    else
+    {
+        cout<<"Board not implemented\n";
+        return -1;
+    }
+    {
+        cout<<("Starting Astar with Hamming:")<<endl;
+        astar(board , &Hamming);
+        cout<<("Completed Astar with Hamming:")<<endl;
+    }
+    {
+        cout<<("Starting Astar with Manhattan:")<<endl;
+        astar(board , &Manhattan);
+        cout<<("Completed Astar with Manhattan:")<<endl;
+    }
+    {
+        cout<<("Starting Astar with LinearConflict:")<<endl;
+        astar(board , &LinearConflict);
+        cout<<("Completed Astar with LinearConflict:")<<endl;
+    }
+
+}
+
+int main() {
+    DBG(freopen("inass.txt","r+",stdin));
+    //Lightoj1139();
+    Assignment();
     return 0;
 }
