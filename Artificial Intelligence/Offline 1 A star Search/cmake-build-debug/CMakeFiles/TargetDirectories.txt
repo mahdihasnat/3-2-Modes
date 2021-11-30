@@ -1,3 +1,0 @@
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/cmake-build-debug/CMakeFiles/rebuild_cache.dir

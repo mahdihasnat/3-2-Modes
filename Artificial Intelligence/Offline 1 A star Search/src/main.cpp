@@ -15,6 +15,7 @@ using namespace std;
 
 void Lightoj1139()
 {
+    DBG(freopen("in.txt","r+",stdin));
     freopen("out.txt","w+",stdout);
     int T,cs=0;
     cin>>T;
@@ -44,6 +45,7 @@ void Lightoj1139()
 
 int Assignment()
 {
+    DBG(freopen("inass.txt","r+",stdin));
     int k;
     cin>>k;
     Board2D board2D(k);
@@ -85,11 +87,13 @@ int Assignment()
         astar(board , &LinearConflict);
         cout<<("Completed Astar with LinearConflict:")<<endl;
     }
+    delete board;
 
 }
 
 int main() {
-    DBG(freopen("inass.txt","r+",stdin));
+
+
     //Lightoj1139();
     Assignment();
     return 0;

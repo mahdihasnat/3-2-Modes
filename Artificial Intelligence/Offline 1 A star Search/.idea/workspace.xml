@@ -7,15 +7,19 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug-WSL" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="WSL" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/inass.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/inass.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/in.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/inass.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/search/astar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/astar.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +30,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-WSL" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -55,10 +59,11 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug-wsl" />
       <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\cmake-build-debug" />
       <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\" />
       <recent name="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 1 A star Search\src" />
@@ -66,7 +71,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Offline_1_A_star_Search" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offline_1_A_star_Search" TARGET_NAME="Offline_1_A_star_Search" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Offline_1_A_star_Search" RUN_TARGET_NAME="Offline_1_A_star_Search">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Offline_1_A_star_Search" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offline_1_A_star_Search" TARGET_NAME="Offline_1_A_star_Search" CONFIG_NAME="Debug-WSL" RUN_TARGET_PROJECT_NAME="Offline_1_A_star_Search" RUN_TARGET_NAME="Offline_1_A_star_Search">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -94,7 +104,7 @@
       <workItem from="1638101568945" duration="2194000" />
       <workItem from="1638110386399" duration="13845000" />
       <workItem from="1638151557866" duration="20919000" />
-      <workItem from="1638282613318" duration="4808000" />
+      <workItem from="1638282613318" duration="6957000" />
     </task>
     <servers />
   </component>

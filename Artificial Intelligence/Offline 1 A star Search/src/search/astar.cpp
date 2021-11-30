@@ -152,6 +152,8 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
             cout<<"Total Expanded:"<<totalExpanded<<endl;
             printPath(prevMove , board);
 
+
+            delete board;
             clearMap(dist);
             clearMap(prevMove);
             clearPQ(pq);
@@ -159,8 +161,10 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
         }
 
 
-        if (dist[board] != g)
+        if (dist[board] != g) {
+            delete board;
             continue;
+        }
 
 
         for (int direction = 0; direction < 4; direction++) {
@@ -191,6 +195,7 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
                 delete nextBoard;
             }
         }
+        delete board;
     }
     /*
     cout << "No final state";
