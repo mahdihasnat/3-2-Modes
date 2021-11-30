@@ -20,53 +20,17 @@ iostream
 iomanip
 -
 
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
+C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.cpp
+queue
+-
+ostream
+-
 cassert
 -
-Board.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h
-cassert
--
-Board.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.h
-../board/Board2D.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
-../board/Board2D.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h
-../board/Board2D.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
-../board/Board2D.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
-
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/main.cpp
-iostream
--
-board/Board2D.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
-search/astar.h
+astar.h
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
-board/Board3.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
-heuristics/Hamming.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
-heuristics/Dummy.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.h
-heuristics/Manhattan.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
-board/Board4.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h
-heuristics/LinearConflict.h
-C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h
+map
+C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/map
 
 C:/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
 ../board/Board.h

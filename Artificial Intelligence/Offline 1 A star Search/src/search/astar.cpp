@@ -36,7 +36,7 @@ operator<<(std::ostream &dest, __int128_t value) {
 }
 
 
-const char moves[4] = {'R', 'U', 'L', 'D'};
+const char moves[4] = {'D', 'R', 'U', 'L'};
 
 class MapCmp {
 public:
@@ -64,7 +64,45 @@ public:
 
 };
 
-int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
+void clearMap(map<Board *, int, MapCmp> &mp)
+{
+    for(auto i: mp)
+        delete i.first;
+    mp.clear();
+}
+
+void clearPQ(priority_queue<PriorityField> &pq)
+{
+    while (!pq.empty())
+    {
+        auto i = pq.top();
+        pq.pop();
+
+        delete i.board;
+    }
+}
+
+void printPath(map<Board *, int, MapCmp> &prevMove , Board * finalNode)
+{
+    assert(prevMove.find(finalNode) != prevMove.end());
+    int dir = prevMove[finalNode];
+    if(dir == -1)
+    {
+        cout<<finalNode->getBoard2D();
+        return;
+    }
+    else
+    {
+        Board * pre = finalNode->nextMove(dir^2);
+        printPath(prevMove , pre );
+        delete pre;
+        cout<<"---------------------------------"<<moves[dir]<<"-------------------------------"<<endl;
+        cout<<finalNode->getBoard2D();
+        return;
+    }
+}
+
+int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
 
     priority_queue<PriorityField> pq;
     map<Board *, int, MapCmp> dist;
@@ -75,6 +113,9 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
 
     Board *startBoard2 = startBoard->clone();
     pq.push({0 + heuristic(startBoard2->getBoard2D()), startBoard2});
+
+    Board *startBoard3 = startBoard->clone();
+    prevMove[startBoard3]=-1;
 
     int totalExplored = 0;
     int totalExpanded = 0;
@@ -105,6 +146,15 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
             DBG(totalExpanded);
             DBG(g);
              */
+
+            cout<<"Total Move :"<<g<<endl;
+            cout<<"Total Explored:"<<dist.size()<<endl;
+            cout<<"Total Expanded:"<<totalExpanded<<endl;
+            printPath(prevMove , board);
+
+            clearMap(dist);
+            clearMap(prevMove);
+            clearPQ(pq);
             return g;
         }
 
@@ -114,24 +164,29 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
 
 
         for (int direction = 0; direction < 4; direction++) {
-            //DBG(__LINE__);
+
             Board *nextBoard = board->nextMove(direction);
 
-            //DBG(nextBoard->getBoard2D());
+
 
             if (dist.find(nextBoard) == dist.end()) {
-
-                dist[nextBoard] = g + 1;
 
                 Board *nextBoard1 = nextBoard->clone();
                 pq.push({g + 1 + heuristic(nextBoard1->getBoard2D()), nextBoard1});
 
+                dist[nextBoard] = g + 1;
+
+                Board * nextBoard2 = nextBoard->clone();
+                prevMove[nextBoard2] = direction;
+
                 assert(dist[nextBoard1] == g + 1);
 
             } else if (dist[nextBoard] > g + 1) {
-                dist[nextBoard] = g + 1;
-
                 pq.push({g + 1 + heuristic(nextBoard->getBoard2D()), nextBoard});
+
+                dist[nextBoard] = g + 1;
+                prevMove[nextBoard] = direction;
+
             } else {
                 delete nextBoard;
             }
@@ -142,5 +197,7 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D)) {
     DBG(totalExplored);
     DBG(totalExpanded);
 */
+    clearMap(dist);
+    clearMap(prevMove);
     return -1;
 }
