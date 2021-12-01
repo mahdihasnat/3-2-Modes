@@ -1,0 +1,12 @@
+
+‹	cpp:S5276"jimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'const int'(ÃâË›úÿÿÿÿ8Èü‹‘×/
+…	cpp:S5276i"ãimplicit conversion loses integer precision: '__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type' (aka 'int') to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(½°«–ıÿÿÿÿ8–ı‹‘×/
+X	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(§À½V8ÿ€Œ‘×/
+Y	cpp:S5945	"=Use "std::array" or "std::vector" instead of a C-style array.(ĞÈ¹‰8ÿ€Œ‘×/
+C	cpp:S5827("'Replace the redundant type with "auto".(·ô±•8Œ‘×/
+mcpp:S134G"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(ÌŒÙ‚øÿÿÿÿ8Œ‘×/
+Mcpp:S886E"2Refactor this loop so that it is less error-prone.(Æª¤¿8Œ‘×/
+I	cpp:S3659E"-Replace alternative operator "and" with "&&".(Æª¤¿8Œ‘×/
+H	cpp:S3659N",Replace alternative operator "xor" with "^".(Š‰‡8èà‘×/
+hcpp:S134["MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(ÈáßÌ8Œ‘×/
+Bcpp:CommentedCodeM"Remove the commented out code.(Ùäš8Õ…—‘×/

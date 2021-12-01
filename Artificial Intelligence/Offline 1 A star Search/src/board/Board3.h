@@ -13,6 +13,8 @@ class Board3 : public Board{
 private:
     int num;
 public:
+    Board3(int num) : num(num) {}
+
     Board3(const Board3 & board3):num(board3.num){}
 
     Board3(const Board2D &board2D)

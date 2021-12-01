@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/Generator.h
+bits/stdc++.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/bits/stdc++.h
+board/Board3.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
+
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
 Board2D.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
@@ -67,6 +73,8 @@ board/Board4.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h
 heuristics/LinearConflict.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h
+Generator.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/Generator.h
 chrono
 -
 

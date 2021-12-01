@@ -35,6 +35,7 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.o: ../src/bo
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.o: ../src/heuristics/Manhattan.cpp
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Manhattan.cpp.o: ../src/heuristics/Manhattan.h
 
+CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/Generator.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board2D.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board3.h

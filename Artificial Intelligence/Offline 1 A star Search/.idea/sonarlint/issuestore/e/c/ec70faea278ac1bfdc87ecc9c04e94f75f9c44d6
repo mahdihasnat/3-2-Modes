@@ -1,0 +1,7 @@
+
+—	cpp:S3624"}Explicitly define or delete the missing destructor and copy assignment operator so that they will not be implicitly provided.(¥´Êşÿÿÿÿ
+i	cpp:S4963"ORemove this class' copy constructor so that the class follows the rule of Zero.(¥´Êşÿÿÿÿ
+t	cpp:S3230"_Do not assign data members in a constructor. Initialize member "num" in an initialization list.(Ø©Û
+D	cpp:S1709"/Add the "explicit" keyword to this constructor.(¸Áé¯
+k	cpp:S5025-"QReplace the use of "new" with an operation that automatically manages the memory.(ª‰ˆ˜şÿÿÿÿ
+f	cpp:S50251"QReplace the use of "new" with an operation that automatically manages the memory.( Å£•

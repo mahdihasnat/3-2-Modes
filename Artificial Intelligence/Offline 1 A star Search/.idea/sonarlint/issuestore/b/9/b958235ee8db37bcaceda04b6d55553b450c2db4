@@ -1,0 +1,26 @@
+
+;cpp:CommentedCodeN"Remove the commented out code.(Ïæ²ô
+;cpp:CommentedCodeS"Remove the commented out code.(§ºšñ
+	cpp:S5276l"|implicit conversion from 'std::chrono::duration<long, std::ratio<1, 1000>>::rep' (aka 'long') to 'double' may lose precision(¥ÌèÕùÿÿÿÿ8ûÏ»‘×/
+acpp:PPIncludeNotAtTopb"4Move this #include directive to the top of the file.(ôÃÊÉùÿÿÿÿ8Ù•´‘×/
+acpp:S134 "MRefactor this code to not nest more than 3 if|for|do|while|switch statements.( ª¥ 
+]!cpp:SingleDeclarationPerStatement"0Define each identifier in a dedicated statement.(Óä“›
+Zcpp:AssignmentInSubExpression)",Extract the assignment from this expression.(–•‡¥ıÿÿÿÿ
+Gcpp:S106)".Replace this usage of "std::cout" by a logger.(–•‡¥ıÿÿÿÿ
+Zcpp:AssignmentInSubExpression+",Extract the assignment from this expression.(Ù÷¥€şÿÿÿÿ
+Gcpp:S106+".Replace this usage of "std::cout" by a logger.(Ù÷¥€şÿÿÿÿ
+P	cpp:S1199X"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ
+O	cpp:S5025]":Rewrite the code so that you no longer need this "delete".(ã¿¡¾
+Gcpp:S1069".Replace this usage of "std::cout" by a logger.(Ø¬ßøÿÿÿÿ
+Gcpp:S106:".Replace this usage of "std::cout" by a logger.(›òÒ½ÿÿÿÿÿ
+Bcpp:S106?".Replace this usage of "std::cout" by a logger.(½¢Íª
+Gcpp:S106@".Replace this usage of "std::cout" by a logger.(›òÒ½ÿÿÿÿÿ
+f	cpp:S5025E"QReplace the use of "new" with an operation that automatically manages the memory.(³Şûì
+f	cpp:S5025F"QReplace the use of "new" with an operation that automatically manages the memory.(‹‹²½
+Bcpp:S106I".Replace this usage of "std::cout" by a logger.(ËŞğü
+Bcpp:S106Y".Replace this usage of "std::cout" by a logger.(¹¼¯×
+6	cpp:S1110Y"!Remove these useless parentheses.(¹¼¯×
+Bcpp:S106[".Replace this usage of "std::cout" by a logger.(Úøô
+6	cpp:S1110["!Remove these useless parentheses.(Úøô
+Ncpp:S106l".Replace this usage of "std::cout" by a logger.(¥ÌèÕùÿÿÿÿ8ôÆº‘×/
+Bcpp:CommentedCodeg"Remove the commented out code.(ƒ×·¦8óÂ´‘×/

@@ -10,6 +10,7 @@
 #include "heuristics/Manhattan.h"
 #include "board/Board4.h"
 #include "heuristics/LinearConflict.h"
+#include "Generator.h"
 
 using namespace std;
 
@@ -100,7 +101,8 @@ using namespace std::chrono;
 int main() {
     auto start = high_resolution_clock::now();
     //Lightoj1139();
-    Assignment();
+    //Assignment();
+    gen3();
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
     cout << "Elapsed Time:"<<duration.count()/1000.0 << endl;
