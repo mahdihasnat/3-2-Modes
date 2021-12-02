@@ -8,7 +8,7 @@ do
 	n=$((n+1))
 	ARRAY[$n]="$line"
 done < "$filename"
-echo ${!ARRAY[@]}
+echo ${ARRAY[@]}
 
 found=0
 while (($found == 0));
@@ -16,8 +16,6 @@ do
 	read pass
 	for i in ${!ARRAY[@]}
 	do
-		echo ${ARRAY[$i]}
-		echo $pass
 		if [[ "${ARRAY[$i]}" = "${pass}" ]];
 		then
 			index=$i;
@@ -25,5 +23,31 @@ do
 			break
 		fi 
 	done
+	if (($found == 0));
+	then
+		echo "Try again!"
+	fi
 done 
 echo "pass matched at index :$index"
+
+echo "enter new password:"
+read pass
+
+ARRAY[$i]=$pass
+
+echo ${ARRAY[*]}
+
+s=""
+for val in ${ARRAY[*]};
+do
+	if [[ $s = "" ]];
+	then
+		s=$val
+	else 
+	s="$s
+$val"
+	fi
+	
+done
+
+echo "$s" > "$filename"
