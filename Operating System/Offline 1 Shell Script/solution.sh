@@ -9,10 +9,10 @@ read_extension(){
     lines=`cat "$1"`
     while read -r line;
     do
-        echo "line#$line"
+        # echo "line#$line"
         forbidden_extensions["$line"]=1
     done <<< "$lines"
-    echo "forbidden_ext ${!forbidden_extensions[@]}"
+    # echo "forbidden_ext ${!forbidden_extensions[@]}"
 }
 
 is_allowed_extension(){
@@ -58,7 +58,7 @@ then
     exit 1
 fi
 
-echo "fine"
+echo "Total arguments are $# : Ok"
 
 # check if input file exist
 if [ ! -f "$1" ];
@@ -68,7 +68,7 @@ then
     exit 1
 fi
 
-echo "fine1"
+echo "First arguments is file : Ok"
 
 # check if input file is readable
 if [ ! -r "$1" ];
@@ -77,9 +77,11 @@ then
     exit 1
 fi
 
+echo "Read Persmission is granted for file : Ok"
+
 # read forbidden_extensionss 
 read_extension "$1"
-echo "ext: ${!forbidden_extensions[@]}"
+echo "Forbidden Extensions are: ${!forbidden_extensions[@]}"
 
 # define working_dir
 if (( $# >=2 ));
@@ -90,7 +92,7 @@ else
 fi
 
 
-echo "wdir:${working_dir}"
+echo "Working Directory is: ${working_dir}"
 
 # check if working_dir exists
 if [ ! -d "${working_dir}" ];
@@ -99,41 +101,35 @@ then
     exit 1
 fi 
 
+echo "Working Directory is valid : Ok"
 
 # set output_dir
 set_output_dir "${working_dir}"
-echo "Output dir is: $output_dir"
+echo "Output directory is: $output_dir"
 
 
-# while read line
-# do
-#     echo "line: $line"
-#     if exist $line in forbidden_extensions;
-#     then
-#         echo "ok"
-#     else 
-#         echo "no"
-#     fi 
-# done 
+declare -A files # stores all file names
+declare -A totalFiles # stores totalFiles key as extension
 
+increment_totalFiles(){
+    # $1 -> extension
 
-# tree "${working_dir}"
-
-
-# export -f is_allowed_extension
-
-# find "${working_dir}" -type f -print0
-
-# declare associative array for all files
-declare -A files
-
+    if [ -z "${totalFiles["$1"]}" ];
+    then
+        totalFiles["$1"]=0
+    fi
+    tmp="${totalFiles["$1"]}"
+    totalFiles["$1"]=$(($tmp + 1))
+    # echo "tmp:$tmp ${totalFiles["$1"]}"
+    # echo "${!totalFiles[*]}"
+}
 
 add_file_to_output_dir(){
     # $1 -> filePath
     # $2 -> name
     # $3 -> extension
 
-    echo "fileapth: $1 fileName: $2 fileExt: $3"
+    # echo "fileapth: $1 fileName: $2 fileExt: $3"
 
     if [ -z "${files["$2"]}" ];
     then
@@ -142,7 +138,7 @@ add_file_to_output_dir(){
         targetDir="${output_dir}/$3"
         target="$targetDir/$2"
         targetDescription="$targetDir/desc_$3.txt"
-        echo "target: $target"
+        # echo "target: $target"
 
         # create target dir
         if [ ! -d "$targetDir" ];
@@ -152,32 +148,54 @@ add_file_to_output_dir(){
         fi
 
         cp -p "$1" "$target" # copy file
-        echo "$1" >> "$targetDescription"
+        echo "$1" >> "$targetDescription" # append output to description file
+        increment_totalFiles "$3" # increment extension count
 
     fi
 
 }
+write_csv(){
+    csvFileLocation="${output_dir}/output.csv"
+
+    touch "${csvFileLocation}"
+    echo "file_type,no_of_files" >> "${csvFileLocation}"
+    for extension in ${!totalFiles[@]};
+    do
+        echo "${extension},${totalFiles[$extension]}" >> "${csvFileLocation}"
+    done
+}
 
 
 find "${working_dir}" -type f -print0 |
-while IFS= read -r -d '' filePath;
-do 
-    echo "${filePath}"
-    fileName="${filePath##*/}"
-    fileExtension="${fileName##*.}"
-    echo "fileName:$fileName fileExtension:$fileExtension"
+{
+    while IFS= read -r -d '' filePath;
+    do 
+        # echo "${filePath}"
+        fileName="${filePath##*/}"
+        fileExtension="${fileName##*.}"
+        # echo "fileName:$fileName fileExtension:$fileExtension"
+        
 
-    
-
-    if [ "$fileName" != "$fileExtension" ];
-    then
-        # echo "ext found"
-        if is_allowed_extension "$fileExtension" ;
+        if [ "$fileName" != "$fileExtension" ];
         then
-            add_file_to_output_dir "$filePath" "$fileName" "$fileExtension"
+            # echo "ext found"
+            if is_allowed_extension "$fileExtension" ;
+            then
+                add_file_to_output_dir "$filePath" "$fileName" "$fileExtension"
+            else 
+                increment_totalFiles "ignored"
+            fi
+        else
+            add_file_to_output_dir "$filePath" "$fileName" "others"
         fi
-    else
-        add_file_to_output_dir "$filePath" "$fileName" "others"
-    fi
+    done
 
-done
+    echo "Files copied to Output Directory : Ok"
+    # echo "totalFiles: ${totalFiles[*]}"
+    # echo "files: ${files}"
+
+    write_csv
+    echo "Statistics are written to $csvFileLocation : Ok"
+}
+
+
