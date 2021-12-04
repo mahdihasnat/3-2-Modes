@@ -16,6 +16,12 @@ board/Board3.h
 Board2D.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
 
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.cpp
+Board2D.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
+set
+-
+
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
 vector
 -
@@ -38,6 +44,10 @@ cassert
 Board.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
 
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.cpp
+BoardK.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.h
+
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.h
 Board.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
@@ -50,13 +60,27 @@ Dummy.h
 ../board/Board2D.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
 
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.cpp
+Hamming.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
+
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
 ../board/Board2D.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
 
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.cpp
+LinearConflict.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h
+Manhattan.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
+
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h
 ../board/Board2D.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
+
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.cpp
+Manhattan.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
 
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Manhattan.h
 ../board/Board2D.h
@@ -87,6 +111,18 @@ board/BoardK.h
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.h
 chrono
 -
+
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.cpp
+queue
+-
+ostream
+-
+cassert
+-
+astar.h
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
+map
+/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/map
 
 /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/search/astar.h
 ../board/Board.h

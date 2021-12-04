@@ -7,16 +7,10 @@ Q
 !src/heuristics/LinearConflict.cpp,3\8\38f5c7971d3cddd8e155f640526a0fe7ab7b11c8
 B
 src/board/Board4.h,e\c\ec70faea278ac1bfdc87ecc9c04e94f75f9c44d6
-C
-src/board/Board2D.h,c\b\cb0369958a27a5dd8425863d2f4649eeedd4fc0a
 E
 src/board/Board2D.cpp,9\c\9c560f07ccd1bd512468cd7e24181b75f28d6048
 D
-src/search/astar.cpp,c\f\cfe2f2bee9fc5e5ae9b0735b6f3723a32bca8b41
-D
 src/board/Board3.cpp,7\8\78d7e5479846cf34ba96e24b01f233f46a856f37
-<
-src/main.cpp,b\9\b958235ee8db37bcaceda04b6d55553b450c2db4
 B
 src/board/Board3.h,4\6\46de7924147daacf7b5efed987853260d79e4ec5
 ?

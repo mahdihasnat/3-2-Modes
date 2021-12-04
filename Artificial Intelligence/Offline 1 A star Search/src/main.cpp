@@ -67,7 +67,7 @@ int Assignment()
     }
 
     Board * board;
-    if(k==3)    board = new BoardK(board2D);
+    if(k==3)    board = new Board3(board2D);
     else if(k==4)    board = new Board4(board2D);
     else
     {
