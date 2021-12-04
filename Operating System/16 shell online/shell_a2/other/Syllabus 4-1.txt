@@ -1,0 +1,195 @@
+IPE 493:
+
+--------------------------
+--------------------------
+
+Books:
+1. Management - Robbins + Coulter (pdf in drive)
+2. personnel Management - Edwin B flippo (can buy)
+3. Managerial Accounting - Garrison Noreen Brewer (pdf in drive)
+4. Operations and Supply Chain Management - Chase Shankar Jacobs
+5. Operations and decision sciences - Stevenson (pdf in 13 batch drive)
+6. Operations management for competitive advantage - chase jacobs acquilano (pdf in 13 batch drive)
+7. Quality Control and Management - Dr. Ahsan Akhtar Hasin 
+8. Engineering Economy - Sullivan (pdf in 13 batch drive)
+9. Marketing management - kotler (pdf in 13 batch drive)
+
+Tavila Mam:
+Slides Link:
+https://drive.google.com/drive/folders/1Tl6LJf3UF44RUn3MgH4DclpCw_K3eByi
+
+1. Managing teams(class_9.ppt) - coulter chapter 13
+2. Leadershipe(class_11.ppt)- coulter chapter 17
+3. Motivating Employees(class_13.ppt)- coulter chapter 16
+4. Performance Appraisal - Cotha from mam (Chapter 10 of flippo)
+5. Wage and Incentive Plans
+6. Managerial Accounting Costs,terms ,concepts and classifications(class_18.ppt) - Garrison chapter 2
+7. Cost-Volume-Profit(CVP analysis) (class_19.ppt) - Garrison chapter 4
+8. Facility Layout(class_21.ppt) - Chase-shankar chapter 8 + Stevenson chapter 6
+9. Job Scheduling(scheduling.ppt) - chase-Acquilano chapter 17 + chase-shankar chapter 22
+10. Quality Control and management - mam's cotha
+11. Management technology - reading materials in mam's chotha
+
+*I do not have the chotha's of mam during the time of writing this, will update later on, probably they are reading materials for the last 2 topics.
+
+Tanvir Sir:
+
+1. Introduction to management and organization - coulter chapter 1
+2. Management History - coulter chapter 1(Module)
+3. Capital Budgeting Decision - Sullivan chapter 4.2-4.8, 5.1-5.7, 10.7-10.9 (10.1-10.6 if someone want to gain deeper knowledge about public project and BC ratios)
+4. Organizational Structure - coulter chapter 10
+5. Marketing Management - Book kotler
+
+[Scope of Marketing , what is marketing - Chapter 1, page 5-7
+Core Marketing Concepts- Need , Want & Demand - Chapter 1, Page 9 ; Value & Satisfaction - Page 10
+Company Orientations- Chapter 1, Page 17-18
+What Influences Consumer Behaviour- Cultural,Social & Personal Factors- Chapter 6, Page 151-155
+Refercence Groups-  Page 153
+Roles and Status- Page 154
+LOHAS- Page 158
+Competitive Forces- Chapter 8, Page 232
+
+*All references from pdf book in 13 batch drive.]
+
+
+
+**All requested to read slide first and then book to clear the concepts, its already a huge syllabus.
+
+
+
+----------------
+----------------
+
+CSE 401 (Artificial Intelligence)
+
+---------------------------------
+
+
+Book:
+1. Artifical Intelligence A Modern Approach- Russell Norvig
+
+Wasif Sir:
+
+1. Class Lecture of Chapter 1 to 4 (All class lectures are given in 13 batch drive - Arko da's lectures)
+https://drive.google.com/drive/folders/0B4baLsNe19TgOXZiNUJhcFBUdUE
+(lecture 1-5) Or Aaiyeesha's Lecture
+Refercence: Norvig chapter 1.1 , 1.2 ; chapter 2.4 ; 3(full) ; 4.1
+
+A* search refercence: https://www.redblobgames.com/pathfinding/a-star/introduction.html
+Pattern database reference: https://webdocs.cs.ualberta.ca/~holte/CMPUT651/pdb20041031.pdf
+
+Eunus Sir:
+(All Slides and Youtube links):
+All Slides in Drive
+https://drive.google.com/drive/folders/1fj5W7IC6aSScTja3F_P-oEt2kOk9Ib7z
+
+1.Probability - 
+https://www.youtube.com/watch?v=cFtXkaLog5A
+
+2.Markov Models-
+https://www.youtube.com/watch?v=Nxkapm7QlNw
+
+3.Hidden Markov Models-
+https://www.youtube.com/watch?v=XFgdo4czYs4
+https://www.youtube.com/watch?v=KBg97801U40
+
++ Class Lectures(Will have to collect HMM class lectures).
+
+4.Bayes Nets I-
+https://www.youtube.com/watch?v=gMQZq2O8yDA
+
+5.Bayes Nets II-
+https://www.youtube.com/watch?v=9OajWBYRhRU
+
+6.Bayes Nets III-
+https://www.youtube.com/watch?v=y9jdsPNsU_Q
+
+7.Bayes Nets IV-
+https://www.youtube.com/watch?v=ogYaTTRguIw
+
+8.Naive Bayes-
+https://www.youtube.com/watch?v=gmmXLEnM6Io
+
+9.Perceptrons-
+https://www.youtube.com/watch?v=HEFfs1KCph4
+
+10.Decision Trees-
+Learn the algorithm. this link might be helpful: https://www.youtube.com/watch?v=qDcl-FRnwSU
+
+11.Advanced Applications-I & II
+https://www.youtube.com/watch?v=sMKptCC-x_o
+https://www.youtube.com/watch?v=WZqtZ8RDVs8
+
+12.Clustering-
+https://www.youtube.com/watch?v=oj3tRwn7EBs (first 23 minutes)
+
+13.Robotics-
+Norvig chapter 25.1 to 25.4,25.7,25.8
+
+**See the Videos, Read the Slides and solve term final questions.
+Also may solve sections 6,7,8,10,11 from here: http://ai.berkeley.edu/section_handouts.html
+
+-----------------------------
+-----------------------------
+
+CSE 403 (Digital System Design)
+-------------------------------
+
+Saiful Sir:
+Syllabus uploaded in our drive.
+https://drive.google.com/drive/folders/1VMyohYgnLDW_ywcgGJyWMkZgTYvJsBzS
+All contents given in Moodle.
+
+Sakib Sir:
+All Slides, Contents and Syllabus here:
+https://drive.google.com/drive/folders/1cYQD8ttSqGA-wL13j_iCEGu7S9Z5-Oc7
+
+------------------------------
+------------------------------
+
+CSE 433 (Digital Image Processing)
+----------------------------------
+Contents and Syllabus given in Moodle.
+
+Section B(External will prepare questions): Chapter 2,3,10
+Section A(Papon Sir Will question): Rest.
+
+-----------------------------
+-----------------------------
+
+HUM 411 (Business Law)
+----------------------
+
+All Contents Here:
+https://drive.google.com/drive/folders/1K_j-1yP6bnuXAq45F5TAJ_ZFI1B_n7yE
+
+1. Law of contract (Slide 1-5,7)
+Book: Commercial Law and Industrial Law - Sen & Mitra - Law of contract - Chapter 1-9
+
+2. Company Act (Slide Company Law.ppt)
+Book: Company Law By Ashok K. Bagrial (Read relevant chapters)
+
+3. Labor Law (Slide Labor law.ppt)
+
+*Only slide contents would be enough, but the relevent concepts should be cleared by reading book.
+*Section A: Company Act
+*Section B: Law of Contract + Labor law (answering 1 set from labor law would be mandatory).
+
+------------------------
+
+
+I have been very inattentive to classes this term. So there may be mistakes in the syllabus. If you find any errors please see with kind consideration. :'(
+Happy Term Finals.
+
+
+
+
+
+
+
+
+
+
+
+
+

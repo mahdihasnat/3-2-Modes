@@ -1,0 +1,8 @@
+In this online, you will have to write a script which 
+takes a directory as command line argument and prints 
+all its subdirectories and files in a tree like manner
+(see the command tree for demonstration). 
+There will some optional arguments which will denote 
+which files to exclude from printing in console. Also, 
+you have to print the files in sorted order of last 
+modified date of each file.
