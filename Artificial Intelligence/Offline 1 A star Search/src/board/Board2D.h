@@ -84,6 +84,10 @@ public:
         return is;
     }
 
+    bool operator<(const Board2D &rhs) const {
+        return board < rhs.board;
+    }
+
 
     friend ostream &operator<<(ostream &os, const Board2D &d) {
         const int k = d.board.size();

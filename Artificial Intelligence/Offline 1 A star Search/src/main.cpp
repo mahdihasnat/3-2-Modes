@@ -11,6 +11,7 @@
 #include "board/Board4.h"
 #include "heuristics/LinearConflict.h"
 #include "Generator.h"
+#include "board/BoardK.h"
 
 using namespace std;
 
@@ -46,7 +47,7 @@ void Lightoj1139()
 
 int Assignment()
 {
-    DBG(freopen("inass.txt","r+",stdin));
+    //DBG(freopen("input.txt","r+",stdin));
     int k;
     cin>>k;
     Board2D board2D(k);
@@ -66,14 +67,14 @@ int Assignment()
     }
 
     Board * board;
-    if(k==3)    board = new Board3(board2D);
+    if(k==3)    board = new BoardK(board2D);
     else if(k==4)    board = new Board4(board2D);
     else
     {
-        cout<<"Board not implemented\n";
-        return -1;
+        cout<<"Board is not Memory Optimized\n";
+        board = new BoardK(board2D);
     }
-    /*
+
     {
         cout<<("Starting Astar with Hamming:")<<endl;
         astar(board , &Hamming);
@@ -84,14 +85,13 @@ int Assignment()
         astar(board , &Manhattan);
         cout<<("Completed Astar with Manhattan:")<<endl;
     }
-     */
     {
         cout<<("Starting Astar with LinearConflict:")<<endl;
         astar(board , &LinearConflict);
         cout<<("Completed Astar with LinearConflict:")<<endl;
     }
     delete board;
-
+    return 0;
 }
 
 
@@ -101,8 +101,8 @@ using namespace std::chrono;
 int main() {
     auto start = high_resolution_clock::now();
     //Lightoj1139();
-    //Assignment();
-    gen3();
+    Assignment();
+//    gen3();
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
     cout << "Elapsed Time:"<<duration.count()/1000.0 << endl;

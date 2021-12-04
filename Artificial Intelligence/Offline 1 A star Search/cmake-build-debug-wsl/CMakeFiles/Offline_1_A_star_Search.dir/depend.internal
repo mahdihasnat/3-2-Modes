@@ -18,6 +18,11 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.o
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.cpp
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o
+ /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h
+ /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
+ /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.cpp
+ /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.o
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.cpp
@@ -41,6 +46,7 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h
+ /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Hamming.h
  /mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/LinearConflict.h

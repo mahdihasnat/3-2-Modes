@@ -25,6 +25,11 @@ public:
 
     bool operator <(const Board & board) const
     {
+        __int128 l = getNum();
+        __int128 r = getNum();
+        if(l==0 or r==0)
+            return getBoard2D() < board.getBoard2D();
+
         return getNum()<board.getNum();
     };
 

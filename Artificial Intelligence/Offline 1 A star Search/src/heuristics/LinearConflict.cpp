@@ -5,6 +5,7 @@
 #include "LinearConflict.h"
 #include "Manhattan.h"
 
+/*
 int LongestIncreasingSubsequence( const vector<int>  &arr)
 {
     vector<int> ans;
@@ -22,10 +23,12 @@ int LongestIncreasingSubsequence( const vector<int>  &arr)
     return ans.size();
 }
 
+
 int minimumMove(vector<int> v)
 {
     return (v.size() - LongestIncreasingSubsequence(v))                                   ;
 }
+ */
 int inversionCount(const vector<int> &v)
 {
     int ret=0;

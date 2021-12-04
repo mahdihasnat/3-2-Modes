@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board2D.cpp.o"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.o"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.o"
+  "CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.o"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Hamming.cpp.o"
   "CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/LinearConflict.cpp.o"

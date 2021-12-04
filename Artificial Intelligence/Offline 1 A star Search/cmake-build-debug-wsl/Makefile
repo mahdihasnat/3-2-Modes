@@ -231,6 +231,33 @@ src/board/Board4.cpp.s:
 	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.s
 .PHONY : src/board/Board4.cpp.s
 
+src/board/BoardK.o: src/board/BoardK.cpp.o
+
+.PHONY : src/board/BoardK.o
+
+# target to build an object file
+src/board/BoardK.cpp.o:
+	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o
+.PHONY : src/board/BoardK.cpp.o
+
+src/board/BoardK.i: src/board/BoardK.cpp.i
+
+.PHONY : src/board/BoardK.i
+
+# target to preprocess a source file
+src/board/BoardK.cpp.i:
+	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.i
+.PHONY : src/board/BoardK.cpp.i
+
+src/board/BoardK.s: src/board/BoardK.cpp.s
+
+.PHONY : src/board/BoardK.s
+
+# target to generate assembly for a file
+src/board/BoardK.cpp.s:
+	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.s
+.PHONY : src/board/BoardK.cpp.s
+
 src/heuristics/Dummy.o: src/heuristics/Dummy.cpp.o
 
 .PHONY : src/heuristics/Dummy.o
@@ -414,6 +441,9 @@ help:
 	@echo "... src/board/Board4.o"
 	@echo "... src/board/Board4.i"
 	@echo "... src/board/Board4.s"
+	@echo "... src/board/BoardK.o"
+	@echo "... src/board/BoardK.i"
+	@echo "... src/board/BoardK.s"
 	@echo "... src/heuristics/Dummy.o"
 	@echo "... src/heuristics/Dummy.i"
 	@echo "... src/heuristics/Dummy.s"

@@ -18,6 +18,11 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.o: ../src/board/Boar
 CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.o: ../src/board/Board4.cpp
 CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.o: ../src/board/Board4.h
 
+CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o: ../src/board/Board.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o: ../src/board/Board2D.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o: ../src/board/BoardK.cpp
+CMakeFiles/Offline_1_A_star_Search.dir/src/board/BoardK.cpp.o: ../src/board/BoardK.h
+
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.o: ../src/board/Board2D.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.o: ../src/heuristics/Dummy.cpp
 CMakeFiles/Offline_1_A_star_Search.dir/src/heuristics/Dummy.cpp.o: ../src/heuristics/Dummy.h
@@ -40,6 +45,7 @@ CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board2D.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board3.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/Board4.h
+CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/board/BoardK.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/heuristics/Dummy.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/heuristics/Hamming.h
 CMakeFiles/Offline_1_A_star_Search.dir/src/main.cpp.o: ../src/heuristics/LinearConflict.h

@@ -104,6 +104,10 @@ void printPath(map<Board *, int, MapCmp> &prevMove , Board * finalNode)
 
 int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
 
+
+    int totalExplored = 0;
+    int totalExpanded = 0;
+
     priority_queue<PriorityField> pq;
     map<Board *, int, MapCmp> dist;
     map<Board *, int, MapCmp> prevMove;
@@ -113,19 +117,16 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
 
     Board *startBoard2 = startBoard->clone();
     pq.push({0 + heuristic(startBoard2->getBoard2D()), startBoard2});
+    totalExplored++;
 
     Board *startBoard3 = startBoard->clone();
     prevMove[startBoard3]=-1;
 
-    int totalExplored = 0;
-    int totalExpanded = 0;
 
     while (!pq.empty()) {
 
         PriorityField priorityField = pq.top();
         pq.pop();
-
-        totalExpanded++;
 
 
         int f = priorityField.f;
@@ -166,6 +167,7 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
             continue;
         }
 
+        totalExpanded++;
 
         for (int direction = 0; direction < 4; direction++) {
 
@@ -177,19 +179,23 @@ int astar(Board *startBoard, int (*heuristic)(const Board2D &board2D) ) {
 
                 Board *nextBoard1 = nextBoard->clone();
                 pq.push({g + 1 + heuristic(nextBoard1->getBoard2D()), nextBoard1});
+                totalExplored++;
 
                 dist[nextBoard] = g + 1;
 
                 Board * nextBoard2 = nextBoard->clone();
                 prevMove[nextBoard2] = direction;
 
-                assert(dist[nextBoard1] == g + 1);
+
+//                assert(dist[nextBoard1] == g + 1);
 
             } else if (dist[nextBoard] > g + 1) {
                 pq.push({g + 1 + heuristic(nextBoard->getBoard2D()), nextBoard});
+                totalExplored++;
 
                 dist[nextBoard] = g + 1;
                 prevMove[nextBoard] = direction;
+
 
             } else {
                 delete nextBoard;

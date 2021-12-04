@@ -11,30 +11,30 @@
 				<Option working_dir="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/cmake-build-debug-wsl"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/cmake-build-debug-wsl"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/cmake-build-debug-wsl"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Offline_1_A_star_Search">
@@ -53,10 +53,10 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 Offline_1_A_star_Search"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 Offline_1_A_star_Search"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Offline_1_A_star_Search/fast">
@@ -75,10 +75,10 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 Offline_1_A_star_Search/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 Offline_1_A_star_Search/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/mahdi/Desktop/New\ folder/3-2-Modes/Artificial\ Intelligence/Offline\ 1\ A\ star\ Search/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -107,6 +107,12 @@
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.cpp">
+			<Option target="Offline_1_A_star_Search"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/BoardK.h">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/heuristics/Dummy.cpp">
