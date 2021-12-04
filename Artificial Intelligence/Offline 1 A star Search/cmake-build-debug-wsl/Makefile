@@ -123,33 +123,6 @@ Offline_1_A_star_Search/fast:
 	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/build
 .PHONY : Offline_1_A_star_Search/fast
 
-src/board/Board.o: src/board/Board.cpp.o
-
-.PHONY : src/board/Board.o
-
-# target to build an object file
-src/board/Board.cpp.o:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board.cpp.o
-.PHONY : src/board/Board.cpp.o
-
-src/board/Board.i: src/board/Board.cpp.i
-
-.PHONY : src/board/Board.i
-
-# target to preprocess a source file
-src/board/Board.cpp.i:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board.cpp.i
-.PHONY : src/board/Board.cpp.i
-
-src/board/Board.s: src/board/Board.cpp.s
-
-.PHONY : src/board/Board.s
-
-# target to generate assembly for a file
-src/board/Board.cpp.s:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board.cpp.s
-.PHONY : src/board/Board.cpp.s
-
 src/board/Board2D.o: src/board/Board2D.cpp.o
 
 .PHONY : src/board/Board2D.o
@@ -176,60 +149,6 @@ src/board/Board2D.s: src/board/Board2D.cpp.s
 src/board/Board2D.cpp.s:
 	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board2D.cpp.s
 .PHONY : src/board/Board2D.cpp.s
-
-src/board/Board3.o: src/board/Board3.cpp.o
-
-.PHONY : src/board/Board3.o
-
-# target to build an object file
-src/board/Board3.cpp.o:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.o
-.PHONY : src/board/Board3.cpp.o
-
-src/board/Board3.i: src/board/Board3.cpp.i
-
-.PHONY : src/board/Board3.i
-
-# target to preprocess a source file
-src/board/Board3.cpp.i:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.i
-.PHONY : src/board/Board3.cpp.i
-
-src/board/Board3.s: src/board/Board3.cpp.s
-
-.PHONY : src/board/Board3.s
-
-# target to generate assembly for a file
-src/board/Board3.cpp.s:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board3.cpp.s
-.PHONY : src/board/Board3.cpp.s
-
-src/board/Board4.o: src/board/Board4.cpp.o
-
-.PHONY : src/board/Board4.o
-
-# target to build an object file
-src/board/Board4.cpp.o:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.o
-.PHONY : src/board/Board4.cpp.o
-
-src/board/Board4.i: src/board/Board4.cpp.i
-
-.PHONY : src/board/Board4.i
-
-# target to preprocess a source file
-src/board/Board4.cpp.i:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.i
-.PHONY : src/board/Board4.cpp.i
-
-src/board/Board4.s: src/board/Board4.cpp.s
-
-.PHONY : src/board/Board4.s
-
-# target to generate assembly for a file
-src/board/Board4.cpp.s:
-	$(MAKE) -f CMakeFiles/Offline_1_A_star_Search.dir/build.make CMakeFiles/Offline_1_A_star_Search.dir/src/board/Board4.cpp.s
-.PHONY : src/board/Board4.cpp.s
 
 src/board/BoardK.o: src/board/BoardK.cpp.o
 
@@ -429,18 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Offline_1_A_star_Search"
-	@echo "... src/board/Board.o"
-	@echo "... src/board/Board.i"
-	@echo "... src/board/Board.s"
 	@echo "... src/board/Board2D.o"
 	@echo "... src/board/Board2D.i"
 	@echo "... src/board/Board2D.s"
-	@echo "... src/board/Board3.o"
-	@echo "... src/board/Board3.i"
-	@echo "... src/board/Board3.s"
-	@echo "... src/board/Board4.o"
-	@echo "... src/board/Board4.i"
-	@echo "... src/board/Board4.s"
 	@echo "... src/board/BoardK.o"
 	@echo "... src/board/BoardK.i"
 	@echo "... src/board/BoardK.s"

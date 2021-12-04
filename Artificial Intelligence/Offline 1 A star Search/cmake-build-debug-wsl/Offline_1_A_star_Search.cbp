@@ -85,9 +85,6 @@
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/Generator.h">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.cpp">
-			<Option target="Offline_1_A_star_Search"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board.h">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
@@ -97,13 +94,7 @@
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board2D.h">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.cpp">
-			<Option target="Offline_1_A_star_Search"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board3.h">
-			<Option target="Offline_1_A_star_Search"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.cpp">
 			<Option target="Offline_1_A_star_Search"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/mahdi/Desktop/New folder/3-2-Modes/Artificial Intelligence/Offline 1 A star Search/src/board/Board4.h">
