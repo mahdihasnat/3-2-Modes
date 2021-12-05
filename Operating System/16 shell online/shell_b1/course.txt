@@ -1,3 +1,4 @@
 physics
-math
-CSE100
+ma th
+bio
+
