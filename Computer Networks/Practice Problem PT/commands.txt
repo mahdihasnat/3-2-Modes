@@ -1,0 +1,158 @@
+R0
+===
+int fa 0/0
+ip add 172.1.0.1 255.255.0.0
+no shutdown
+exit
+
+int fa 5/0
+ip add 172.2.0.1 255.255.0.0
+no shutdown
+exit
+
+
+int fa 4/0
+ip add 172.3.0.0 255.255.0.0
+no shutdown
+exit
+
+int fa 1/0
+ip add 172.4.0.1 255.255.0.0
+no shutdown
+exit
+
+
+router rip
+network 172.1.0.0
+network 172.3.0.0
+network 172.4.0.0
+network 172.2.0.0
+exit
+
+
+R1 
+=== 
+
+conf t
+
+int fa 0/0
+ip add 172.9.0.1 255.255.0.0
+no shutdown
+exit
+
+int fa 5/0
+ip add 172.6.0.1 255.255.0.0
+no shutdown
+exit
+
+
+int fa 4/0
+ip add 172.3.0.2 255.255.0.0
+no shutdown
+exit
+
+int se 2/0
+ip add 172.5.0.1 255.255.0.0
+no shutdown
+exit
+
+router rip
+network 172.3.0.0
+network 172.5.0.0
+network 172.6.0.0
+network 172.9.0.0
+exit
+
+
+R2
+===
+
+int fa 0/0
+ip add 172.8.0.1 255.255.0.0
+no shutdown
+exit
+
+int fa 5/0
+ip add 172.7.0.2 255.255.0.0
+no shutdown
+exit
+
+
+int fa 4/0
+ip add 172.2.0.2 255.255.0.0
+no shutdown
+exit
+
+int se 2/0
+ip add 172.5.0.2 255.255.0.0
+no shutdown
+exit
+
+router rip
+network 172.2.0.0
+network 172.5.0.0
+network 172.7.0.0
+network 172.8.0.0
+exit
+
+
+R3
+=== 
+int fa 0/0
+ip add 172.4.0.2 255.255.0.0
+no shutdown
+exit
+
+int fa 5/0
+ip add 172.7.0.1 255.255.0.0
+no shutdown
+exit
+
+
+int fa 4/0
+ip add 172.6.0.2 255.255.0.0
+no shutdown
+exit
+
+
+router rip
+network 172.4.0.0
+network 172.6.0.0
+network 172.7.0.0
+exit
+
+
+
+Task-B
+====
+Static route
+pc0 -> r0 -> r2 -> r3 -> r1 -> pc2 
+
+dest: 172.9.0.0 255.255.0.0
+R0
+===
+ip route 172.9.0.0 255.255.0.0 fa 5/0
+
+R2
+===
+ip route 172.9.0.0 255.255.0.0 fa 5/0
+
+r3
+===
+ip route 172.9.0.0 255.255.0.0 fa 4/0
+
+====
+pc0 -> r0 -> r1 -> r3 -> r2 -> pc2
+dest 172.8.0.0 255.255.0.0
+
+r0
+===
+ip route 172.8.0.0 255.255.0.0 fa 4/0
+
+r1
+===
+ip route 172.8.0.0 255.255.0.0 fa 5/0
+
+r3
+===
+ip route 172.8.0.0 255.255.0.0 fa 5/0
