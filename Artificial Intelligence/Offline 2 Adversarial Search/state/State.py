@@ -125,3 +125,22 @@ class State:
             next_state._board[opposite_index] = 0
 
         return next_state, False
+
+    def is_terminal(self):
+        """
+        :return: true if game is over
+        """
+        if all(x == 0 for x in self._board[0:6]):
+            return True
+        
+        if all(x == 0 for x in self._board[7:13]):
+            return True
+        
+        return False
+    
+    def get_score_1st_player(self):
+        return sum(self._board[0:7])
+    
+    def get_score_2nd_player(self):
+        return sum(self._board[7:14])
+    
