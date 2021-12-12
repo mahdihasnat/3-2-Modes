@@ -12,28 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0229cf23-d36c-4bc8-83c2-e31330fc2642" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b958235ee8db37bcaceda04b6d55553b450c2db4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cb0369958a27a5dd8425863d2f4649eeedd4fc0a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cfe2f2bee9fc5e5ae9b0735b6f3723a32bca8b41" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/Offline_1_A_star_Search.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/Offline_1_A_star_Search" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/Offline_1_A_star_Search" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/Offline_1_A_star_Search.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/Offline_1_A_star_Search.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-wsl/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-wsl/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +69,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -119,6 +94,7 @@
       <workItem from="1638151557866" duration="20919000" />
       <workItem from="1638282613318" duration="11218000" />
       <workItem from="1638628030360" duration="1011000" />
+      <workItem from="1639293375044" duration="51000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38f533e6-4f8f-4c86-9ecc-e12377f09fec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/agent/Agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agent/Console.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agent/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/sonarlint/issuestore/4/6/46de7924147daacf7b5efed987853260d79e4ec5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/sonarlint/issuestore/7/8/78d7e5479846cf34ba96e24b01f233f46a856f37" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/sonarlint/issuestore/a/f/af40f91a973f09e77a991035fdaf567f8e156ee2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Offline 1 A star Search/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Offline 1 A star Search/cmake-build-debug-wsl/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Offline 1 A star Search/cmake-build-debug-wsl/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22AwXf9T4qMI2BzWN3OZSxMyd6D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38f533e6-4f8f-4c86-9ecc-e12377f09fec" name="Changes" comment="" />
+      <created>1639293740944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639293740944</updated>
+      <workItem from="1639293747143" duration="2575000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

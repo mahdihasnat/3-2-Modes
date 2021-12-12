@@ -1,0 +1,27 @@
+
+Q	cpp:S5276"<implicit conversion loses integer precision: 'long' to 'int'(‡¿î¡
+;cpp:CommentedCode‰"Remove the commented out code.(˜õî`
+;cpp:CommentedCode‘"Remove the commented out code.(µŠöV
+Acpp:CommentedCode¾"Remove the commented out code.(Îàù›üÿÿÿÿ
+Acpp:CommentedCodeÏ"Remove the commented out code.(üÑ–ùÿÿÿÿ
+X	cpp:S6004">Use the init-statement to declare "s" inside the if statement.(½ž®Õùÿÿÿÿ
+<	cpp:S6234"'Replace the redundant type with "auto".(×·Ä¯
+F	cpp:S5945"2Use "std::string" instead of a C-style char array.(ÕïÓ$
+L	cpp:S5945'"2Use "std::string" instead of a C-style char array.(”¬³üÿÿÿÿ
+rcpp:S995+"_Make the type of this parameter a pointer-to-const. The current type of "l" is "class Board *".(‡ºE
+rcpp:S995+"_Make the type of this parameter a pointer-to-const. The current type of "r" is "class Board *".(‡ºE
+R	cpp:S6005E"=Replace this declaration by a structured binding declaration.(Çð½Ÿ
+O	cpp:S5025F":Rewrite the code so that you no longer need this "delete".(¸ËÚ°
+T	cpp:S5025Q":Rewrite the code so that you no longer need this "delete".(Ø‰áõûÿÿÿÿ
+Bcpp:S106[".Replace this usage of "std::cout" by a logger.(øœÚÎ
+O	cpp:S5025b":Rewrite the code so that you no longer need this "delete".(þÇÜð
+Gcpp:S106c".Replace this usage of "std::cout" by a logger.(ü¤žÀüÿÿÿÿ
+Bcpp:S106d".Replace this usage of "std::cout" by a logger.(øœÚÎ
+g	cpp:S5205i"MReplace this function pointer with a template parameter or a "std::function".(ÑÁÙñýÿÿÿÿ
+P	cpp:S5025Ì":Rewrite the code so that you no longer need this "delete".(ã¿¡¾
+P	cpp:S5025":Rewrite the code so that you no longer need this "delete".(ã¿¡¾
+Bcpp:S106—".Replace this usage of "std::cout" by a logger.(¨–ÓE
+Hcpp:S106˜".Replace this usage of "std::cout" by a logger.(üø°Æûÿÿÿÿ
+Hcpp:S106™".Replace this usage of "std::cout" by a logger.(Ó›ªÂùÿÿÿÿ
+P	cpp:S5025¦":Rewrite the code so that you no longer need this "delete".(ã¿¡¾
+U	cpp:S5025É":Rewrite the code so that you no longer need this "delete".(÷åà¶ùÿÿÿÿ

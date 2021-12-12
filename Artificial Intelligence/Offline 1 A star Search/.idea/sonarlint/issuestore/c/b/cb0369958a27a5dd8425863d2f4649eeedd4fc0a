@@ -1,0 +1,30 @@
+
+¶	cpp:S5276!"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(Ü±ÿœøÿÿÿÿ
+~	cpp:S5276&"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(şÎşÑüÿÿÿÿ
+~	cpp:S5276/"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ªŸÓ£ÿÿÿÿÿ
+±	cpp:S5276R"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(¡Îì¦
+y	cpp:S5276@"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ÏÀø¡
+	cpp:S5276]"jimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'const int'(¬ÏûÚ
+¶	cpp:S5276!"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(Ü±ÿœøÿÿÿÿ
+~	cpp:S5276&"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(şÎşÑüÿÿÿÿ
+~	cpp:S5276/"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ªŸÓ£ÿÿÿÿÿ
+±	cpp:S5276R"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(¡Îì¦
+y	cpp:S5276@"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ÏÀø¡
+	cpp:S5276]"jimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'const int'(¬ÏûÚ
+6	cpp:S1003"Remove this using-directive.(ÉÔ³òÿÿÿÿÿ
+I	cpp:S1709"/Add the "explicit" keyword to this constructor.(áïÑØûÿÿÿÿ
+`cpp:S134O"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(Çß~
+0	cpp:S1905f"Remove this redundant cast.(ù¯¾Î
+D	cpp:S1709o"/Add the "explicit" keyword to this constructor.(™œ”„
+¶	cpp:S5276!"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(Ü±ÿœøÿÿÿÿ
+~	cpp:S5276&"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(şÎşÑüÿÿÿÿ
+~	cpp:S5276/"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ªŸÓ£ÿÿÿÿÿ
+±	cpp:S5276R"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(¡Îì¦
+y	cpp:S5276@"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ÏÀø¡
+	cpp:S5276]"jimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'const int'(¬ÏûÚ
+¶	cpp:S5276!"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(Ü±ÿœøÿÿÿÿ
+~	cpp:S5276&"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(şÎşÑüÿÿÿÿ
+~	cpp:S5276/"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ªŸÓ£ÿÿÿÿÿ
+±	cpp:S5276R"›implicit conversion loses integer precision: 'int' to '__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type' (aka 'signed char')(¡Îì¦
+y	cpp:S5276@"dimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'int'(ÏÀø¡
+	cpp:S5276]"jimplicit conversion loses integer precision: 'std::vector::size_type' (aka 'unsigned long') to 'const int'(¬ÏûÚ
