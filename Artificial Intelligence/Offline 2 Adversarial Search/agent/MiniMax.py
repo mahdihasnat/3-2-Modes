@@ -8,6 +8,9 @@ class MiniMaxAlphaBetaAgent(Agent):
         self._heuristic = heuristic
         self._depth = depth
 
+    def __str__(self):
+        return "MMABPA"+"("+str(self._heuristic)+",d="+str(self._depth)+")"
+
     def alpha_beta_search(self, state, depth, alpha, beta, first_player):
         if state.is_terminal() or depth == 0:
             return self._heuristic.get_value(state)

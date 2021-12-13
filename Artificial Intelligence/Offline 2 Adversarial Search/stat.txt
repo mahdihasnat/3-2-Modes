@@ -1,0 +1,4 @@
+                       agents:  MMABPA(StorageHeuristic,d=4)      MMABPA(Storage4Side1,d=4)      MMABPA(Storage1Side4,d=4)
+  MMABPA(StorageHeuristic,d=4)                    [0, 100, 0]                    [0, 100, 0]                    [0, 0, 100]
+     MMABPA(Storage4Side1,d=4)                    [0, 100, 0]                    [0, 0, 100]                    [0, 100, 0]
+     MMABPA(Storage1Side4,d=4)                    [0, 100, 0]                    [0, 100, 0]                    [0, 100, 0]

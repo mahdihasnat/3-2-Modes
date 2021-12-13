@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f533e6-4f8f-4c86-9ecc-e12377f09fec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/heuristics/StorageWithSide.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stat,txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agent/MiniMax.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent/MiniMax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agent/Random.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent/Random.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heuristics/Storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/heuristics/Storage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stastics.py" beforeDir="false" afterPath="$PROJECT_DIR$/stastics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state/State.py" beforeDir="false" afterPath="$PROJECT_DIR$/state/State.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +116,7 @@
       <updated>1639293740944</updated>
       <workItem from="1639293747143" duration="2586000" />
       <workItem from="1639319455570" duration="2902000" />
-      <workItem from="1639376005527" duration="10977000" />
+      <workItem from="1639376005527" duration="17989000" />
     </task>
     <servers />
   </component>
@@ -129,7 +135,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Offline_2_Adversarial_Search$stastics.coverage" NAME="stastics Coverage Results" MODIFIED="1639417234876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Offline_2_Adversarial_Search$stastics.coverage" NAME="stastics Coverage Results" MODIFIED="1639428577634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Offline_2_Adversarial_Search$Unnamed.coverage" NAME="main Coverage Results" MODIFIED="1639416138943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
