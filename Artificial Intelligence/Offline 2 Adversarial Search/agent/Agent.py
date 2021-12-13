@@ -1,6 +1,6 @@
 class Agent:
 
-    def get_move(self, state,first_player=True):
+    def get_move(self, state, first_player=True):
         """
 
         :param s: State

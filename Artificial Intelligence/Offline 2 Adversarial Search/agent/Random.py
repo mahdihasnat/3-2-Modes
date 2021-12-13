@@ -1,5 +1,6 @@
-from agent.Agent import Agent
 import random
+
+from agent.Agent import Agent
 
 
 class RandomAgent(Agent):

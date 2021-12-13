@@ -1,6 +1,5 @@
 import copy
 from builtins import staticmethod
-from pdb import lasti2lineno
 
 
 class State:
@@ -73,7 +72,8 @@ class State:
 
         # check if capture of stone is possible
         opposite_index = 12 - last_stone_index
-        if 0 <= last_stone_index <= 5 and next_state._board[last_stone_index] == 1 and next_state._board[opposite_index] > 0:
+        if 0 <= last_stone_index <= 5 and next_state._board[last_stone_index] == 1 and next_state._board[
+            opposite_index] > 0:
             State.capture_event()
             next_state._board[6] += next_state._board[opposite_index] + 1;
             next_state._board[last_stone_index] = 0
@@ -81,16 +81,16 @@ class State:
 
         return next_state, False
 
-    def move_2nd_player(self,move):
+    def move_2nd_player(self, move):
         """
         :return: ( next_state,true if bonus move )
         """
 
         if move < 1 or 6 < move:
             raise Exception("Invalid move , move number not in range")
-        
-        move+=7
-        
+
+        move += 7
+
         if self._board[move - 1] == 0:
             raise Exception("Invalid move , Board doesnot contains stone in that position")
 
@@ -106,7 +106,7 @@ class State:
                 add_stone_index = 0
             if add_stone_index == 6:
                 add_stone_index = 7
-            
+
             next_state._board[add_stone_index] += 1
             add_stone_index += 1
 
@@ -118,7 +118,8 @@ class State:
 
         # check if capture of stone is possible
         opposite_index = 12 - last_stone_index
-        if 7 <= last_stone_index <= 12 and next_state._board[last_stone_index] == 1 and next_state._board[opposite_index] > 0:
+        if 7 <= last_stone_index <= 12 and next_state._board[last_stone_index] == 1 and next_state._board[
+            opposite_index] > 0:
             State.capture_event()
             next_state._board[13] += next_state._board[opposite_index] + 1
             next_state._board[last_stone_index] = 0
@@ -132,15 +133,15 @@ class State:
         """
         if all(x == 0 for x in self._board[0:6]):
             return True
-        
+
         if all(x == 0 for x in self._board[7:13]):
             return True
-        
+
         return False
-    
+
     def get_score_1st_player(self):
         return sum(self._board[0:7])
-    
+
     def get_score_2nd_player(self):
         return sum(self._board[7:14])
 
@@ -152,4 +153,3 @@ class State:
             return [i + 1 for i, x in enumerate(self._board[0:6]) if x > 0]
         else:
             return [i + 1 for i, x in enumerate(self._board[7:13]) if x > 0]
-    
