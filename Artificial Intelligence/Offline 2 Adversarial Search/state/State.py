@@ -143,4 +143,13 @@ class State:
     
     def get_score_2nd_player(self):
         return sum(self._board[7:14])
+
+    def get_valid_moves(self, first_player):
+        """
+        :return: list of valid moves
+        """
+        if first_player:
+            return [i + 1 for i, x in enumerate(self._board[0:6]) if x > 0]
+        else:
+            return [i + 1 for i, x in enumerate(self._board[7:13]) if x > 0]
     

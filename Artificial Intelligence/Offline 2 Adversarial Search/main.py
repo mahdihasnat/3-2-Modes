@@ -31,6 +31,8 @@ def runner(agent1 , agent2):
         return 0
 
 
+
+
 if __name__ == '__main__':
     # runner(ConsoleAgent() ,ConsoleAgent())
     print(runner(RandomAgent() ,RandomAgent()))
