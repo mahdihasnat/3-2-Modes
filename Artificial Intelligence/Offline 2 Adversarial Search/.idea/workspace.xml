@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f533e6-4f8f-4c86-9ecc-e12377f09fec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/agent/MiniMax.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heuristics/Heuristic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heuristics/Storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heuristics/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/play.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stastics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agent/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent/Agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agent/Console.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent/Console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agent/Random.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent/Random.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/state/State.py" beforeDir="false" afterPath="$PROJECT_DIR$/state/State.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tempCodeRunnerFile.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +43,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Offline 2 Adversarial Search" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,12 +54,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\mahdi\Desktop\New folder\3-2-Modes\Artificial Intelligence\Offline 2 Adversarial Search\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -74,7 +78,8 @@
       <option name="presentableId" value="Default" />
       <updated>1639293740944</updated>
       <workItem from="1639293747143" duration="2586000" />
-      <workItem from="1639319455570" duration="2612000" />
+      <workItem from="1639319455570" duration="2902000" />
+      <workItem from="1639376005527" duration="8812000" />
     </task>
     <servers />
   </component>
@@ -91,5 +96,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Offline_2_Adversarial_Search$Unnamed.coverage" NAME="main Coverage Results" MODIFIED="1639414945270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

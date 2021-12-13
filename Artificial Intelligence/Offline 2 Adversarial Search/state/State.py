@@ -39,7 +39,8 @@ class State:
 
     @staticmethod
     def capture_event():
-        print("capturing opponents stones")
+        pass
+        # print("capturing opponents stones")
 
     def move_1st_player(self, move):
         """
@@ -126,6 +127,15 @@ class State:
             next_state._board[opposite_index] = 0
 
         return next_state, False
+
+    def get_next_state(self, move, first_player):
+        """
+        :return: ( next_state,true if bonus move )
+        """
+        if first_player:
+            return self.move_1st_player(move)
+        else:
+            return self.move_2nd_player(move)
 
     def is_terminal(self):
         """
