@@ -1,18 +1,29 @@
-
-
-from agent.Random import RandomAgent
-from agent.Console import ConsoleAgent
 from agent.MiniMax import MiniMaxAlphaBetaAgent
-
+from agent.Random import RandomAgent
 from heuristics.Storage import StorageHeuristic
-from play import play
+
 
 def generate_statistics():
-    total = 0
-    for _ in range(100):
-        if play(agent1=RandomAgent(), agent2=MiniMaxAlphaBetaAgent(depth=5, heuristic=StorageHeuristic())) == 1:
-            total += 1
-    print("total win:" + str(total))
+    agents = []
+    agents.append(RandomAgent())
+    agents.append(MiniMaxAlphaBetaAgent(depth=5, heuristic=StorageHeuristic()))
+
+    mxlen = 0
+    for agent in agents:
+        mxlen = max(mxlen, len("{}".format(type(agent).__name__)))
+
+    mxlen += 2
+    print(f"%{mxlen}s" % "agents:", end='')
+    for agent in agents:
+        print(f"%{mxlen}s" % type(agent).__name__, end=' ')
+    print()
+    n = len(agents)
+    for i in range(n):
+        print(f"%{mxlen}s" % type(agents[i]).__name__, end=' ')
+        for j in range(n):
+            print(f"%{mxlen}s" % (str(i) + "," + str(j)), end=' ')
+        print()
+
 
 if __name__ == '__main__':
     generate_statistics()
