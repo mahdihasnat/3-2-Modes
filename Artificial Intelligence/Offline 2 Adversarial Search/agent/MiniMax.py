@@ -2,6 +2,9 @@ import random
 
 from agent.Agent import Agent
 
+
+MAX_HEURISTIC_VALUE=100
+
 class MiniMaxAlphaBetaAgent(Agent):
 
     def __init__(self, depth, heuristic):
@@ -16,7 +19,7 @@ class MiniMaxAlphaBetaAgent(Agent):
             return self._heuristic.get_value(state)
         else:
             if first_player:
-                value = -1000
+                value = -MAX_HEURISTIC_VALUE
                 for move in state.get_valid_moves(first_player):
                     next_state, bonus = state.get_next_state(move, first_player)
                     value = max(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, bonus))
@@ -25,7 +28,7 @@ class MiniMaxAlphaBetaAgent(Agent):
                     alpha = max(alpha, value)
                 return value
             else:
-                value = 1000
+                value = MAX_HEURISTIC_VALUE
                 for move in state.get_valid_moves(first_player):
                     next_state, bonus = state.get_next_state(move, first_player)
                     value = min(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, not bonus))
