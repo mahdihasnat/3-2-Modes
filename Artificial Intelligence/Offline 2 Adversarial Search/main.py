@@ -6,6 +6,6 @@ from heuristics.StorageWithSide import StorageWithSideHeuristic
 from play import play
 
 if __name__ == '__main__':
-    # print(play(MiniMaxAlphaBetaAgent(depth=11, heuristic=StorageWithSideHeuristic(1,1)) , ConsoleAgent()))
-    print(play(ConsoleAgent(),MiniMaxAlphaBetaAgent(depth=11, heuristic=StorageWithSideHeuristic(1,1)) ))
+    # print(play(MiniMaxAlphaBetaAgent(depth=11, heuristic=StorageWithSideHeuristic(1,1),debug=True) , ConsoleAgent()))
+    print(play(ConsoleAgent(),MiniMaxAlphaBetaAgent(depth=10, heuristic=StorageWithSideHeuristic(1,1) ,debug=True) ))
     # print(play(RandomAgent(), RandomAgent()))

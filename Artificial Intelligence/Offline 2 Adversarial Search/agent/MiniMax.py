@@ -1,18 +1,20 @@
 import random
+import multiprocessing
 
 from agent.Agent import Agent
 
+MAX_HEURISTIC_VALUE = 100
 
-MAX_HEURISTIC_VALUE=100
 
 class MiniMaxAlphaBetaAgent(Agent):
 
-    def __init__(self, depth, heuristic):
+    def __init__(self, depth, heuristic, debug=False):
         self._heuristic = heuristic
         self._depth = depth
+        self._print = debug
 
     def __str__(self):
-        return "MMABPA"+"("+str(self._heuristic)+",d="+str(self._depth)+")"
+        return "MMABPA" + "(" + str(self._heuristic) + ",d=" + str(self._depth) + ")"
 
     def alpha_beta_search(self, state, depth, alpha, beta, first_player):
         if state.is_terminal() or depth == 0:
@@ -22,40 +24,46 @@ class MiniMaxAlphaBetaAgent(Agent):
                 value = -MAX_HEURISTIC_VALUE
                 for move in state.get_valid_moves(first_player):
                     next_state, bonus = state.get_next_state(move, first_player)
-                    value = max(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, bonus))
-                    if value >= beta:
-                        break
+                    value = max(value, self.alpha_beta_search(next_state, depth - (0 if bonus else 1), alpha, beta, bonus))
                     alpha = max(alpha, value)
+                    if beta <= alpha:
+                        break
                 return value
             else:
                 value = MAX_HEURISTIC_VALUE
                 for move in state.get_valid_moves(first_player):
                     next_state, bonus = state.get_next_state(move, first_player)
-                    value = min(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, not bonus))
-                    if value <= alpha:
-                        break
+                    value = min(value, self.alpha_beta_search(next_state, depth - (0 if bonus else 1), alpha, beta, not bonus))
                     beta = min(beta, value)
+                    if beta <= alpha:
+                        break
                 return value
 
+    def get_move_fast(self,state,firsl_player):
+        pass
+
+
     def get_move(self, state, first_player):
-        best_score = -1000 if first_player else 1000
+        best_score = -MAX_HEURISTIC_VALUE if first_player else MAX_HEURISTIC_VALUE
         best_move = None
         for move in state.get_valid_moves(first_player):
             next_state, bonus = state.get_next_state(move, first_player)
             score = self.alpha_beta_search(
                 state=next_state,
                 depth=self._depth,
-                alpha=best_score if first_player else -1000,
-                beta=1000 if first_player else best_score,
-                first_player=first_player
+                alpha=best_score if first_player else -MAX_HEURISTIC_VALUE,
+                beta=MAX_HEURISTIC_VALUE if first_player else best_score,
+                first_player=bonus if first_player else (not bonus)
             )
-            if score > best_score if first_player else score < best_score:
+            if ((score > best_score) if first_player else (score < best_score)):
                 best_score = score
                 best_move = move
+
         if best_move is None:
+            print("best move is none!")
             return random.choice(state.get_valid_moves(first_player))
-        
-        print("AI prediction:", best_score)
-        print(state)
-        print(first_player and "First Player Move:" or "Second Player Move:" , best_move)
+        if self._print:
+            print("AI prediction:", best_score)
+            print(state)
+            print(first_player and "First Player Move:" or "Second Player Move:", best_move)
         return best_move
