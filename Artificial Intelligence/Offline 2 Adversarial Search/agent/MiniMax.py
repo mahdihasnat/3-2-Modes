@@ -19,7 +19,7 @@ class MiniMaxAlphaBetaAgent(Agent):
                 value = -1000
                 for move in state.get_valid_moves(first_player):
                     next_state, bonus = state.get_next_state(move, first_player)
-                    value = max(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, False))
+                    value = max(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, bonus))
                     if value >= beta:
                         break
                     alpha = max(alpha, value)
@@ -28,7 +28,7 @@ class MiniMaxAlphaBetaAgent(Agent):
                 value = 1000
                 for move in state.get_valid_moves(first_player):
                     next_state, bonus = state.get_next_state(move, first_player)
-                    value = min(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, True))
+                    value = min(value, self.alpha_beta_search(next_state, depth - 1, alpha, beta, not bonus))
                     if value <= alpha:
                         break
                     beta = min(beta, value)
@@ -51,4 +51,8 @@ class MiniMaxAlphaBetaAgent(Agent):
                 best_move = move
         if best_move is None:
             return random.choice(state.get_valid_moves(first_player))
+        
+        print("AI prediction:", best_score)
+        print(state)
+        print(first_player and "First Player Move:" or "Second Player Move:" , best_move)
         return best_move
