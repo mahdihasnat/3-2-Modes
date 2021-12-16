@@ -7,5 +7,5 @@ from play import play
 
 if __name__ == '__main__':
     # print(play(MiniMaxAlphaBetaAgent(depth=11, heuristic=StorageWithSideHeuristic(1,1),debug=True) , ConsoleAgent()))
-    print(play(ConsoleAgent(),MiniMaxAlphaBetaAgent(depth=10, heuristic=StorageWithSideHeuristic(1,1) ,debug=True) ))
+    print(play(ConsoleAgent(),MiniMaxAlphaBetaAgent(depth=9, heuristic=StorageWithSideHeuristic(1,1) ,debug=True) ))
     # print(play(RandomAgent(), RandomAgent()))

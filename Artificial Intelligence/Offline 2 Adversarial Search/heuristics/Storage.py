@@ -7,4 +7,4 @@ class StorageHeuristic(Heuristic):
         return (state.get_storage_1st_player() - state.get_storage_2nd_player())
 
     def __str__(self):
-        return self.__class__.__name__
+        return "STH"
