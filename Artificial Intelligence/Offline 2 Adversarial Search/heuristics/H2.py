@@ -1,7 +1,7 @@
 from heuristics.Heuristic import Heuristic
 
 
-class StorageWithSideHeuristic(Heuristic):
+class H2(Heuristic):
 
     def __init__(self, storage_weight, side_weight):
         self.w1 = storage_weight
@@ -12,4 +12,4 @@ class StorageWithSideHeuristic(Heuristic):
 
     def get_value(self, state):
         return self.w1 * (state.get_storage_1st_player() - state.get_storage_2nd_player()) + self.w2 * (
-                    sum(state.board[0:6]) - sum(state.board[7:13]))
+                sum(state.board[0:6]) - sum(state.board[7:13]))

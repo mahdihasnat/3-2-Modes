@@ -3,8 +3,8 @@ import time
 
 
 from agent.MiniMax import MiniMaxAlphaBetaAgent
-from heuristics.Storage import StorageHeuristic
-from heuristics.StorageWithSide import StorageWithSideHeuristic
+from heuristics.H1 import H1
+from heuristics.H2 import H2
 from play import play
 
 MAX_DEPTH = 4
@@ -44,14 +44,14 @@ def generate_statistics():
     agents = []
     # agents.append(RandomAgent())
 
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=StorageWithSideHeuristic(storage_weight=4, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=StorageWithSideHeuristic(storage_weight=5, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=StorageWithSideHeuristic(storage_weight=6, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=StorageWithSideHeuristic(storage_weight=7, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=StorageWithSideHeuristic(storage_weight=4, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=StorageWithSideHeuristic(storage_weight=5, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=StorageWithSideHeuristic(storage_weight=6, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=StorageWithSideHeuristic(storage_weight=7, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=4, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=5, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=6, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=7, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=4, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=5, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=6, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=7, side_weight=1)))
 
     matrix = get_all_statistics(agents)
 
