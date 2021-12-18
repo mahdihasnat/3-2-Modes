@@ -1,19 +1,22 @@
 import multiprocessing
 import time
 
-
+from agent.Random import RandomAgent
 from agent.MiniMax import MiniMaxAlphaBetaAgent
 from heuristics.H1 import H1
 from heuristics.H2 import H2
 from heuristics.H3 import H3
+from heuristics.H4 import H4
+from heuristics.H5 import H5
+from heuristics.H6 import H6
 from play import play
 
-MAX_DEPTH = 4
+MAX_DEPTH = 5
 
 
 def get_stastics(agent1, agent2):
     ret = [0, 0, 0]
-    for _ in range(10):
+    for _ in range(100):
         ret[play(agent1=agent1, agent2=agent2)] += 1
     return ret
 
@@ -45,8 +48,13 @@ def generate_statistics():
     agents = []
     # agents.append(RandomAgent())
 
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(7, 1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H3(7, 1,3)))
+    agents.append(RandomAgent())
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H1()))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(7, 4)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H3(7, 4,3)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H4(7, 4,3,2)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H5(7, 4,3,2,1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H6(10,7,4,3,2,1)))
 
     matrix = get_all_statistics(agents)
 

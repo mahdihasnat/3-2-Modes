@@ -76,7 +76,7 @@ class State:
         if 0 <= last_stone_index <= 5 and next_state.board[last_stone_index] == 1 and next_state.board[
             opposite_index] > 0:
             State.capture_event()
-            next_state.board[6] += next_state.board[opposite_index] + 1;
+            next_state.board[6] += next_state.board[opposite_index] + 1
             next_state.board[last_stone_index] = 0
             next_state.board[opposite_index] = 0
 
@@ -169,3 +169,17 @@ class State:
             return [i + 1 for i, x in enumerate(self.board[0:6]) if x > 0]
         else:
             return [i + 1 for i, x in enumerate(self.board[7:13]) if x > 0]
+
+    def get_max_capture_1st_player(self):
+        ret=0
+        for i in range(6):
+            if self.board[i] >0 and self.board[i]+i <6 and self.board[i+self.board[i]] == 0 and self.board[12 - i - self.board[i]] > 0:
+                ret = max(ret , 1+ self.board[12 - i - self.board[i]])
+        return ret
+    
+    def get_max_capture_2nd_player(self):
+        ret =0
+        for i in range(7,13):
+            if self.board[i] >0 and self.board[i]+i <13 and self.board[i+self.board[i]] == 0 and self.board[12 - i - self.board[i]] > 0:
+                ret = max(ret , 1+ self.board[12 - i - self.board[i]])
+        return ret
