@@ -183,3 +183,44 @@ class State:
             if self.board[i] >0 and self.board[i]+i <13 and self.board[i+self.board[i]] == 0 and self.board[12 - i - self.board[i]] > 0:
                 ret = max(ret , 1+ self.board[12 - i - self.board[i]])
         return ret
+    
+    def stones_in_capture_move(self,move,first_player):
+        """
+            1<=move<=6
+        """
+        if first_player:
+            stone=self.board[move-1]
+            if stone == 0:
+                return 0
+            target=move-1 + stone
+
+            if target >= 13:
+                target-=13
+                if target < move -1 and self.board[target] == 0:
+                    return self.board[12-target]+1 if self.board[12-target] != 0 else 0
+                else:
+                    return 0
+            elif target >=6:
+                return 0
+            elif self.board[target] == 0:
+                return self.board[12-target]+1 if self.board[12-target] != 0 else 0
+            else:
+                return 0       
+        else:
+            stone=self.board[move+6]
+            if stone == 0:
+                return 0
+            target=move+6 + stone
+
+            if target <= 12 and self.board[target] == 0:
+                return self.board[12-target]+1 if self.board[12-target] != 0 else 0
+            elif target >=20:
+                target-=13
+                if target < move+6 and self.board[target] ==0:
+                    return self.board[12-target]+1 if self.board[12-target] != 0 else 0
+            return 0
+    def is_bonus_move(self,move,first_player):
+        if first_player :
+            return self.board[move-1] == 7- move
+        else:
+            return self.board[6+move] == 7- move
