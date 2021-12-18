@@ -20,7 +20,7 @@ class MiniMaxAlphaBetaAgent(Agent):
 
     def alpha_beta_search(self, state, depth, alpha, beta, first_player):
         if state.is_terminal() or depth == 0:
-            return self._heuristic.get_value(state)
+            return self._heuristic.get_value(state,first_player)
         else:
             if first_player:
                 value = -MAX_HEURISTIC_VALUE
