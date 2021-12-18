@@ -5,6 +5,7 @@ import time
 from agent.MiniMax import MiniMaxAlphaBetaAgent
 from heuristics.H1 import H1
 from heuristics.H2 import H2
+from heuristics.H3 import H3
 from play import play
 
 MAX_DEPTH = 4
@@ -12,7 +13,7 @@ MAX_DEPTH = 4
 
 def get_stastics(agent1, agent2):
     ret = [0, 0, 0]
-    for _ in range(3):
+    for _ in range(10):
         ret[play(agent1=agent1, agent2=agent2)] += 1
     return ret
 
@@ -44,14 +45,8 @@ def generate_statistics():
     agents = []
     # agents.append(RandomAgent())
 
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=4, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=5, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=6, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(storage_weight=7, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=4, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=5, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=6, side_weight=1)))
-    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH+1, heuristic=H2(storage_weight=7, side_weight=1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H2(7, 1)))
+    agents.append(MiniMaxAlphaBetaAgent(depth=MAX_DEPTH, heuristic=H3(7, 1,3)))
 
     matrix = get_all_statistics(agents)
 
