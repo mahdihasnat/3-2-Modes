@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f533e6-4f8f-4c86-9ecc-e12377f09fec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/heuristics/H5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heuristics/H6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsonparser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stastics.py" beforeDir="false" afterPath="$PROJECT_DIR$/stastics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stat.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state/State.py" beforeDir="false" afterPath="$PROJECT_DIR$/state/State.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Python.stastics">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -117,7 +114,7 @@
       <workItem from="1639319455570" duration="2902000" />
       <workItem from="1639376005527" duration="17989000" />
       <workItem from="1639449738229" duration="30328000" />
-      <workItem from="1639828334797" duration="8157000" />
+      <workItem from="1639828334797" duration="10738000" />
     </task>
     <servers />
   </component>
