@@ -3,7 +3,7 @@ CC = g++
 # compile every cpp file in this directory with g++ , and target
 
 # the object file in the same directory
-%.o : %.cpp
+%.o : %.cpp %.h
 	${CC} -c $< -o $@
 
 clean :
@@ -16,7 +16,7 @@ a.out :
 	${CC} *.o -o a.out
 
 # run the executable
-run : main.o a.out
+run : main.o passenger.o a.out
 	./a.out
 
 # compile and run
