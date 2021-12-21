@@ -90,6 +90,7 @@ int main(void)
 	pthread_create(&thread1,NULL,ProducerFunc,(void*)message1 );
 	pthread_create(&thread2,NULL,ConsumerFunc,(void*)message2 );
 
-	while(1);
+	pthread_join(thread1,NULL);
+	pthread_join(thread2,NULL);
 	return 0;
 }
