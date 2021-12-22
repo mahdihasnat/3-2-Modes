@@ -21,8 +21,6 @@ public:
 		os << "Passenger " << p.id << (p.is_vip ? "(VIP)" : "");
 		return os;
 	}
-
-	void *fly();
 };
 
 void *passenger_fly(void *args);

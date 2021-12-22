@@ -5,6 +5,6 @@
 
 void kiosk_init();
 void kiosk_self_check(const Passenger & p);
-void koisk_destroy();
+void kiosk_destroy();
 
 #endif

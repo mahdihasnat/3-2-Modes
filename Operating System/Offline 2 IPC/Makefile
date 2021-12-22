@@ -22,6 +22,9 @@ run : a.out
 # compile and run
 all : run
 
+# compile and debug memory-check
+memory : a.out
+	valgrind --leak-check=full -s ./a.out
 # compile and run
 .PHONY : run
 
