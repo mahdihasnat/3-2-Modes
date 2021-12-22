@@ -3,7 +3,7 @@
 
 #include "passenger.h"
 
-void kiosk_init();
+void kiosk_init(int);
 void kiosk_self_check(const Passenger & p);
 void kiosk_destroy();
 

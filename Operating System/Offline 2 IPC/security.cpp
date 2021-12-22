@@ -4,6 +4,7 @@
 
 #include "security.h"
 #include "SecurityBelt.h"
+#include <stdlib.h>
 
 extern int n;
 extern int p;
@@ -24,7 +25,8 @@ void security_destroy()
     delete [] sb;
 }
 
-void security_check(Passenger const & p)
+void security_check(Passenger const & passenger)
 {
-    
-}
+    int belt_id=rand()%n;
+    sb[belt_id]->check_security(passenger);
+}   

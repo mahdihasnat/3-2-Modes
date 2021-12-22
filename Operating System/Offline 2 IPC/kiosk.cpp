@@ -2,18 +2,17 @@
 #include "Semaphore.h"
 #include "logger.h"
 
-#include<unistd.h>
+#include "Sleep.h"
 #include <iostream>
 using namespace std;
 
 extern int w;
-extern int m;
 
 Semaphore * available;
 
-void kiosk_init()
+void kiosk_init(int totalKiosk)
 {
-	available = new Semaphore(m);
+	available = new Semaphore(totalKiosk);
 }
 
 void kiosk_destroy()
@@ -27,7 +26,7 @@ void kiosk_self_check(const Passenger & p)
 	available->down();
     log{}<<p<<" has entered the kiosk "<<endl;
 
-	sleep(w);
+	sleep_milliseconds(w);
 
     log{}<<p<<" has got his boarding pass"<<endl;
 	available->up();

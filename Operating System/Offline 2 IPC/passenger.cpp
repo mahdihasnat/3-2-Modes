@@ -1,5 +1,7 @@
 #include "Passenger.h"
+#include "kiosk.h"
 #include "vip_channel.h"
+#include "security.h"
 
 Passenger::Passenger(int id, bool is_vip)
 {
@@ -14,6 +16,10 @@ void * passenger_fly(void *args)
 	if(p->is_vip)
 	{
 		vip_channel_to_gate(*p);
+	}
+	else 
+	{
+		security_check(*p);
 	}
 	return NULL;
 }

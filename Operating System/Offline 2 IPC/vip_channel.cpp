@@ -4,7 +4,7 @@
 
 #include "vip_channel.h"
 #include "logger.h"
-#include <unistd.h>
+#include "Sleep.h"
 
 
 Semaphore available_to_kiosk(1);
@@ -34,7 +34,7 @@ void vip_channel_to_gate(Passenger const &p) {
 
     log{} << p << " has started crossing vip channel to gate" << endl;
 
-    sleep(z);
+    sleep_milliseconds(z);
 
     log{} << p << " has crossed vip channel to gate" << endl;
 
@@ -68,7 +68,7 @@ void vip_channel_to_special_kiosk(Passenger const &p) {
 
     log{} << p << " has started crossing vip channel to special kiosk" << endl;
 
-    sleep(z);
+    sleep_milliseconds(z);
 
     log{} << p << " has crossed vip channel to special kiosk" << endl;
 

@@ -12,7 +12,7 @@ clean :
 
 .PHONY : clean
 
-a.out : main.o passenger.o kiosk.o logger.o Semaphore.o vip_channel.o SecurityBelt.o security.o
+a.out : main.o passenger.o kiosk.o logger.o Semaphore.o vip_channel.o SecurityBelt.o security.o Sleep.o
 	${CC} -pthread *.o -o a.out
 
 # run the executable

@@ -11,15 +11,15 @@ int w,x,y,z;
 void system_init()
 {
 
-	m=2;
+	m=10;
 	n=1;
-	p=1;
+	p=5;
 	w=0;
 	x=0;
 	y=0;
-	z=1;
+	z=0;
 
-	kiosk_init();
+	kiosk_init(m);
 	security_init();
 }
 
@@ -32,18 +32,16 @@ void system_destroy()
 int main()
 {
 	
-	cout<<"hellow\n";
-	
 	system_init();
 
 	const int totalP=10;
-	Passenger ** p = new Passenger *[totalP];
+	Passenger ** passenger = new Passenger *[totalP];
 	pthread_t * pth = new pthread_t[totalP];
 
 	for(int i=0;i<totalP;i++)
 	{
-		p[i]=new Passenger(i,true);
-		pthread_create(pth + i,NULL,passenger_fly,p[i]);
+		passenger[i]=new Passenger(i,false);
+		pthread_create(pth + i,NULL,passenger_fly,passenger[i]);
 	}
 
 	for(int i=0;i<totalP;i++)
@@ -53,9 +51,9 @@ int main()
 
 	for(int i=0;i<totalP;i++)
 	{
-		delete p[i];
+		delete passenger[i];
 	}
-	delete [] p;
+	delete [] passenger;
 	delete [] pth;
 
 	system_destroy();
