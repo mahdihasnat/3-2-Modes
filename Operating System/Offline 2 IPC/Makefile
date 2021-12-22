@@ -12,11 +12,11 @@ clean :
 
 .PHONY : clean
 
-a.out :
-	${CC} *.o -o a.out
+a.out : main.o passenger.o kiosk.o
+	${CC} -pthread *.o -o a.out
 
 # run the executable
-run : main.o passenger.o a.out
+run : a.out
 	./a.out
 
 # compile and run

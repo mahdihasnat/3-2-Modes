@@ -1,30 +1,37 @@
 #ifndef PASSENGER_H
 #define PASSENGER_H
+
 #include <iostream>
 using namespace std;
+
+class Passenger;
+
+#include "kiosk.h"
 
 class Passenger
 {
 	
 public:
 	int id;
-	Passenger(int id)
+	bool is_vip;
+	Passenger(int id,bool is_vip)
 	{
 		this->id = id;
+		this->is_vip = is_vip;
 	}
-	~Passenger();
 
 	friend ostream &operator<<(ostream &os, const Passenger &p)
 	{
-		os << "Passenger id: " << p.id << endl;
+		os << "Passenger " << p.id << (p.is_vip ? "(VIP)" : "");
 		return os;
 	}
 
-	friend istream &operator>>(istream &is, Passenger &p)
+	void * fly(void *args)
 	{
-		is >> p.id;
-		return is;
+		kiosk_self_check(*this);
+		return NULL;
 	}
+
 
 };
 
