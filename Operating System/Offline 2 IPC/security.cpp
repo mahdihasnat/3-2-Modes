@@ -21,10 +21,10 @@ void security_destroy()
 {
     for(int i=0;i<n;i++)
         delete sb[i];
-    delete sb;
+    delete [] sb;
 }
 
 void security_check(Passenger const & p)
 {
-
+    
 }

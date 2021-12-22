@@ -55,8 +55,8 @@ int main()
 	{
 		delete p[i];
 	}
-	delete p;
-	delete pth;
+	delete [] p;
+	delete [] pth;
 
 	system_destroy();
 
