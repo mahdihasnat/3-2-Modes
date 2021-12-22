@@ -1,4 +1,4 @@
-CC = g++
+CC = g++ -std=c++2a
 
 # compile every cpp file in this directory with g++ , and target
 
@@ -12,7 +12,7 @@ clean :
 
 .PHONY : clean
 
-a.out : main.o passenger.o kiosk.o
+a.out : main.o passenger.o kiosk.o logger.o
 	${CC} -pthread *.o -o a.out
 
 # run the executable
