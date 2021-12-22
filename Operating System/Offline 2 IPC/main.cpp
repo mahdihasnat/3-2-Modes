@@ -16,7 +16,7 @@ void system_init()
 	w=0;
 	x=0;
 	y=0;
-	z=0;
+	z=1;
 
 	kiosk_init();
 }
@@ -39,7 +39,7 @@ int main()
 
 	for(int i=0;i<totalP;i++)
 	{
-		p[i]=new Passenger(i,false);
+		p[i]=new Passenger(i,true);
 		pthread_create(pth + i,NULL,passenger_fly,p[i]);
 	}
 

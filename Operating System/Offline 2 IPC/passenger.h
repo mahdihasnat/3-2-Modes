@@ -21,10 +21,6 @@ public:
 		os << "Passenger " << p.id << (p.is_vip ? "(VIP)" : "");
 		return os;
 	}
-	const string operator + (string const & s) const
-	{
-		return string("Passenger  "+ id) + string(is_vip ? "(VIP)" : "")+s;
-	}
 
 };
 

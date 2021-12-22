@@ -1,0 +1,30 @@
+Passenger 0(VIP) has arrived at gate side of vip channel
+Passenger 0(VIP) has started crossing vip channel to special kiosk
+Passenger 2(VIP) has arrived at gate side of vip channel
+Passenger 2(VIP) has started crossing vip channel to special kiosk
+Passenger 1(VIP) has arrived at kiosk side of vip channel
+Passenger 3(VIP) has arrived at kiosk side of vip channel
+Passenger 4(VIP) has arrived at gate side of vip channel
+Passenger 5(VIP) has arrived at kiosk side of vip channel
+Passenger 6(VIP) has arrived at gate side of vip channel
+Passenger 7(VIP) has arrived at kiosk side of vip channel
+Passenger 8(VIP) has arrived at gate side of vip channel
+Passenger 9(VIP) has arrived at kiosk side of vip channel
+Passenger 2(VIP) has crossed vip channel to special kiosk
+Passenger 0(VIP) has crossed vip channel to special kiosk
+Passenger 1(VIP) has started crossing vip channel to gate
+Passenger 3(VIP) has started crossing vip channel to gate
+Passenger 5(VIP) has started crossing vip channel to gate
+Passenger 7(VIP) has started crossing vip channel to gate
+Passenger 9(VIP) has started crossing vip channel to gate
+Passenger 7(VIP) has crossed vip channel to gate
+Passenger 3(VIP) has crossed vip channel to gate
+Passenger 1(VIP) has crossed vip channel to gate
+Passenger 9(VIP) has crossed vip channel to gate
+Passenger 5(VIP) has crossed vip channel to gate
+Passenger 4(VIP) has started crossing vip channel to special kiosk
+Passenger 6(VIP) has started crossing vip channel to special kiosk
+Passenger 8(VIP) has started crossing vip channel to special kiosk
+Passenger 8(VIP) has crossed vip channel to special kiosk
+Passenger 6(VIP) has crossed vip channel to special kiosk
+Passenger 4(VIP) has crossed vip channel to special kiosk

@@ -23,7 +23,7 @@ void kiosk_destroy()
 
 void kiosk_self_check(const Passenger & p)
 {
-	//log{}<<p<<" has started waiting in kiosk"<<endl;
+	log{}<<p<<" has started waiting in kiosk"<<endl;
 	available->down();
     log{}<<p<<" has entered the kiosk "<<endl;
 
