@@ -14,6 +14,7 @@ public:
     Semaphore(int );
     Semaphore(const Semaphore &) = delete;
     ~Semaphore();
+    Semaphore operator =(const Semaphore &) = delete;
     void up();
     void down();
 };
