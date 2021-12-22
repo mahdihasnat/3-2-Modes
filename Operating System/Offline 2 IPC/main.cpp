@@ -30,13 +30,14 @@ int main()
 	for(int i=0;i<totalP;i++)
 	{
 		p[i]=new Passenger(i,false);
-		pthread_create(pth + i,NULL,p[i]->fly,NULL);
+		pthread_create(pth + i,NULL,passenger_fly,p+i);
 	}
 
 	for(int i=0;i<totalP;i++)
 	{
 		pthread_join(pth[i],NULL);
 	}
+
 
 
 

@@ -10,15 +10,11 @@ class Passenger;
 
 class Passenger
 {
-	
+
 public:
 	int id;
 	bool is_vip;
-	Passenger(int id,bool is_vip)
-	{
-		this->id = id;
-		this->is_vip = is_vip;
-	}
+	Passenger(int id, bool is_vip);
 
 	friend ostream &operator<<(ostream &os, const Passenger &p)
 	{
@@ -26,13 +22,9 @@ public:
 		return os;
 	}
 
-	void * fly(void *args)
-	{
-		kiosk_self_check(*this);
-		return NULL;
-	}
-
-
+	void *fly();
 };
+
+void *passenger_fly(void *args);
 
 #endif

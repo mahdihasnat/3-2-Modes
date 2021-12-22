@@ -1,3 +1,18 @@
 {
-	"cmake.configureOnOpen": false
+	"cmake.configureOnOpen": false,
+	"files.associations": {
+		"*.asm": "muchassemblyrequired",
+		"*.txt": "plaintext",
+		"complex": "cpp",
+		"any": "cpp",
+		"bitset": "cpp",
+		"chrono": "cpp",
+		"future": "cpp",
+		"limits": "cpp",
+		"memory": "cpp",
+		"optional": "cpp",
+		"thread": "cpp",
+		"type_traits": "cpp",
+		"valarray": "cpp"
+	}
 }
