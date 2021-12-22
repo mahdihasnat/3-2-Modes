@@ -6,15 +6,17 @@
 #include <semaphore.h>
 
 Semaphore::Semaphore(int value) {
-    sem_init(&this->value , 0,value);
+    sem_init(&this->value, 0, value);
 }
-Semaphore :: ~Semaphore() {
+
+Semaphore::~Semaphore() {
     sem_destroy(&this->value);
 }
-void Semaphore::up()
-{
+
+void Semaphore::up() {
     sem_post(&this->value);
 }
+
 void Semaphore::down() {
     sem_wait(&this->value);
 }

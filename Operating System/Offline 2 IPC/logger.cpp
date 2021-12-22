@@ -6,9 +6,8 @@
 
 Semaphore log::mutex(1);
 
-log::~log()
-{
+log::~log() {
     mutex.down();
-    cout<< this->str();
+    cout << this->str();
     mutex.up();
 }

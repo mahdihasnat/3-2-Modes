@@ -6,7 +6,6 @@
 #include <chrono>
 #include <thread>
 
-void sleep_milliseconds(int milisec)
-{
+void sleep_milliseconds(int milisec) {
     std::this_thread::sleep_for(std::chrono::milliseconds(milisec));
 }

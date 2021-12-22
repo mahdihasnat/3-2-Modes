@@ -12,8 +12,9 @@ class SecurityBelt {
     Semaphore available;
     int id;
 public:
-    SecurityBelt(int,int);
-    void check_security(Passenger const&);
+    SecurityBelt(int, int);
+
+    void check_security(Passenger const &);
 };
 
 #endif //OFFLINE_2_IPC_SECURITYBELT_H

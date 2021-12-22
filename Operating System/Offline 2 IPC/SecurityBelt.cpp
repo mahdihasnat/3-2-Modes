@@ -10,11 +10,10 @@
 
 extern int x;
 
-SecurityBelt::SecurityBelt(int id, int maximumPassenger) : available(maximumPassenger), id(id)
-{
+SecurityBelt::SecurityBelt(int id, int maximumPassenger) : available(maximumPassenger), id(id) {
 }
-void SecurityBelt::check_security(const Passenger &p)
-{
+
+void SecurityBelt::check_security(const Passenger &p) {
     log{} << p << "  has started waiting for security check in belt " << id << endl;
     available.down();
 

@@ -24,8 +24,7 @@ void vip_channel_to_gate(Passenger const &p) {
     mutex_count_to_gate.down();
     {
         count_to_gate++;
-        if (count_to_gate == 1)
-        {
+        if (count_to_gate == 1) {
             available_to_kiosk.down();
             mutex_vip_channel.down();
         }
@@ -41,8 +40,7 @@ void vip_channel_to_gate(Passenger const &p) {
     mutex_count_to_gate.down();
     {
         count_to_gate--;
-        if (count_to_gate == 0)
-        {
+        if (count_to_gate == 0) {
             mutex_vip_channel.up();
             available_to_kiosk.up();
         }
@@ -59,8 +57,7 @@ void vip_channel_to_special_kiosk(Passenger const &p) {
     mutex_count_to_special_kiosk.down();
     {
         count_to_special_kiosk++;
-        if (count_to_special_kiosk == 1)
-        {
+        if (count_to_special_kiosk == 1) {
             mutex_vip_channel.down();
         }
     }
@@ -75,8 +72,7 @@ void vip_channel_to_special_kiosk(Passenger const &p) {
     mutex_count_to_special_kiosk.down();
     {
         count_to_special_kiosk--;
-        if (count_to_special_kiosk == 0)
-        {
+        if (count_to_special_kiosk == 0) {
             mutex_vip_channel.up();
         }
     }

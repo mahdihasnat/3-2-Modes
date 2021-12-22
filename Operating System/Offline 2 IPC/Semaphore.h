@@ -11,11 +11,16 @@ class Semaphore {
 private:
     sem_t value;
 public:
-    Semaphore(int );
+    Semaphore(int);
+
     Semaphore(const Semaphore &) = delete;
+
     ~Semaphore();
-    Semaphore operator =(const Semaphore &) = delete;
+
+    Semaphore operator=(const Semaphore &) = delete;
+
     void up();
+
     void down();
 };
 

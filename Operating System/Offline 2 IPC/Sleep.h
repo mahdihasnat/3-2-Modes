@@ -4,6 +4,7 @@
 
 #ifndef OFFLINE_2_IPC_SLEEP_H
 #define OFFLINE_2_IPC_SLEEP_H
-void sleep_milliseconds(int );
+
+void sleep_milliseconds(int);
 
 #endif //OFFLINE_2_IPC_SLEEP_H
