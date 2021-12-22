@@ -3,3 +3,12 @@
 //
 
 #include "logger.h"
+
+Semaphore log::mutex(1);
+
+log::~log()
+{
+    mutex.down();
+    cout<< this->str();
+    mutex.up();
+}

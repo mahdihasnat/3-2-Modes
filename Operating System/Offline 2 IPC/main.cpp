@@ -14,6 +14,9 @@ void system_init()
 	n=1;
 	p=1;
 	w=0;
+	x=0;
+	y=0;
+	z=0;
 
 	kiosk_init();
 }
@@ -25,7 +28,6 @@ void system_destroy()
 
 int main()
 {
-	ofstream os("output.txt");
 	
 	cout<<"hellow\n";
 	
