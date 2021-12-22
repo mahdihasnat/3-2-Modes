@@ -10,7 +10,7 @@ class Passenger;
 #include "kiosk.h"
 
 class Passenger {
-
+    bool lost_boarding_pass;
 public:
     int id;
     bool is_vip;
@@ -21,6 +21,10 @@ public:
         os << "Passenger " << p.id << (p.is_vip ? "(VIP)" : "");
         return os;
     }
+
+    bool lostBoardingPass() const;
+
+    void setLostBoardingPass(bool);
 
 };
 
