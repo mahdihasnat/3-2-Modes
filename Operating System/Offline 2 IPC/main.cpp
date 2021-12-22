@@ -3,6 +3,7 @@ using namespace std;
 
 #include "kiosk.h"
 #include "passenger.h"
+#include "security.h"
 
 int m,n,p;
 int w,x,y,z;
@@ -19,11 +20,13 @@ void system_init()
 	z=1;
 
 	kiosk_init();
+	security_init();
 }
 
 void system_destroy()
 {
 	kiosk_destroy();
+	security_destroy();
 }
 
 int main()
