@@ -29,7 +29,7 @@ void kiosk_self_check(const Passenger &p) {
 
     sleep_milliseconds(w);
 
-    log{} << p << " has got his boarding pass" << endl;
+    log{} << p << " has got his boarding pass from kiosk" << endl;
     available->up();
 
 }
