@@ -19,6 +19,9 @@ void system_init() {
     y = 0;
     z = 0;
 
+    cin>>m>>n>>p;
+    cin>>w>>x>>y>>z;
+
     kiosk_init(m);
     security_init();
 }
@@ -28,7 +31,18 @@ void system_destroy() {
     security_destroy();
 }
 
-int main() {
+int main(int argc,char *argv[]) {
+
+    if(argc ==1 )
+    {
+        cout<<"Usage: "<<argv[0]<<" <input_file> [<output_file>]"<<endl;
+        return 0;
+    }
+
+    freopen(argv[1],"r",stdin);
+
+    if(argc >= 3)
+        freopen(argv[2],"w",stdout);
 
     system_init();
 

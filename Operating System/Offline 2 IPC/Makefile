@@ -1,5 +1,5 @@
 CC = g++
-
+PARAMETERS = input.txt output.txt
 # compile every cpp file in this directory with g++ , and target
 
 # the object file in the same directory
@@ -17,7 +17,7 @@ a.out : main.o passenger.o kiosk.o logger.o Semaphore.o vip_channel.o SecurityBe
 
 # run the executable
 run : a.out
-	./a.out
+	./a.out ${PARAMETERS}
 
 # compile and run
 all : run
