@@ -4,49 +4,49 @@
 
 #include "Queue.h"
 
-template<class T>
+
+template<typename T>
 Queue<T>::Queue() : mutex(1) {
 }
 
-template<class T>
+template<typename T>
 Queue<T>::~Queue() {
 
 }
 
-template<class T>
+template<typename T>
 void Queue<T>::syn_push(T const &val) {
     mutex.down();
     q.push(val);
     mutex.up();
 }
 
-template<class T>
+template<typename T>
 void Queue<T>::asyn_push(const T &val) {
     return q.push(val);
 }
 
-template<class T>
+template<typename T>
 T Queue<T>::asyn_front() {
-    T ret = q.front();
-    return ret;
+    return q.front();
 }
 
-template<class T>
+template<typename T>
 void Queue<T>::asyn_pop() {
     return q.pop();
 }
 
-template<class T>
+template<typename T>
 bool Queue<T>::asyn_empty() {
     return q.empty();
 }
 
-template<class T>
+template<typename T>
 void Queue<T>::lock() {
-    mutex.down();
+    return mutex.down();
 }
 
-template<class T>
+template<typename T>
 void Queue<T>::unlock() {
-    mutex.up();
+    return mutex.up();
 }

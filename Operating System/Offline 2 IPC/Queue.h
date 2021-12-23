@@ -10,7 +10,7 @@
 
 using namespace std;
 
-template<class T>
+template<typename T>
 class Queue {
     // for any operation threed need to acquire lock either syn or  lock() + asyn
     // before calling asyn operation , call lock() first
