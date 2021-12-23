@@ -1,5 +1,5 @@
 CC = g++
-PARAMETERS = input.txt output.txt
+PARAMETERS = input.txt
 # compile every cpp file in this directory with g++ , and target
 
 # the object file in the same directory
@@ -12,7 +12,7 @@ clean :
 
 .PHONY : clean
 
-a.out : main.o passenger.o kiosk.o logger.o Semaphore.o vip_channel.o SecurityBelt.o security.o Sleep.o boarding.o Queue.o
+a.out : main.o passenger.o kiosk.o logger.o Semaphore.o vip_channel.o SecurityBelt.o security.o Sleep.o boarding.o Queue.o timer.o
 	${CC} -pthread *.o -o a.out
 
 # run the executable
