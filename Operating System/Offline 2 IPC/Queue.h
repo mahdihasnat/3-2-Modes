@@ -42,5 +42,6 @@ public:
 
 };
 
+#include "Queue.cpp"
 
 #endif //OFFLINE_2_IPC_QUEUE_H

@@ -9,3 +9,11 @@ Search for particular text in outputs:
 |Vip channel    | `channel`                   |
 |Security Belt  | `belt`                      |
 |Boarding Gate  | `"boarding gate\\|officer"` |
+
+
+-----------------------
+### Debug notes:
+
+- https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp
+
+- https://isocpp.org/wiki/faq/templates#templates-defn-vs-decl

@@ -10,16 +10,15 @@ using namespace std;
 extern int w;
 
 Semaphore *available;
-Queue<int> *q;
+Queue<int> q;
 
 Semaphore mutex_special_kiosk(1);
 
 
 void kiosk_init(int totalKiosk) {
     available = new Semaphore(totalKiosk);
-    // q = new Queue<int>();
-//    for(int i=1;i<=totalKiosk;i++)
-//        q->asyn_push(i); // asyn push without lock since no thread is already created
+    for (int i = 1; i <= totalKiosk; i++)
+        q.asyn_push(i); // asyn push without lock since no thread is already created
 
 }
 

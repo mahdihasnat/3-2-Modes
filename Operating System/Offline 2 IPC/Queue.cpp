@@ -2,6 +2,9 @@
 // Created by mahdi on 12/23/2021.
 //
 
+#ifndef QUEUE_CPP
+#define QUEUE_CPP
+
 #include "Queue.h"
 
 
@@ -50,3 +53,5 @@ template<typename T>
 void Queue<T>::unlock() {
     return mutex.up();
 }
+
+#endif //QUEUE_CPP

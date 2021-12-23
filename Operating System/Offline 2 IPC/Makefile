@@ -1,4 +1,4 @@
-CC = g++ -std=c++2a
+CC = g++
 
 # compile every cpp file in this directory with g++ , and target
 
