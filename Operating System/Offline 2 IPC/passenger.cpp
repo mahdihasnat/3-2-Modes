@@ -8,7 +8,7 @@
 Passenger::Passenger(int id, bool is_vip) {
     this->id = id;
     this->is_vip = is_vip;
-    this->lost_boarding_pass = false;
+    this->lost_boarding_pass = true;
 }
 
 bool Passenger::lostBoardingPass() const {
@@ -29,6 +29,7 @@ void *passenger_fly(void *args) {
     }
     while (boarding_check_boarding_pass(*p) == false) {
         vip_channel_to_special_kiosk(*p);
+        kiosk_special_check(*p);
         p->setLostBoardingPass(false);
         vip_channel_to_gate(*p);
     }

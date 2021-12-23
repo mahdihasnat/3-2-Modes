@@ -9,4 +9,6 @@ void kiosk_self_check(const Passenger &p);
 
 void kiosk_destroy();
 
+void kiosk_special_check(Passenger const &);
+
 #endif
