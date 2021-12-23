@@ -54,4 +54,13 @@ void Queue<T>::unlock() {
     return mutex.up();
 }
 
+template<typename T>
+T Queue<T>::syn_front_and_pop() {
+    mutex.down();
+    T ret=q.front();
+    q.pop();
+    mutex.up();
+    return ret;
+}
+
 #endif //QUEUE_CPP

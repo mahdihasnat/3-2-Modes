@@ -19,23 +19,23 @@ void kiosk_init(int totalKiosk) {
     available = new Semaphore(totalKiosk);
     for (int i = 1; i <= totalKiosk; i++)
         q.asyn_push(i); // asyn push without lock since no thread is already created
-
 }
 
 void kiosk_destroy() {
     delete available;
-    // delete q;
 }
 
 void kiosk_self_check(const Passenger &p) {
     log{} << p << " has started waiting in kiosk" << endl;
 
     available->down();
-    log{} << p << " has entered the kiosk " << endl;
+    int kiosk_id = q.syn_front_and_pop();
+    log{} << p << " has entered the kiosk " << kiosk_id << endl;
 
     sleep_milliseconds(w);
 
-    log{} << p << " has got his boarding pass from kiosk" << endl;
+    log{} << p << " has got his boarding pass from kiosk " << kiosk_id << endl;
+    q.syn_push(kiosk_id);
     available->up();
 
 }

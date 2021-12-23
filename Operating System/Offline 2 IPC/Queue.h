@@ -32,6 +32,8 @@ public:
 
     T asyn_front();
 
+    T syn_front_and_pop();
+
     void asyn_pop();
 
     bool asyn_empty();
