@@ -3,11 +3,12 @@
 //
 
 #include "logger.h"
+#include "timer.h"
 
 Semaphore log::mutex(1);
 
 log::~log() {
     mutex.down();
-    cout << this->str();
+    cout << "[" << timer_get_time_str() << "] " << this->str();
     mutex.up();
 }

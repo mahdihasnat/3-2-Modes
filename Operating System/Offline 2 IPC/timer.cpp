@@ -23,7 +23,6 @@ void timer_destroy() {
 
 string timer_get_time_str() {
     double milisec = duration_cast<milliseconds>(system_clock::now() - start).count();
-    cout << milisec << endl;
     double sec = milisec / 1000.0;
     stringstream ss;
     ss << setprecision(3) << fixed << setw(6) << right << sec;
