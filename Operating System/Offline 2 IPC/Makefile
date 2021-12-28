@@ -22,6 +22,10 @@ run : a.out
 # compile and run
 all : run
 
+time : timer.o
+	g++ -o time timer.o
+	./time	
+
 # compile and debug memory-check
 memory : a.out
 	valgrind --leak-check=full -s ./a.out
