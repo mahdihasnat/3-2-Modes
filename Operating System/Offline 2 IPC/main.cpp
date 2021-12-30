@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 
     system_init();
 
-    const int totalP = 10;
+    const int totalP = 1;
     Passenger **passenger = new Passenger *[totalP];
     pthread_t *pth = new pthread_t[totalP];
 

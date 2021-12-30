@@ -29,7 +29,7 @@ time : timer.o
 
 # compile and debug memory-check
 memory : a.out
-	valgrind --leak-check=full -s ./a.out
+	valgrind --leak-check=full -s ./a.out input.txt
 # compile and run
 .PHONY : run
 

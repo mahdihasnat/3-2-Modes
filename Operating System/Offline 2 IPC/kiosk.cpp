@@ -30,11 +30,11 @@ void kiosk_self_check(const Passenger &p) {
 
     available->down();
     int kiosk_id = q.syn_front_and_pop();
-    log{} << p << " has entered the kiosk " << kiosk_id << endl;
+    log{} << p << " has started self-check in at kiosk " << kiosk_id << endl;
 
     sleep_milliseconds(w);
 
-    log{} << p << " has got his boarding pass from kiosk " << kiosk_id << endl;
+    log{} << p << " has finished check in at kiosk " << kiosk_id << endl;
     q.syn_push(kiosk_id);
     available->up();
 
@@ -45,7 +45,7 @@ void kiosk_special_check(const Passenger &p) {
     log{} << p << " has started waiting in special kiosk" << endl;
 
     mutex_special_kiosk.down();
-    log{} << p << " has entered the special kiosk " << endl;
+    log{} << p << " has entered the special kiosk" << endl;
 
     sleep_milliseconds(w);
 
