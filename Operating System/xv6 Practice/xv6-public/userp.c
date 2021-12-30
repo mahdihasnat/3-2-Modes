@@ -3,6 +3,6 @@
 
 int main()
 {
-	printf(1, "hello from mahdi\n");
+	printf(1, "hello from mahdi, space used: %d\n",getmemorysize());
 	exit();
 }
