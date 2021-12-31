@@ -3,8 +3,6 @@
 
 int main(int argc,char *argv[])
 {
-	printf(1,"total argument: %d\n",argc);
-	
 	int *arr = (int *)malloc(sizeof(int)*(argc-1));
 	int i=0;
 	for(i=0;i<argc-1;i++)
@@ -13,7 +11,7 @@ int main(int argc,char *argv[])
 	}
 	int sum;
 	sum=add(argc-1,arr);
-	printf(1,"sum: %d\n",sum);
+	printf(1,"%d\n",sum);
 	free(arr);
 	exit();
 }
