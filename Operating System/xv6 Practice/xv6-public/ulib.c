@@ -87,9 +87,15 @@ atoi(const char *s)
   int n;
 
   n = 0;
+  int multiplier=1;
+  if(*s=='-')
+  {
+    multiplier=-1;
+    s++;
+  }
   while('0' <= *s && *s <= '9')
     n = n*10 + *s++ - '0';
-  return n;
+  return n*multiplier;
 }
 
 void*
