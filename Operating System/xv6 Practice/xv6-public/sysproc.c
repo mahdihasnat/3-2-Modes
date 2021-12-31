@@ -94,3 +94,22 @@ int sys_getmemorysize()
 {
   return myproc()->sz;
 }
+
+int sys_add(void)
+{
+  int argc;
+  if(argint(0, &argc)<0){
+    // printf(2, "argc error\n");
+    return -1;
+  }
+  int sum=0;
+  int *arr;
+  if(argint(1,(int*)&arr)<0){
+    // printf(2, "arr error\n");
+    return -1;
+  }
+  for(int i=0;i<argc;i++){
+    sum+=arr[i];
+  }
+  return sum;
+}
