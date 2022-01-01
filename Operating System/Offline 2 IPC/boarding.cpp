@@ -11,22 +11,22 @@ Semaphore mutex_officer(1);
 extern int y;
 
 bool boarding_check_boarding_pass(Passenger const &passenger) {
-    log{} << passenger << " has started waiting at boarding gate" << endl;
+    Log{} << passenger << " has started waiting at boarding gate" << endl;
     bool ret;
     mutex_officer.down();
-    log{} << "Boarding officer has started checking boarding pass of " << passenger << endl;
+    Log{} << "Boarding officer has started checking boarding pass of " << passenger << endl;
 
     if (passenger.lostBoardingPass()) {
         ret = false;
-        log{} << passenger << " failed to show boarding pass to officer" << endl;
+        Log{} << passenger << " failed to show boarding pass to officer" << endl;
 
     } else {
         ret = true;
-        log{} << passenger << " started showing boarding pass to officer" << endl;
+        Log{} << passenger << " started showing boarding pass to officer" << endl;
 
         sleep_milliseconds(y);
 
-        log{} << "Boarding Officer checked boarding pass of " << passenger << " successfully" << endl;
+        Log{} << "Boarding Officer checked boarding pass of " << passenger << " successfully" << endl;
     }
 
     mutex_officer.up();

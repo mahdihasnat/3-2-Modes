@@ -33,7 +33,7 @@ void *passenger_fly(void *args) {
         p->setLostBoardingPass(false);
         vip_channel_to_gate(*p);
     }
-    log{} << (*p) << " has boarded on the plane successfully" << endl;
+    Log{} << (*p) << " has boarded on the plane successfully" << endl;
 
     return NULL;
 }

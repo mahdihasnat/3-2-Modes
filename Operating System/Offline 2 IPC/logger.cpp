@@ -5,9 +5,9 @@
 #include "logger.h"
 #include "timer.h"
 
-Semaphore log::mutex(1);
+Semaphore Log::mutex(1);
 
-log::~log() {
+Log::~Log() {
     mutex.down();
     cout << "[" << timer_get_time_str() << "] " << this->str();
     mutex.up();

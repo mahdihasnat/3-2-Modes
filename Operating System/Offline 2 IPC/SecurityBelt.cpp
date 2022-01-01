@@ -14,13 +14,13 @@ SecurityBelt::SecurityBelt(int id, int maximumPassenger) : available(maximumPass
 }
 
 void SecurityBelt::check_security(const Passenger &p) {
-    log{} << p << " has started waiting for security check in belt " << id << endl;
+    Log{} << p << " has started waiting for security check in belt " << id << endl;
     available.down();
 
-    log{} << p << " has started the security check in belt " << id << endl;
+    Log{} << p << " has started the security check in belt " << id << endl;
 
     sleep_milliseconds(x);
 
-    log{} << p << " has crossed the security check in belt " << id << endl;
+    Log{} << p << " has crossed the security check in belt " << id << endl;
     available.up();
 }

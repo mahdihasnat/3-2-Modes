@@ -11,9 +11,9 @@
 
 using namespace std;
 
-class log : public ostringstream {
+class Log : public ostringstream {
 public:
-    ~log();
+    ~Log();
 
 private:
     static Semaphore mutex;

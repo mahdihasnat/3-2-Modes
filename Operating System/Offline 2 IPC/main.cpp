@@ -1,11 +1,14 @@
-#include<bits/stdc++.h>
-
-using namespace std;
+#include <queue>
 
 #include "kiosk.h"
 #include "passenger.h"
 #include "security.h"
 #include "timer.h"
+#include "generator.h"
+#include "Sleep.h"
+#include "logger.h"
+
+using namespace std;
 
 int m, n, p;
 int w, x, y, z;
@@ -48,25 +51,34 @@ int main(int argc, char *argv[]) {
 
     system_init();
 
-    const int totalP = 1;
-    Passenger **passenger = new Passenger *[totalP];
-    pthread_t *pth = new pthread_t[totalP];
+    double passenger_per_time_unit = 2.0/1.0;
+    int total_time_unit=10;
 
-    for (int i = 0; i < totalP; i++) {
-        passenger[i] = new Passenger(i, false);
-        pthread_create(pth + i, NULL, passenger_fly, passenger[i]);
+    Generator generator(passenger_per_time_unit);
+    queue<pthread_t *> thread_q;
+    int new_passenger_number=1;
+
+    for(int i=0;i<total_time_unit;i++){
+        
+        int passenger_num = generator.generate();
+        for(int j=0;j<passenger_num;j++){
+            Passenger *passenger = new Passenger( new_passenger_number++ ,rand()%2);
+            pthread_t *thread = new pthread_t;
+            pthread_create(thread, NULL, passenger_fly, (void *)passenger);
+            thread_q.push(thread);
+        }
+        
+        Log{} << "time unit " << i << ": " << passenger_num << " passengers generated" << endl;
+        sleep_milliseconds(1);
     }
 
-    for (int i = 0; i < totalP; i++) {
-        pthread_join(pth[i], NULL);
+    while(!thread_q.empty())
+    {
+        pthread_t *thread = thread_q.front();
+        thread_q.pop();
+        pthread_join(*thread, NULL);
+        delete thread;
     }
-
-    for (int i = 0; i < totalP; i++) {
-        delete passenger[i];
-    }
-    delete[] passenger;
-    delete[] pth;
-
     system_destroy();
 
 }

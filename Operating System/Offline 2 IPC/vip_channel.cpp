@@ -19,7 +19,7 @@ Semaphore mutex_vip_channel(1);
 extern int z;
 
 void vip_channel_to_gate(Passenger const &p) {
-    log{} << p << " has arrived at kiosk side of vip channel" << endl;
+    Log{} << p << " has arrived at kiosk side of vip channel" << endl;
 
     mutex_count_to_gate.down();
     {
@@ -31,11 +31,11 @@ void vip_channel_to_gate(Passenger const &p) {
     }
     mutex_count_to_gate.up();
 
-    log{} << p << " has started crossing vip channel to gate" << endl;
+    Log{} << p << " has started crossing vip channel to gate" << endl;
 
     sleep_milliseconds(z);
 
-    log{} << p << " has crossed vip channel to gate" << endl;
+    Log{} << p << " has crossed vip channel to gate" << endl;
 
     mutex_count_to_gate.down();
     {
@@ -49,7 +49,7 @@ void vip_channel_to_gate(Passenger const &p) {
 }
 
 void vip_channel_to_special_kiosk(Passenger const &p) {
-    log{} << p << " has arrived at gate side of vip channel" << endl;
+    Log{} << p << " has arrived at gate side of vip channel" << endl;
 
     available_to_kiosk.down();
     available_to_kiosk.up();
@@ -63,11 +63,11 @@ void vip_channel_to_special_kiosk(Passenger const &p) {
     }
     mutex_count_to_special_kiosk.up();
 
-    log{} << p << " has started crossing vip channel to special kiosk" << endl;
+    Log{} << p << " has started crossing vip channel to special kiosk" << endl;
 
     sleep_milliseconds(z);
 
-    log{} << p << " has crossed vip channel to special kiosk" << endl;
+    Log{} << p << " has crossed vip channel to special kiosk" << endl;
 
     mutex_count_to_special_kiosk.down();
     {
