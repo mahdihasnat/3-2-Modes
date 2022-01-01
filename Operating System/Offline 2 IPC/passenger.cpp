@@ -35,5 +35,7 @@ void *passenger_fly(void *args) {
     }
     Log{} << (*p) << " has boarded on the plane successfully" << endl;
 
+    delete p;
+
     return NULL;
 }
