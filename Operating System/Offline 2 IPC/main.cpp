@@ -26,6 +26,8 @@ void system_init() {
     cin >> m >> n >> p;
     cin >> w >> x >> y >> z;
 
+    // seed rand with time
+    srand(time(NULL));
     kiosk_init(m);
     security_init();
     timer_init();
