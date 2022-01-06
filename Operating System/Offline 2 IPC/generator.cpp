@@ -11,6 +11,8 @@ int Generator::generate() {
 	return distribution(generator);
 }
 /*
+#include<bits/stdc++.h>
+using namespace std;
 int main()
 {
 	double lambda = 1/5.0;
