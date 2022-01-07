@@ -1,3 +1,5 @@
+`sudo apt install gcc make gdb qemu`
+
 `sudo apt install qemu`
 
 `sudo apt install qemu-system-x86`
