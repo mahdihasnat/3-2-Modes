@@ -113,3 +113,13 @@ int sys_add(void)
   }
   return sum;
 }
+
+int 
+sys_date(void)
+{
+  struct rtcdate *d;
+  if(argint(0,(int*)&d)<0)
+    return -1;
+  cmostime(d);
+  return 0;
+}

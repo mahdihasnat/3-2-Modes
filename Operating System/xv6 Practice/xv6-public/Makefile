@@ -170,6 +170,7 @@ mkfs: mkfs.c fs.h
 UPROGS=\
 	_add\
 	_cat\
+	_date\
 	_echo\
 	_forktest\
 	_grep\
@@ -256,7 +257,7 @@ EXTRA=\
 	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
 	printf.c umalloc.c\
 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
-	.gdbinit.tmpl gdbutil userp.c add.c\
+	.gdbinit.tmpl gdbutil userp.c add.c date.c\
 
 dist:
 	rm -rf dist
