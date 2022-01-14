@@ -106,6 +106,7 @@ extern int sys_uptime(void);
 extern int sys_getmemorysize(void);
 extern int sys_add(void);
 extern int sys_date(void);
+extern int sys_shutdown(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -132,6 +133,7 @@ static int (*syscalls[])(void) = {
 [SYS_getmemorysize]  sys_getmemorysize,
 [SYS_add]  sys_add,
 [SYS_date]  sys_date,
+[SYS_shutdown]  sys_shutdown,
 };
 
 void

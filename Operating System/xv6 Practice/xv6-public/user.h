@@ -26,6 +26,7 @@ int uptime(void);
 int getmemorysize(void);
 int add(int,int *);
 int date(struct rtcdate *);
+int shutdown(void) __attribute__((noreturn));
 
 // ulib.c
 int stat(const char*, struct stat*);

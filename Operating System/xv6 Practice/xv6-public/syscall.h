@@ -23,3 +23,4 @@
 #define SYS_getmemorysize 22
 #define SYS_add 23
 #define SYS_date 24
+#define SYS_shutdown 25

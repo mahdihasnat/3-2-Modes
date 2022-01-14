@@ -32,4 +32,6 @@
 
 # ChangeLog
 - Added user program named `userp`
+- Added user program named `shutdown` - does shutdown qemu by printing acpi commands
+
 
