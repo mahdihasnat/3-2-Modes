@@ -1,3 +1,5 @@
+MAKEFLAGS += -j8
+
 CC = g++
 PARAMETERS = input.txt
 # compile every cpp file in this directory with g++ , and target
