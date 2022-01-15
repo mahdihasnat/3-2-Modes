@@ -5,7 +5,7 @@
 int
 main(int argc,char ** argv)
 {
-	rtcdate d;
+	struct rtcdate d;
 	if(date(&d) < 0)
 	{
 		printf(1,"error in date system call\n");
