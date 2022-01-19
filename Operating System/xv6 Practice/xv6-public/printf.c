@@ -35,7 +35,26 @@ printint(int fd, int xx, int base, int sgn)
     putc(fd, buf[i]);
 }
 
-// Print to the given fd. Only understands %d, %x, %p, %s.
+union 
+{
+  double fraction;
+  int integerparts[2];
+}Fraction;
+
+static void
+printfloat(int fd, float f)
+{
+  int integar = (int)f;
+  int frac = ((int)(f*10000)) - ((int)(integar*10000));
+  printint(fd, integar, 10, 1);
+  putc(fd, '.');
+  if(frac<1000) putc(fd, '0');
+  if(frac<100) putc(fd, '0');
+  if(frac<10) putc(fd, '0');
+  printint(fd, frac, 10, 1);
+}
+
+// Print to the given fd. Only understands %d, %x, %p, %s, %f.
 void
 printf(int fd, const char *fmt, ...)
 {
@@ -74,6 +93,18 @@ printf(int fd, const char *fmt, ...)
         ap++;
       } else if(c == '%'){
         putc(fd, c);
+        } else if(c == 'f'){
+
+        // printf(fd,"\n>*ap size %d\n",sizeof(*ap));
+        // printf(fd,"\n>ap size %d \n",sizeof(ap));
+        // printf(fd,"\n>ap = %d \n",ap);
+        // printint(fd, *ap, 10, 0);
+        Fraction.integerparts[0]=*ap;
+        ap++;
+        Fraction.integerparts[1]=*ap;
+        ap++;
+        printfloat(fd, Fraction.fraction);
+
       } else {
         // Unknown % sequence.  Print it to draw attention.
         putc(fd, '%');
