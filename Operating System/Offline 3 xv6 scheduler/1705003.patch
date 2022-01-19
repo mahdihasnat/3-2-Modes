@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 09d790c..ed940d4 100644
+index 09d790c..0815fd2 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1,3 +1,5 @@
@@ -8,24 +8,25 @@ index 09d790c..ed940d4 100644
  OBJS = \
  	bio.o\
  	console.o\
-@@ -175,9 +177,11 @@ UPROGS=\
+@@ -175,9 +177,12 @@ UPROGS=\
  	_ln\
  	_ls\
  	_mkdir\
 +	_ps\
  	_rm\
++	_schedulartest\
  	_sh\
  	_stressfs\
 +	_ticketstest\
  	_usertests\
  	_wc\
  	_zombie\
-@@ -252,7 +256,7 @@ EXTRA=\
+@@ -252,7 +257,7 @@ EXTRA=\
  	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
  	printf.c umalloc.c\
  	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
 -	.gdbinit.tmpl gdbutil\
-+	.gdbinit.tmpl gdbutil ticketstest.c ps.c\
++	.gdbinit.tmpl gdbutil ticketstest.c ps.c schedulartest.c\
  
  dist:
  	rm -rf dist
@@ -50,8 +51,54 @@ index 82fb982..e34490e 100644
  
  // swtch.S
  void            swtch(struct context**, struct context*);
+diff --git a/printf.c b/printf.c
+index b3298aa..abaa28d 100644
+--- a/printf.c
++++ b/printf.c
+@@ -35,7 +35,26 @@ printint(int fd, int xx, int base, int sgn)
+     putc(fd, buf[i]);
+ }
+ 
+-// Print to the given fd. Only understands %d, %x, %p, %s.
++union 
++{
++  double fraction;
++  int integerparts[2];
++}Fraction;
++
++static void
++printfloat(int fd, float f)
++{
++  int integar = (int)f;
++  int frac = ((int)(f*10000)) - ((int)(integar*10000));
++  printint(fd, integar, 10, 1);
++  putc(fd, '.');
++  if(frac<1000) putc(fd, '0');
++  if(frac<100) putc(fd, '0');
++  if(frac<10) putc(fd, '0');
++  printint(fd, frac, 10, 1);
++}
++
++// Print to the given fd. Only understands %d, %x, %p, %s, %f.
+ void
+ printf(int fd, const char *fmt, ...)
+ {
+@@ -74,6 +93,13 @@ printf(int fd, const char *fmt, ...)
+         ap++;
+       } else if(c == '%'){
+         putc(fd, c);
++      } else if(c == 'f'){
++        Fraction.integerparts[0]=*ap;
++        ap++;
++        Fraction.integerparts[1]=*ap;
++        ap++;
++        printfloat(fd, Fraction.fraction);
++
+       } else {
+         // Unknown % sequence.  Print it to draw attention.
+         putc(fd, '%');
 diff --git a/proc.c b/proc.c
-index 806b1b1..d2d39a8 100644
+index 806b1b1..657ad3f 100644
 --- a/proc.c
 +++ b/proc.c
 @@ -1,6 +1,6 @@
@@ -62,23 +109,25 @@ index 806b1b1..d2d39a8 100644
  #include "memlayout.h"
  #include "mmu.h"
  #include "x86.h"
-@@ -86,6 +86,7 @@ allocproc(void)
+@@ -86,6 +86,8 @@ allocproc(void)
    return 0;
  
  found:
 +  p->tickets = DEFAULT_TICKETS; // set tickets value for new process
++  p->ticks = 0; // set ticks value for new process
    p->state = EMBRYO;
    p->pid = nextpid++;
  
-@@ -196,6 +197,7 @@ fork(void)
+@@ -196,6 +198,8 @@ fork(void)
      np->state = UNUSED;
      return -1;
    }
 +  np->tickets = curproc->tickets; // set tickets of child as tickets of parent
++  np->ticks = 0; // set ticks of child as ticks of parent
    np->sz = curproc->sz;
    np->parent = curproc;
    *np->tf = *curproc->tf;
-@@ -311,6 +313,59 @@ wait(void)
+@@ -311,6 +315,60 @@ wait(void)
    }
  }
  
@@ -103,6 +152,7 @@ index 806b1b1..d2d39a8 100644
 +    ps->inuse[i] = ptable.proc[i].state != UNUSED;
 +    ps->tickets[i] = ptable.proc[i].tickets;
 +    ps->pid[i] = ptable.proc[i].pid;
++    ps->ticks[i] = ptable.proc[i].ticks;
 +    // cprintf("%s\n",ptable.proc[i].name);
 +  }
 +  release(&ptable.lock);
@@ -138,7 +188,7 @@ index 806b1b1..d2d39a8 100644
  //PAGEBREAK: 42
  // Per-CPU process scheduler.
  // Each CPU calls scheduler() after setting itself up.
-@@ -332,23 +387,40 @@ scheduler(void)
+@@ -332,23 +390,45 @@ scheduler(void)
  
      // Loop over process table looking for process to run.
      acquire(&ptable.lock);
@@ -180,9 +230,14 @@ index 806b1b1..d2d39a8 100644
 +        c->proc = p;
 +        switchuvm(p);
 +        p->state = RUNNING;
-+
++        int start_ticks=ticks;
 +        // cprintf("\n\n%d pid=%d start\n",c-cpus,p->pid);
 +        swtch(&(c->scheduler), p->context);
++        int end_ticks=ticks;
++        int diff_ticks=end_ticks-start_ticks;
++        if(diff_ticks < 0)
++          panic("schedular:ticks < start_ticks");
++        p->ticks += diff_ticks;
 +        // cprintf("\n\n%d pid=%d mid\n",c-cpus,p->pid);
 +        switchkvm();
 +        // cprintf("%d pid=%d end\n",c-cpus,p->pid);
@@ -196,7 +251,7 @@ index 806b1b1..d2d39a8 100644
      release(&ptable.lock);
  
 diff --git a/proc.h b/proc.h
-index 1647114..bc03af2 100644
+index 1647114..8dcd5a5 100644
 --- a/proc.h
 +++ b/proc.h
 @@ -34,6 +34,7 @@ struct context {
@@ -207,20 +262,21 @@ index 1647114..bc03af2 100644
  // Per-process state
  struct proc {
    uint sz;                     // Size of process memory (bytes)
-@@ -49,6 +50,7 @@ struct proc {
+@@ -49,6 +50,8 @@ struct proc {
    struct file *ofile[NOFILE];  // Open files
    struct inode *cwd;           // Current directory
    char name[16];               // Process name (debugging)
 +  int tickets;                 // Tickets or priority for priority scheduling
++  int ticks;                   // total ticks of process
  };
  
  // Process memory is laid out contiguously, low addresses first:
 diff --git a/ps.c b/ps.c
 new file mode 100644
-index 0000000..ec5903f
+index 0000000..0ca6ee4
 --- /dev/null
 +++ b/ps.c
-@@ -0,0 +1,28 @@
+@@ -0,0 +1,29 @@
 +#include "types.h"
 +#include "pstat.h"
 +#include "user.h"
@@ -231,7 +287,8 @@ index 0000000..ec5903f
 +	printf(1,"process table:\n");
 +	for(int i=0;i<NPROC;i++)
 +	{
-+		printf(1,"%d: inuse: %d, tickets: %d, pid: %d, ticks: %d\n",i,p->inuse[i],p->tickets[i],p->pid[i],p->ticks[i]);
++		printf(1,"%d: inuse: %d, tickets: %d, pid: %d, ticks: %d, ratio:%f\n",
++		i,p->inuse[i],p->tickets[i],p->pid[i],p->ticks[i], (p->tickets[i] ==0 ? 0.0 : (float)p->ticks[i]/p->tickets[i]));
 +	}
 +}
 +
@@ -239,7 +296,7 @@ index 0000000..ec5903f
 +main(int argc,char * argv[])
 +{
 +	struct pstat p;
-+	// printf(1,"psize= %d\n",sizeof(struct pstat));
++
 +	if(getpinfo(&p) < 0)
 +	{
 +		printf(1,"getpinfo error\n");
@@ -271,6 +328,71 @@ index 0000000..c01ab96
 +
 +};
 \ No newline at end of file
+diff --git a/schedulartest.c b/schedulartest.c
+new file mode 100644
+index 0000000..6ef4094
+--- /dev/null
++++ b/schedulartest.c
+@@ -0,0 +1,59 @@
++#include "types.h"
++#include "user.h"
++#include "pstat.h"
++
++
++void infinite_loop(void)
++{
++	while(1)
++	{
++		;
++	}
++}
++
++int
++init_process(int priority, void (* func)(void))
++{
++	int pid = fork();
++	if(pid < 0)
++		return pid;
++	if(pid == 0)
++	{
++		if(settickets(priority) != 0)
++		{
++			printf(1,"Failed to set tickets for process %d\n",getpid());
++		}
++		func();
++		exit();
++	}
++	else
++	{
++		return pid;
++	}
++}
++
++
++int
++main(int argc,char * argv[])
++{
++	#define NUM_PROCESSES 10
++	int pids[NUM_PROCESSES];
++	int priorities[NUM_PROCESSES]={10,20,30,40,50,60,70,80,90,100};
++
++	for(int i=0;i<NUM_PROCESSES;i++)
++	{
++		pids[i] = init_process(priorities[i],&infinite_loop);
++	}
++	sleep(1000);
++	for(int i=0;i<NUM_PROCESSES;i++)
++	{
++		while(kill(pids[i]) <0)
++		{
++			printf(1,"kill failed processid %d\n",pids[i]);
++		}
++	}
++
++	char * argps[2]={"ps","\0"};
++	exec("ps", argps);
++}
++
 diff --git a/syscall.c b/syscall.c
 index ee85261..7f31fd9 100644
 --- a/syscall.c
