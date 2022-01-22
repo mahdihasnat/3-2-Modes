@@ -98,7 +98,7 @@ index b3298aa..abaa28d 100644
          // Unknown % sequence.  Print it to draw attention.
          putc(fd, '%');
 diff --git a/proc.c b/proc.c
-index 806b1b1..657ad3f 100644
+index 806b1b1..7e62ef0 100644
 --- a/proc.c
 +++ b/proc.c
 @@ -1,6 +1,6 @@
@@ -166,9 +166,9 @@ index 806b1b1..657ad3f 100644
 +random(uint mx)
 +{
 +  static uint z1 = 12345;
-+  static uint z2 = 12345;
-+  static uint z3 = 12345;
-+  static uint z4 = 12345;
++  static uint z2 = 12345+12;
++  static uint z3 = 12345+12312;
++  static uint z4 = 12345+12234134;
 +
 +  uint b;
 +  b = (((z1 << 6) ^ z1) >> 13);
@@ -330,10 +330,10 @@ index 0000000..c01ab96
 \ No newline at end of file
 diff --git a/schedulartest.c b/schedulartest.c
 new file mode 100644
-index 0000000..6ef4094
+index 0000000..56d1090
 --- /dev/null
 +++ b/schedulartest.c
-@@ -0,0 +1,59 @@
+@@ -0,0 +1,63 @@
 +#include "types.h"
 +#include "user.h"
 +#include "pstat.h"
@@ -374,20 +374,24 @@ index 0000000..6ef4094
 +{
 +	#define NUM_PROCESSES 10
 +	int pids[NUM_PROCESSES];
-+	int priorities[NUM_PROCESSES]={10,20,30,40,50,60,70,80,90,100};
++	int priorities[NUM_PROCESSES]={100,90,80,70,60,50,40,30,20,10};
++
++	settickets(10000);
 +
 +	for(int i=0;i<NUM_PROCESSES;i++)
 +	{
 +		pids[i] = init_process(priorities[i],&infinite_loop);
 +	}
++	
 +	sleep(1000);
 +	for(int i=0;i<NUM_PROCESSES;i++)
 +	{
-+		while(kill(pids[i]) <0)
++		if(kill(pids[i]) <0)
 +		{
 +			printf(1,"kill failed processid %d\n",pids[i]);
 +		}
 +	}
++	wait();
 +
 +	char * argps[2]={"ps","\0"};
 +	exec("ps", argps);
